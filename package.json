@@ -32,6 +32,7 @@
     "lit-html": "^2.2.5",
     "prettier": "^2.6.2",
     "rollup-plugin-postcss-lit": "^2.0.0",
+    "@storybook/addon-storysource": "^6.5.12",
     "rollup-plugin-scss": "3.0.0",
     "sass": "^1.52.3",
     "storybook-addon-themes": "^6.1.0",
@@ -43,8 +44,6 @@
     "@cldcvr/flow-core": "^0.3.9",
     "@cldcvr/flow-gcp-icon": "^0.1.1",
     "@cldcvr/flow-product-icon": "^0.1.1",
-    "@cldcvr/flow-system-icon": "^0.1.1",
-    "@storybook/addon-storysource": "^6.5.12",
-    "vue": "2.7.8"
+    "@cldcvr/flow-system-icon": "^0.1.1"
   }
 }
