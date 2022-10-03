@@ -49,6 +49,7 @@ export const decorators = [
       <style>
         .sb-show-main.sb-main-padded {
           background-color: var(--color-surface-default);
+          padding: 0;
         }
         #root,
         #root-inner {
