@@ -9,6 +9,10 @@ module.exports = {
   },
   async viteFinal(config, { configType }) {
     // customize the Vite config here
+
+    if (configType === "PRODUCTION") {
+      config.base = "/templates/";
+    }
     if (!config.optimizeDeps) {
       config.optimizeDeps = {};
     }
