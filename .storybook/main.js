@@ -2,7 +2,12 @@ const litcss = require("rollup-plugin-postcss-lit");
 
 module.exports = {
   stories: ["../stories/**/*.stories.mdx", "../stories/**/*.stories.@(js|jsx|ts|tsx)"],
-  addons: ["@storybook/addon-links", "@storybook/addon-essentials", "storybook-addon-themes"],
+  addons: [
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "storybook-addon-themes",
+    "@storybook/addon-storysource",
+  ],
   framework: "@storybook/web-components",
   core: {
     builder: "@storybook/builder-vite",
