@@ -1107,10 +1107,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cldcvr/flow-aws-icon@^0.1.1":
-  version "0.1.3"
-  resolved "https://pkgs.dev.azure.com/cldcvrdevusa/_packaging/FlowLibraryFeed/npm/registry/@cldcvr/flow-aws-icon/-/flow-aws-icon-0.1.3.tgz#95df1a305972b9930efb427d44b07f058e6f1824"
-  integrity sha1-ld8aMFlyuZMO+0J9RLB/BY5vGCQ=
+"@cldcvr/flow-aws-icon@*":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@cldcvr/flow-aws-icon/-/flow-aws-icon-0.1.7.tgz#4e1ecb3d28e4aea4ced6f64defde37a3c7903364"
+  integrity sha512-f8eoLfyK9fz8OmDM5pFGOHQim5q6PTyqNJ8LGA+8uihsVdSwdhHRbrYiXzuJO4/qZLses8AfJXcnccD/GqT/8Q==
   dependencies:
     "@cldcvr/flow-core" "*"
 
@@ -1122,33 +1122,24 @@
     axios "^0.27.2"
     lit "^2.2.4"
 
-"@cldcvr/flow-core@^0.3.9":
-  version "0.3.9"
-  resolved "https://pkgs.dev.azure.com/cldcvrdevusa/_packaging/FlowLibraryFeed/npm/registry/@cldcvr/flow-core/-/flow-core-0.3.9.tgz#6c1f8edace7beefb54213d35104bc72dd042f2cc"
-  integrity sha1-bB+O2s577vtUIT01EEvHLdBC8sw=
-  dependencies:
-    "@floating-ui/dom" "^1.0.2"
-    axios "^0.27.2"
-    lit "^2.2.4"
-
-"@cldcvr/flow-gcp-icon@^0.1.1":
-  version "0.1.3"
-  resolved "https://pkgs.dev.azure.com/cldcvrdevusa/_packaging/FlowLibraryFeed/npm/registry/@cldcvr/flow-gcp-icon/-/flow-gcp-icon-0.1.3.tgz#a92ccade75b975a21e3a98897bb1737d1241ceba"
-  integrity sha1-qSzK3nW5daIeOpiJe7FzfRJBzro=
+"@cldcvr/flow-gcp-icon@*":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@cldcvr/flow-gcp-icon/-/flow-gcp-icon-0.1.7.tgz#a57ce36a2870e6fa6259a4680f0522d00f9167e1"
+  integrity sha512-jJWJM9P3f4r+0Z9+h04niAYt0S1tDQOPMm72QARAgWwkQ2yUPN8eKFccLCTku4Wd/wTIcDuJ5DtCm6ZOT3CjkQ==
   dependencies:
     "@cldcvr/flow-core" "*"
 
-"@cldcvr/flow-product-icon@^0.1.1":
-  version "0.1.3"
-  resolved "https://pkgs.dev.azure.com/cldcvrdevusa/_packaging/FlowLibraryFeed/npm/registry/@cldcvr/flow-product-icon/-/flow-product-icon-0.1.3.tgz#b98d72c82e757a89f92467711ca94c244e05c85d"
-  integrity sha1-uY1yyC51eon5JGdxHKlMJE4FyF0=
+"@cldcvr/flow-product-icon@*":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@cldcvr/flow-product-icon/-/flow-product-icon-0.1.7.tgz#a1d59e4399002b9d4efb33b241bce46cf91325e4"
+  integrity sha512-UPFCbcssyHwIBHhwWA8NTr9Y7z2QapYBJ2t05QyjpHgcoqvGscR6ryWA5tKr67JYgZQbRyZ271SHfR0dwnYAeQ==
   dependencies:
     "@cldcvr/flow-core" "*"
 
-"@cldcvr/flow-system-icon@^0.1.1":
-  version "0.1.3"
-  resolved "https://pkgs.dev.azure.com/cldcvrdevusa/_packaging/FlowLibraryFeed/npm/registry/@cldcvr/flow-system-icon/-/flow-system-icon-0.1.3.tgz#63928598b22e9d8c09fc7d72b8cc8b105b69c3c7"
-  integrity sha1-Y5KFmLIunYwJ/H1yuMyLEFtpw8c=
+"@cldcvr/flow-system-icon@*":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@cldcvr/flow-system-icon/-/flow-system-icon-0.1.7.tgz#06c07f50f5649894adecf3b5e0e8d726bcd3672b"
+  integrity sha512-8VGgpcLzuPLwSTqiBDOqAmSIANC/Ntpn8IXxuOdsPXisMEfdt6NnWofORHz+gBtcSt39s3VSGgcDBnOhgvnBug==
   dependencies:
     "@cldcvr/flow-core" "*"
 
@@ -1189,18 +1180,6 @@
     js-yaml "^4.1.0"
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
-
-"@floating-ui/core@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@floating-ui/core/-/core-1.0.1.tgz#00e64d74e911602c8533957af0cce5af6b2e93c8"
-  integrity sha512-bO37brCPfteXQfFY0DyNDGB3+IMe4j150KFQcgJ5aBP295p9nBGeHEs/p0czrRbtlHq4Px/yoPXO/+dOCcF4uA==
-
-"@floating-ui/dom@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-1.0.2.tgz#c5184c52c6f50abd11052d71204f4be2d9245237"
-  integrity sha512-5X9WSvZ8/fjy3gDu8yx9HAA4KG1lazUN2P4/VnaXLxTO9Dz53HI1oYoh1OlhqFNlHgGDiwFX5WhFCc2ljbW3yA==
-  dependencies:
-    "@floating-ui/core" "^1.0.1"
 
 "@gar/promisify@^1.0.1":
   version "1.1.3"

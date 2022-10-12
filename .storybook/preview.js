@@ -6,23 +6,27 @@ import AwsIconPack from "@cldcvr/flow-aws-icon/dist/types/icon-pack";
 import "@cldcvr/flow-core/dist/style.css";
 import { ConfigUtil } from "@cldcvr/flow-core";
 import "@cldcvr/flow-core";
+import "./storybook.css";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   backgrounds: { disable: true },
-  themes: {
-    default: "f-dark",
-    clearable: false,
-    list: [
-      { name: "f-dark", color: "#000" },
-      { name: "f-light", color: "#fff" },
-    ],
-  },
+  //   themes: {
+  //     default: "f-light",
+  //     clearable: false,
+  //     list: [
+  //       { name: "f-dark", color: "#000" },
+  //       { name: "f-light", color: "#fff" },
+  //     ],
+  //   },
   controls: {
     matchers: {
       color: /(background|color)$/i,
       date: /Date$/,
     },
+  },
+  previewTabs: {
+    "storybook/docs/panel": { index: -1 },
   },
 };
 
@@ -60,7 +64,7 @@ export const decorators = [
         }
       </style>
       <div
-        style="background-color:var(--color-surface-default);color:var(--color-text-default);font-family:var(--flow-font);height:inherit;"
+        style="color:var(--color-text-default);font-family:var(--flow-font);height:inherit;"
       >
         ${story()}
       </div>
