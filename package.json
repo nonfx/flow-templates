@@ -40,10 +40,10 @@
     "vite": "^2.9.9"
   },
   "dependencies": {
-    "@cldcvr/flow-aws-icon": "*",
-    "@cldcvr/flow-core": "*",
-    "@cldcvr/flow-gcp-icon": "*",
-    "@cldcvr/flow-product-icon": "*",
-    "@cldcvr/flow-system-icon": "*"
+    "@cldcvr/flow-aws-icon": "latest",
+    "@cldcvr/flow-core": "latest",
+    "@cldcvr/flow-gcp-icon": "latest",
+    "@cldcvr/flow-product-icon": "latest",
+    "@cldcvr/flow-system-icon": "latest"
   }
 }
