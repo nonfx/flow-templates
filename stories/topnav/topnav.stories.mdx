@@ -2,8 +2,10 @@ import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import { html } from "lit-html";
 import anatomySVG from "./../../svgs/top-nav.js";
 import { unsafeSVG } from "lit-html/directives/unsafe-svg.js";
+import { unsafeHTML } from "lit-html/directives/unsafe-html.js";
 import { useArgs } from "@storybook/client-api";
 import { ConfigUtil } from "@cldcvr/flow-core";
+import popoverSampleSnippet from "./popoverSampleSnippet.js";
 
 <Meta
   title="Top nav"
@@ -62,14 +64,16 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
   >
     {(args) => {
       const [_, updateArgs] = useArgs();
-      const handle = (e, f) => {
+      const toggle = (e, f) => {
         updateArgs({ open: !args.open });
       };
       const setTheme = (theme) => {
         ConfigUtil.setConfig({ theme });
         updateArgs({ ...args, theme });
       };
-      return html`<f-div
+      return html`
+		${unsafeHTML(popoverSampleSnippet)}
+	  <f-div
         data-f-id="top-nav"
         padding="medium"
         gap="small"
@@ -78,7 +82,7 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
 		height="hug-content"
 		border="small solid default bottom"
       >
-	  <!--This data-f-id=\"top-nav-left\" is swappable, Find examples in \`Swappable items\`  -->
+	  <!--Start : top-nav-left : This data-f-id=\"top-nav-left\" is swappable, Find examples in \`Swappable items\`  -->
         <f-div
           data-f-id="top-nav-left"
           width="hug-content"
@@ -86,14 +90,18 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
         >
           <f-icon source="p-cloudcover-dark" size="large"></f-icon>
         </f-div>
-		<!--This data-f-id=\"top-nav-middle\" is swappable, Find examples in \`Swappable items\`  -->
+	  <!--End : top-nav-left : This data-f-id=\"top-nav-left\" is swappable, Find examples in \`Swappable items\`  -->
+	  
+	  <!--Start : top-nav-middle : This data-f-id=\"top-nav-middle\" is swappable, Find examples in \`Swappable items\`  -->
         <f-div data-f-id="top-nav-middle" gap="small" align="middle-left">
           <f-icon source="i-arrow-left"></f-icon>
           <f-text size="small"
             >Home / Project / Environment / Application / Logs
           </f-text>
         </f-div>
-		<!--This data-f-id=\"top-nav-right\" is swappable, Find examples in \`Swappable items\`  -->
+		<!--End : top-nav-middle : This data-f-id=\"top-nav-right\" is swappable, Find examples in \`Swappable items\`  -->
+		
+		<!--START : top-nav-right : This data-f-id=\"top-nav-right\" is swappable, Find examples in \`Swappable items\`  -->
         <f-div data-f-id="top-nav-right" align="middle-right" gap="large">
           <f-icon-button
             icon="i-search"
@@ -128,11 +136,11 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
             size="small"
             state="neutral"
             id="profile-popover"
-            @click=${handle}
+            @click=${toggle}
           ></f-icon-button>
           <f-popover
             size="small"
-            @overlay-click=${handle}
+            @overlay-click=${toggle}
             .open=${args.open}
             target="#profile-popover"
           >
@@ -183,6 +191,7 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
             </f-div>
           </f-popover>
         </f-div>
+		<!--END : top-nav-right : This data-f-id=\"top-nav-right\" is swappable, Find examples in \`Swappable items\`  -->
       </f-div>`;
     }}
   </Story>
@@ -208,14 +217,16 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
   >
     {(args) => {
       const [_, updateArgs] = useArgs();
-      const handle = (e, f) => {
+      const toggle = (e, f) => {
         updateArgs({ open: !args.open });
       };
       const setTheme = (theme) => {
         ConfigUtil.setConfig({ theme });
         updateArgs({ ...args, theme });
       };
-      return html`<f-div
+      return html`
+	  ${unsafeHTML(popoverSampleSnippet)}
+	  <f-div
         data-f-id="top-nav"
         padding="medium"
         gap="small"
@@ -296,11 +307,11 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
             size="small"
             state="neutral"
             id="profile-popover"
-            @click=${handle}
+            @click=${toggle}
           ></f-icon-button>
           <f-popover
             size="small"
-            @overlay-click=${handle}
+            @overlay-click=${toggle}
             .open=${args.open}
             target="#profile-popover"
           >
@@ -376,14 +387,16 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
   >
     {(args) => {
       const [_, updateArgs] = useArgs();
-      const handle = (e, f) => {
+      const toggle = (e, f) => {
         updateArgs({ open: !args.open });
       };
       const setTheme = (theme) => {
         ConfigUtil.setConfig({ theme });
         updateArgs({ ...args, theme });
       };
-      return html`<f-div
+      return html`
+	  ${unsafeHTML(popoverSampleSnippet)}
+	  <f-div
         data-f-id="top-nav"
         padding="medium"
         gap="small"
@@ -447,11 +460,11 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
             size="small"
             state="neutral"
             id="profile-popover"
-            @click=${handle}
+            @click=${toggle}
           ></f-icon-button>
           <f-popover
             size="small"
-            @overlay-click=${handle}
+            @overlay-click=${toggle}
             .open=${args.open}
             target="#profile-popover"
           >
@@ -527,14 +540,16 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
   >
     {(args) => {
       const [_, updateArgs] = useArgs();
-      const handle = (e, f) => {
+      const toggle = (e, f) => {
         updateArgs({ open: !args.open });
       };
       const setTheme = (theme) => {
         ConfigUtil.setConfig({ theme });
         updateArgs({ ...args, theme });
       };
-      return html`<f-div
+      return html`
+	  ${unsafeHTML(popoverSampleSnippet)}
+	  <f-div
         data-f-id="top-nav"
         padding="medium"
         gap="small"
@@ -615,11 +630,11 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
             size="small"
             state="neutral"
             id="profile-popover"
-            @click=${handle}
+            @click=${toggle}
           ></f-icon-button>
           <f-popover
             size="small"
-            @overlay-click=${handle}
+            @overlay-click=${toggle}
             .open=${args.open}
             target="#profile-popover"
           >
@@ -767,16 +782,9 @@ Replace the logo URL to change the logo
 
 <Canvas>
   <Story name="top-nav-middle - search-action-buttons">
-    {(args) => {
-      const [_, updateArgs] = useArgs();
-      const handle = (e, f) => {
-        updateArgs({ open: !args.open });
-      };
-      const setTheme = (theme) => {
-        ConfigUtil.setConfig({ theme });
-        updateArgs({ ...args, theme });
-      };
-      return html` <f-div
+    {() => {
+      return html` 
+	  <f-div
         data-f-id="top-nav"
         padding="medium"
         gap="small"
@@ -848,7 +856,7 @@ Replace the logo URL to change the logo
   >
     {(args) => {
       const [_, updateArgs] = useArgs();
-      const handle = (e, f) => {
+      const toggle = (e, f) => {
         updateArgs({ open: !args.open });
       };
       const setTheme = (theme) => {
@@ -856,6 +864,7 @@ Replace the logo URL to change the logo
         updateArgs({ ...args, theme });
       };
       return html`
+	  ${unsafeHTML(popoverSampleSnippet)}
         <f-div
           data-f-id="top-nav"
           padding="medium"
@@ -900,12 +909,12 @@ Replace the logo URL to change the logo
               size="small"
               state="neutral"
               id="profile-popover"
-              @click=${handle}
+              @click=${toggle}
             ></f-icon-button>
             <f-popover
               size="small"
               .open=${args.open}
-              @overlay-click=${handle}
+              @overlay-click=${toggle}
               target="#profile-popover"
             >
               <f-div direction="column" state="secondary">
@@ -983,7 +992,7 @@ Replace the logo URL to change the logo
   >
     {(args) => {
       const [_, updateArgs] = useArgs();
-      const handle = (e, f) => {
+      const toggle = (e, f) => {
         updateArgs({ open: !args.open });
       };
       const setTheme = (theme) => {
@@ -991,6 +1000,7 @@ Replace the logo URL to change the logo
         updateArgs({ ...args, theme });
       };
       return html`
+	  ${unsafeHTML(popoverSampleSnippet)}
         <f-div
           data-f-id="top-nav"
           padding="medium"
@@ -1039,13 +1049,13 @@ Replace the logo URL to change the logo
               size="small"
               state="neutral"
               id="profile-popover"
-              @click=${handle}
+              @click=${toggle}
             ></f-icon-button>
             <f-popover
               size="small"
               .open=${args.open}
               target="#profile-popover"
-              @overlay-click=${handle}
+              @overlay-click=${toggle}
             >
               <f-div direction="column" state="secondary">
                 <f-div
