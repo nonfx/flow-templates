@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "@cldcvr/flow-aws-icon": "latest",
-    "@cldcvr/flow-core": "latest",
+    "@cldcvr/flow-core": "1.6.0",
     "@cldcvr/flow-gcp-icon": "latest",
     "@cldcvr/flow-product-icon": "latest",
     "@cldcvr/flow-system-icon": "latest"

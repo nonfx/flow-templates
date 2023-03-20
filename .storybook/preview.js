@@ -4,9 +4,9 @@ import ProductIconPack from "@cldcvr/flow-product-icon/dist/types/icon-pack";
 import GcpIconPack from "@cldcvr/flow-gcp-icon/dist/types/icon-pack";
 import AwsIconPack from "@cldcvr/flow-aws-icon/dist/types/icon-pack";
 import "@cldcvr/flow-core/dist/style.css";
-import { ConfigUtil } from "@cldcvr/flow-core";
 import "@cldcvr/flow-core";
 import "./storybook.css";
+import { ConfigUtil } from "@cldcvr/flow-core";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -63,9 +63,7 @@ export const decorators = [
           overflow: auto;
         }
       </style>
-      <div
-        style="color:var(--color-text-default);font-family:var(--flow-font);height:inherit;"
-      >
+      <div style="color:var(--color-text-default);font-family:var(--flow-font);height:inherit;">
         ${story()}
       </div>
     `;
