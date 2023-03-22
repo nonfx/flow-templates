@@ -40,7 +40,11 @@ Top nav template sits at the top of the product/application. It provides the nav
   {() => html`<f-div>${unsafeSVG(anatomySVG)}</f-div>`}
 </Story>
 
-All sections shown in aanatomy are swappable. Some possible suggestions are given under Swappable items.
+<br />
+
+<f-text variant="para" size="medium">All sections shown in anatomy are swappable. Some possible suggestions are given under <a href="#swappable-items">Swappable items</a>.</f-text>
+
+<br />
 
 ## Available templates
 
@@ -102,13 +106,11 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
 		<!--End : top-nav-middle : This data-f-id=\"top-nav-right\" is swappable, Find examples in \`Swappable items\`  -->
 		
 		<!--START : top-nav-right : This data-f-id=\"top-nav-right\" is swappable, Find examples in \`Swappable items\`  -->
-        <f-div data-f-id="top-nav-right" align="middle-right" gap="large">
-          <f-icon-button
-            icon="i-search"
-            size="small"
-            state="neutral"
-          ></f-icon-button>
-          <f-div gap="small" width="hug-content">
+        <f-div data-f-id="top-nav-right" gap="large" width="hug-content">
+          <f-div width="240px">
+          <f-search size="small" variant="round" placeholder="Enter search keyword"></f-search>
+          </f-div>
+            <f-div gap="small" width="hug-content">
             <f-icon-button
               icon="i-icon"
               variant="round"
@@ -244,12 +246,10 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
           <f-icon source="p-cloudcover-dark" size="large"></f-icon>
         </f-div>
 		<!--This data-f-id=\"top-nav-middle\" is swappable, Find examples in \`Swappable items\`  -->
-        <f-div data-f-id="top-nav-middle" gap="small" align="middle-left">
-          <f-icon-button
-            icon="i-search"
-            size="small"
-            state="neutral"
-          ></f-icon-button>
+        <f-div data-f-id="top-nav-middle" gap="small" align="middle-left" >
+          <f-div width="240px">
+          <f-search size="small" variant="round" placeholder="Enter search keyword"></f-search>
+          </f-div>
           <f-div width="hug-content" gap="small">
             <f-button
               size="small"
@@ -278,7 +278,7 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
           </f-div>
         </f-div>
 		<!--This data-f-id=\"top-nav-right\" is swappable, Find examples in \`Swappable items\`  -->
-        <f-div data-f-id="top-nav-right" align="middle-right" gap="large">
+        <f-div data-f-id="top-nav-right" gap="large" width="hug-content">
           <f-div gap="small" width="hug-content">
             <f-icon-button
               icon="i-icon"
@@ -415,14 +415,12 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
         </f-div>
 		<!--This data-f-id=\"top-nav-middle\" is swappable, Find examples in \`Swappable items\`  -->
         <f-div data-f-id="top-nav-middle" gap="small" align="middle-left">
-          <f-icon-button
-            icon="i-search"
-            size="small"
-            state="neutral"
-          ></f-icon-button>
+          <f-div width="320px">
+          <f-search size="small" variant="round" placeholder="Enter search keyword"></f-search>
+          </f-div>
         </f-div>
 		<!--This data-f-id=\"top-nav-right\" is swappable, Find examples in \`Swappable items\`  -->
-        <f-div data-f-id="top-nav-right" align="middle-right" gap="large">
+        <f-div data-f-id="top-nav-right" gap="large" width="hug-content">
           <f-div gap="small" width="hug-content">
             <f-button size="small" label="label" variant="curved"></f-button>
             <f-button
@@ -596,12 +594,10 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
           </f-div>
         </f-div>
 		<!--This data-f-id=\"top-nav-right\" is swappable, Find examples in \`Swappable items\`  -->
-        <f-div data-f-id="top-nav-right" align="middle-right" gap="large">
-          <f-icon-button
-            icon="i-search"
-            size="small"
-            state="neutral"
-          ></f-icon-button>
+        <f-div data-f-id="top-nav-right" gap="large" width="hug-content">
+            <f-div width="240px">
+          <f-search size="small" variant="round" placeholder="Enter search keyword"></f-search>
+          </f-div>
           <f-div gap="small" width="hug-content">
             <f-icon-button
               icon="i-icon"
@@ -690,7 +686,7 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
   </Story>
 </Canvas>
 
-## Swappable items
+<h2 id="swappable-items">Swappable Items</h2>
 
 Readily avaialable snippets to swap the content of sections mentioned in anatomy.
 
@@ -698,51 +694,35 @@ Readily avaialable snippets to swap the content of sections mentioned in anatomy
 
 <hr />
 
-#### 1.logo
+### 1.logo
 
 <hr />
 
 <Canvas>
   <Story name="top-nav-left - logo">
-    {() => html`<f-div
-      data-f-id="top-nav"
-      padding="medium"
-      gap="small"
-      state="secondary"
-      align="middle-left"
-	  height="hug-content"
-	  border="small solid default bottom"
-    >
+    {() => html`
 	<!--Swap data-f-id="top-nav-left" with following content to get desired results-->
       <f-div data-f-id="top-nav-left" width="hug-content" align="middle-center">
-        <f-icon source="p-codepipes" size="large"></f-icon>
+        <f-icon source="p-cloudcover-dark" size="large"></f-icon>
       </f-div>
-    </f-div> `}
+      `}
   </Story>
 </Canvas>
 
 Replace the logo URL to change the logo
 
-#### 2.home
+### 2.home
 
 <hr />
 
 <Canvas>
   <Story name="top-nav-left - home">
-    {() => html` <f-div
-      data-f-id="top-nav"
-      padding="medium"
-      gap="small"
-      state="secondary"
-      align="middle-left"
-	  height="hug-content"
-	  border="small solid default bottom"
-    >
+    {() => html`
 	<!--Swap data-f-id="top-nav-left" with following content to get desired results-->
       <f-div data-f-id="top-nav-left" width="hug-content" align="middle-center">
         <f-icon source="i-home" size="large"></f-icon>
       </f-div>
-    </f-div>`}
+      `}
   </Story>
 </Canvas>
 
@@ -750,21 +730,13 @@ Replace the logo URL to change the logo
 
 <hr />
 
-#### 1. breadcrumb
+### 1. breadcrumb
 
 <hr />
 
 <Canvas>
   <Story name="top-nav-middle - breadcrumb">
-    {() => html` <f-div
-      data-f-id="top-nav"
-      padding="medium"
-      gap="small"
-      state="secondary"
-      align="middle-left"
-	  height="hug-content"
-	  border="small solid default bottom"
-    >
+    {() => html`
 	<!--Swap data-f-id="top-nav-middle" with following content to get desired results-->
       <f-div data-f-id="top-nav-middle" gap="small" align="middle-left">
         <f-icon source="i-arrow-left"></f-icon>
@@ -772,11 +744,11 @@ Replace the logo URL to change the logo
           >Home / Project / Environment / Application / Logs
         </f-text>
       </f-div>
-    </f-div>`}
+      `}
   </Story>
 </Canvas>
 
-#### 2. search-action-buttons
+### 2. search-action-buttons
 
 <hr />
 
@@ -784,22 +756,11 @@ Replace the logo URL to change the logo
   <Story name="top-nav-middle - search-action-buttons">
     {() => {
       return html` 
-	  <f-div
-        data-f-id="top-nav"
-        padding="medium"
-        gap="small"
-        state="secondary"
-        align="middle-left"
-		height="hug-content"
-	    border="small solid default bottom"
-      >
 	  <!--Swap data-f-id="top-nav-middle" with following content to get desired results-->
         <f-div data-f-id="top-nav-middle" gap="small" align="middle-left">
-          <f-icon-button
-            icon="i-search"
-            size="small"
-            state="neutral"
-          ></f-icon-button>
+          <f-div width="240px">
+          <f-search size="small" variant="round" placeholder="Enter search keyword"></f-search>
+          </f-div>
           <f-div width="hug-content" gap="small">
             <f-button
               size="small"
@@ -826,8 +787,7 @@ Replace the logo URL to change the logo
               state="neutral"
             ></f-button>
           </f-div>
-        </f-div>
-      </f-div>`;
+        </f-div>`;
     }}
   </Story>
 </Canvas>
@@ -836,7 +796,7 @@ Replace the logo URL to change the logo
 
 <hr />
 
-#### 1. search
+### 1. search
 
 <hr />
 
@@ -865,22 +825,11 @@ Replace the logo URL to change the logo
       };
       return html`
 	  ${unsafeHTML(popoverSampleSnippet)}
-        <f-div
-          data-f-id="top-nav"
-          padding="medium"
-          gap="small"
-          state="secondary"
-          align="middle-left"
-		   height="hug-content"
-	  border="small solid default bottom"
-        >
 		<!--Swap data-f-id="top-nav-right" with following content to get desired results-->
-          <f-div data-f-id="top-nav-right" align="middle-right" gap="large">
-            <f-icon-button
-              icon="i-search"
-              size="small"
-              state="neutral"
-            ></f-icon-button>
+          <f-div data-f-id="top-nav-right" gap="large" width="hug-content">
+            <f-div width="240px">
+          <f-search size="small" variant="round" placeholder="Enter search keyword"></f-search>
+          </f-div>
             <f-div gap="small" width="hug-content">
               <f-icon-button
                 icon="i-icon"
@@ -966,13 +915,12 @@ Replace the logo URL to change the logo
               </f-div>
             </f-popover>
           </f-div>
-        </f-div>
       `;
     }}
   </Story>
 </Canvas>
 
-#### 2. action-buttons
+### 2. action-buttons
 
 <hr />
 
@@ -1001,17 +949,8 @@ Replace the logo URL to change the logo
       };
       return html`
 	  ${unsafeHTML(popoverSampleSnippet)}
-        <f-div
-          data-f-id="top-nav"
-          padding="medium"
-          gap="small"
-          state="secondary"
-          align="middle-left"
-		  height="hug-content"
-	      border="small solid default bottom"
-        >
 		<!--Swap data-f-id="top-nav-right" with following content to get desired results-->
-          <f-div data-f-id="top-nav-right" align="middle-right" gap="large">
+          <f-div data-f-id="top-nav-right" gap="large" width="hug-content">
             <f-div gap="small" width="hug-content">
               <f-button size="small" label="label" variant="curved"></f-button>
               <f-button
@@ -1106,7 +1045,6 @@ Replace the logo URL to change the logo
               </f-div>
             </f-popover>
           </f-div>
-        </f-div>
       `;
     }}
   </Story>

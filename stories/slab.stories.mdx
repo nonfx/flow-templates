@@ -1,0 +1,407 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import { html } from "lit-html";
+import { unsafeSVG } from "lit-html/directives/unsafe-svg.js";
+import { unsafeHTML } from "lit-html/directives/unsafe-html.js";
+import { useArgs } from "@storybook/client-api";
+import { ConfigUtil } from "@cldcvr/flow-core";
+import slabAnatomy from "../svgs/slab.js";
+
+<Meta
+  title="Slab"
+  parameters={{
+    docs: {
+      inlineStories: false,
+    },
+  }}
+/>
+
+# Slab
+
+<br />
+
+## Overview
+
+Slab is a template, essentially a combination of icons, text and actions, that can be used at multiple places like slide out header, menu item.
+
+<br />
+
+### Anatomy
+
+<hr />
+
+<Story
+  name="Anatomy"
+  parameters={{
+    docs: {
+      inlineStories: false,
+      iframeHeight: 140,
+    },
+  }}
+>
+  {() => html`<f-div align="middle-center">${unsafeSVG(slabAnatomy)}</f-div>`}
+</Story>
+
+<br />
+
+<f-text variant="para" size="medium">All sections shown in anatomy are swappable. Some possible suggestions are given under <a href="#swappable-items">Swappable items</a>.</f-text>
+
+<br />
+
+## Available templates
+
+<hr />
+
+<br />
+
+### single-line-slab
+
+<hr />
+
+<Canvas>
+  <Story
+    name="single-line-slab"
+  >
+    {(args) => {
+      return html`
+        <!--Start : single-line slab -->
+          <f-div width="382px" state="secondary" padding="medium" gap="medium" align="middle-left">
+            <f-div data-f-id="section-left" height="hug-content" width="hug-content">
+              <f-icon source="i-icon"></f-icon>
+            </f-div>
+             <!--Start : section-middle : This data-f-id=\"section-middle\" is swappable, Find examples in \`Swappable items\`  -->
+            <f-div data-f-id="section-middle" width="fill-container" gap="medium" align="middle-left">
+              <f-text variant="heading" size="small" weight="bold" ?inline=${true}>Heading</f-text>
+              <f-div gap="medium" width="hug-content">
+                <f-icon-button
+                  icon="i-icon"
+                  variant="block"
+                  type="packed"
+                  size="small"
+                  state="inherit"
+                ></f-icon-button>
+                <f-icon-button
+                  icon="i-icon"
+                  variant="block"
+                  type="packed"
+                  size="small"
+                  state="inherit"
+                ></f-icon-button>
+                <f-icon-button
+                  icon="i-icon"
+                  variant="block"
+                  type="packed"
+                  size="small"
+                  state="inherit"
+                ></f-icon-button>
+              </f-div>
+            </f-div>
+            <!--End : section-middle : This data-f-id=\"section-middle\" is swappable, Find examples in \`Swappable items\`  -->
+            <!--START : section-right : This data-f-id=\"section-right\" is swappable, Find examples in \`Swappable items\`  -->
+            <f-div data-f-id="section-right" width="hug-content" gap="medium">
+              <f-icon-button
+                icon="i-icon"
+                variant="block"
+                type="packed"
+                size="medium"
+                state="inherit"
+              ></f-icon-button>
+              <f-icon-button
+                icon="i-icon"
+                variant="block"
+                type="packed"
+                size="medium"
+                state="inherit"
+              ></f-icon-button>
+              <f-icon-button
+                icon="i-icon"
+                variant="block"
+                type="packed"
+                size="medium"
+                state="inherit"
+              ></f-icon-button>
+            </f-div>
+            <!--End : section-right : This data-f-id=\"section-right\" is swappable, Find examples in \`Swappable items\`  -->
+          </f-div>
+        <!--End : single-line slab -->
+      `;
+    }}
+  </Story>
+</Canvas>
+
+<br />
+
+### multi-line-slab
+
+<hr />
+
+<Canvas>
+  <Story
+    name="multi-line-slab"
+  >
+    {(args) => {
+      return html`
+        <!--Start : multi-line slab -->
+          <f-div width="382px" state="secondary" padding="medium" gap="medium">
+            <f-div data-f-id="section-left" height="hug-content" width="hug-content">
+              <f-icon source="i-icon" size="x-large"></f-icon>
+            </f-div>
+            <f-div width="fill-container" gap="x-small" direction="column">
+            <!--Start : section-middle : This data-f-id=\"section-middle\" is swappable, Find examples in \`Swappable items\`  -->
+            <f-div data-f-id="section-middle" direction="row" gap="medium" align="middle-left" width="fill-container">
+              <f-text variant="heading" size="small" weight="bold" ?inline=${true}>Heading</f-text>
+              <f-div gap="medium" width="hug-content">
+                <f-icon-button
+                  icon="i-icon"
+                  variant="block"
+                  type="packed"
+                  size="small"
+                  state="inherit"
+                ></f-icon-button>
+                <f-icon-button
+                  icon="i-icon"
+                  variant="block"
+                  type="packed"
+                  size="small"
+                  state="inherit"
+                ></f-icon-button>
+                <f-icon-button
+                  icon="i-icon"
+                  variant="block"
+                  type="packed"
+                  size="small"
+                  state="inherit"
+                ></f-icon-button>
+              </f-div>
+              </f-div>
+                <!--End : section-middle : This data-f-id=\"section-middle\" is swappable, Find examples in \`Swappable items\`  -->
+                <!--Start : section-subtext  -->
+                <f-text variant="para" size="medium" weight="regular" ?inline=${true}>Description</f-text>
+                <!--End : section-subtext -->
+            </f-div>
+            <!--START : section-right : This data-f-id=\"section-right\" is swappable, Find examples in \`Swappable items\`  -->
+            <f-div data-f-id="section-right" width="hug-content" gap="medium">
+              <f-icon-button
+                icon="i-icon"
+                variant="block"
+                type="packed"
+                size="medium"
+                state="inherit"
+              ></f-icon-button>
+              <f-icon-button
+                icon="i-icon"
+                variant="block"
+                type="packed"
+                size="medium"
+                state="inherit"
+              ></f-icon-button>
+              <f-icon-button
+                icon="i-icon"
+                variant="block"
+                type="packed"
+                size="medium"
+                state="inherit"
+              ></f-icon-button>
+            </f-div>
+            <!--End : section-right : This data-f-id=\"section-right\" is swappable, Find examples in \`Swappable items\`  -->
+          </f-div>
+        <!--End : multi-line slab -->
+      `;
+    }}
+  </Story>
+</Canvas>
+
+<br />
+
+<h2 id="swappable-items">Swappable Items</h2>
+
+Readily avaialable snippets to swap the content of sections mentioned in anatomy.
+
+### section-left
+
+<hr />
+
+### 1.icon
+
+<Canvas>
+  <Story name="icon">
+    {() => html`
+	    <!--Swap data-f-id="section-left" with following content to get desired results-->
+           <f-div data-f-id="section-left" height="hug-content" width="hug-content">
+              <f-icon source="i-icon" size="x-large"></f-icon>
+            </f-div>
+    	<!--Swap data-f-id="section-left" with following content to get desired results-->
+      `}
+  </Story>
+</Canvas>
+
+### 2.pictogram
+
+<Canvas>
+  <Story name="pictogram">
+    {() => html`
+	    <!--Swap data-f-id="section-left" with following content to get desired results-->
+           <f-div data-f-id="section-left" height="hug-content" width="hug-content">
+              <f-pictogram source="💬" variant="squircle" size="medium"></f-pictogram>
+            </f-div>
+    	<!--Swap data-f-id="section-left" with following content to get desired results-->
+      `}
+  </Story>
+</Canvas>
+
+### 3.radio
+
+<Canvas>
+  <Story name="radio">
+    {() => html`
+	    <!--Swap data-f-id="section-left" with following content to get desired results-->
+           <f-div data-f-id="section-left" height="hug-content" width="hug-content">
+              <f-radio value="selected"></f-radio>
+            </f-div>
+    	<!--Swap data-f-id="section-left" with following content to get desired results-->
+      `}
+  </Story>
+</Canvas>
+
+<br />
+
+### section-middle
+
+<hr />
+
+### 1.text + icon-button-group
+
+<Canvas>
+  <Story name="text + icon-button-group">
+    {() => html`
+	    <!--Swap data-f-id="section-middle" with following content to get desired results-->
+            <f-div data-f-id="section-middle" width="fill-container" gap="medium" align="middle-left">
+              <f-text variant="heading" size="small" weight="bold" ?inline=${true}>Heading</f-text>
+              <f-div gap="medium" width="hug-content">
+                <f-icon-button
+                  icon="i-icon"
+                  variant="block"
+                  type="packed"
+                  size="small"
+                  state="inherit"
+                ></f-icon-button>
+                <f-icon-button
+                  icon="i-icon"
+                  variant="block"
+                  type="packed"
+                  size="small"
+                  state="inherit"
+                ></f-icon-button>
+                <f-icon-button
+                  icon="i-icon"
+                  variant="block"
+                  type="packed"
+                  size="small"
+                  state="inherit"
+                ></f-icon-button>
+              </f-div>
+            </f-div>
+    	<!--Swap data-f-id="section-middle" with following content to get desired results-->`}
+  </Story>
+</Canvas>
+
+### 2.text + counter
+
+<Canvas>
+  <Story name="text + counter">
+       {() => html`
+	    <!--Swap data-f-id="section-middle" with following content to get desired results-->
+            <f-div data-f-id="section-middle" width="fill-container" gap="medium" align="middle-left">
+              <f-text variant="heading" size="small" weight="bold" ?inline=${true}>Heading</f-text>
+              <f-div gap="medium" width="hug-content">
+                <f-counter label="88"></f-counter>
+              </f-div>
+            </f-div>
+    	<!--Swap data-f-id="section-middle" with following content to get desired results-->
+`}
+  </Story>
+</Canvas>
+
+### 3.text + tag
+
+<Canvas>
+  <Story name="text + tag">
+       {() => html`
+	    <!--Swap data-f-id="section-middle" with following content to get desired results-->
+            <f-div data-f-id="section-middle" width="fill-container" gap="medium" align="middle-left">
+              <f-text variant="heading" size="small" weight="bold" ?inline=${true}>Heading</f-text>
+              <f-div gap="medium" width="hug-content">
+                <f-tag label="Label" size="small"></f-tag>
+              </f-div>
+            </f-div>
+        <!--Swap data-f-id="section-middle" with following content to get desired results-->
+        `}
+  </Story>
+</Canvas>
+
+<br />
+
+### section-right
+
+<hr />
+
+### 1.icon-button-group
+
+<Canvas>
+  <Story name="icon-button-group">
+    {() => html`
+	    <!--Swap data-f-id="section-right" with following content to get desired results-->
+            <f-div data-f-id="section-right" width="hug-content" gap="medium">
+              <f-icon-button
+                icon="i-icon"
+                variant="block"
+                type="packed"
+                size="medium"
+                state="inherit"
+              ></f-icon-button>
+              <f-icon-button
+                icon="i-icon"
+                variant="block"
+                type="packed"
+                size="medium"
+                state="inherit"
+              ></f-icon-button>
+              <f-icon-button
+                icon="i-icon"
+                variant="block"
+                type="packed"
+                size="medium"
+                state="inherit"
+              ></f-icon-button>
+            </f-div>
+        <!--Swap data-f-id="section-right" with following content to get desired results-->
+         `}
+  </Story>
+</Canvas>
+
+### 2.tag
+
+<Canvas>
+  <Story name="tag">
+    {() => html`
+	    <!--Swap data-f-id="section-right" with following content to get desired results-->
+            <f-div data-f-id="section-right" width="hug-content" gap="medium">
+                <f-tag label="Label" size="small"></f-tag>
+            </f-div>
+        <!--Swap data-f-id="section-right" with following content to get desired results-->
+         `}
+  </Story>
+</Canvas>
+
+### 3.text
+
+<Canvas>
+  <Story name="text">
+    {() => html`
+	    <!--Swap data-f-id="section-right" with following content to get desired results-->
+            <f-div data-f-id="section-right" width="hug-content" gap="medium">
+                <f-text variant="para" size="small" weight="regular" ?inline=${true}>Text</f-text>
+            </f-div>
+        <!--Swap data-f-id="section-right" with following content to get desired results-->
+         `}
+  </Story>
+</Canvas>
