@@ -1,0 +1,227 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import { html } from "lit-html";
+import { unsafeSVG } from "lit-html/directives/unsafe-svg.js";
+import { unsafeHTML } from "lit-html/directives/unsafe-html.js";
+import { useArgs } from "@storybook/client-api";
+import { ConfigUtil } from "@cldcvr/flow-core";
+
+<Meta
+  title="Side nav"
+  parameters={{
+    docs: {
+      inlineStories: false,
+    },
+  }}
+/>
+
+# Side nav
+
+<br />
+
+#### Overview
+
+<br />
+
+Top nav template sits at the top of the product/application. It provides the navigation to the core tasks a user can perform like search, manage profile, notifications, etc.
+
+<br />
+
+#### Available templates
+
+<br />
+
+###### side-nav-01
+
+<Canvas>
+  <Story
+    name="side-nav-01"
+    args={{
+      open: false,
+    }}
+    parameters={{
+      docs: {
+        inlineStories: false,
+        iframeHeight: 1000,
+      },
+    }}
+  >
+    {(args) => {
+      const [_, updateArgs] = useArgs();
+      const toggleSidebar = (e, f) => {
+        updateArgs({ open: !args.open });
+      };
+    const dummyData = [
+            { id: 0, hover: false },
+            { id: 1, hover: false },
+            { id: 2, hover: false },
+            { id: 3, hover: false },
+            { id: 4, hover: false },
+            { id: 5, hover: false },
+            { id: 6, hover: false },
+            { id: 7, hover: false },
+            { id: 8, hover: false },
+            { id: 9, hover: false },
+            { id: 10, hover: false },
+            { id: 11, hover: false },
+            { id: 12, hover: false },
+        ];
+      return html`
+      <!--Start : css snippet  -->
+      <style>
+         .sidebar-expanded {
+          width: inherit;
+        }
+        @keyframes slide-right {
+          from {
+            margin-left: -10%;
+          }
+          to {
+            margin-left: 0%;
+          }
+        }
+        @media (max-width: 600px) {
+          .sidebar-expanded {
+            width: 100% !important;
+          }
+        }
+        @media (min-width: 600px) {
+          .sidebar-expanded {
+            animation: 0.4s ease-out 0s 1 slide-right;
+          }
+        }
+        .sidebar-collapsed {
+          width: inherit;
+        }
+        @keyframes slide-left {
+          from {
+            width:320px;
+          }
+          to {
+            width:55px;
+          }
+        }
+         @media (max-width: 600px) {
+          .sidebar-collapsed {
+            display: none !important;
+          }
+        }
+        @media (min-width: 600px) {
+          .sidebar-collapsed {
+            width: inherit;
+            animation: 0.4s ease-out 0s 1 slide-left;
+          }
+        }
+        .remove-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .remove-scrollbar {
+          -ms-overflow-style: none; /* IE and Edge */
+          scrollbar-width: none; /* Firefox */
+        }
+      </style>
+      <!--End : css snippet  -->
+      
+	   <f-div height="100%" overflow="hidden">
+        <!--Start : side-nav -->
+         <f-div
+          data-f-id="side-nav"
+          align="top-center"
+          border="small solid default right"
+          variant="curved"
+          direction="column"
+          height="fill-container"
+          .width=${args.open ? "320px" : "55px"}
+          class=${args.open ? "sidebar-expanded" : "sidebar-collapsed"}
+          state="default"
+          overflow="hidden"
+        >
+        <!--Start : side-nav-top  -->
+          <f-div
+          data-f-id="side-nav-top"
+            padding="small"
+            gap="small"
+            .align=${args.open ? "middle-left" : "middle-center"}
+            height="hug-content"
+            .direction=${args.open ? "row" : "column"}
+            state="default"
+            overflow="hidden"
+          >
+             <f-div width="hug-content">
+                <f-icon-button .icon=${args.open ? "i-hamburger-close" : "i-hamburger"} size="large" type="packed" variant="block" state="inherit" @click=${toggleSidebar}>
+                </f-icon-button>
+                </f-div>
+            ${args.open? html`
+            <f-search variant="round" size="small"></f-search>
+            `:""}
+          </f-div>
+          <!--End : side-nav-top  -->
+          <!--Start : side-nav-center  -->
+          <f-div
+          data-f-id="side-nav-center"
+            padding="none"
+            direction="column"
+            align="top-left"
+            overflow="scroll"
+            class="remove-scrollbar"
+          >
+            ${dummyData.map((item, index) => {
+              return html` <f-div
+                padding="medium"
+                border="small solid default bottom"
+                .align=${args.open ? "middle-left" : "middle-center"}
+                height="hug-content"
+                selected=${item.id === 0 && "notch-right"}
+                .gap=${args.open && "medium"}
+                state=${item.id === 0 ? "secondary": "default"}
+                clickable
+              >
+                <f-pictogram
+                  size="medium"
+                  source="💬"
+                  state="default"
+                  variant="square"
+                ></f-pictogram>
+                ${args.open
+                  ? html` <f-text variant="heading" size="small" weight="medium"
+                      >Heading ${item.id}</f-text
+                    >`
+                  : null}
+              </f-div>`;
+            })}
+          </f-div>
+          <!--End : side-nav-center  -->
+          <!--Start : side-nav-bottom  -->
+          <f-div
+          data-f-id="side-nav-bottom"
+            direction="column"
+            .align=${args.open ? "bottom-left" : "top-center"}
+            height="hug-content"
+            border="small solid default top"
+          >
+            ${[0, 1, 2].map((item) => {
+              return html` <f-div
+                padding="medium"
+                .align=${args.open ? "middle-left" : "middle-center"}
+                height="hug-content"
+                gap="medium"
+                id=${item}
+                overflow="hidden"
+                state="default"
+                clickable
+              >
+              <f-div width="hug-content">
+                <f-icon-button icon="i-icon" size="large" type="packed" variant="block" state="inherit"></f-icon-button>
+                </f-div>
+                ${args.open
+                  ? html` <f-text variant="heading" size="small" weight="medium">Heading</f-text>`
+                  : null}
+              </f-div>`;
+            })}
+          </f-div>
+          <!--End : side-nav-bottom  -->
+        </f-div>
+        <!--End : side-nav -->
+       </f-div>`;
+    }}
+  </Story>
+</Canvas>

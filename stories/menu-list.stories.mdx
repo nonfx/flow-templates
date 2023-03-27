@@ -19,13 +19,15 @@ import menuListAnatomy from "../svgs/menu-list.js";
 
 <br />
 
-## Overview
+#### Overview
+
+<br />
 
 Menu List overview.
 
 <br />
 
-### Anatomy
+###### Anatomy
 
 <hr />
 
@@ -43,7 +45,7 @@ Menu List overview.
 
 <br />
 
-## Example
+#### Example
 
 <hr />
 
@@ -80,17 +82,17 @@ Menu List overview.
             <f-div direction="column">
                 ${[0,1,2,3,4].map(item=>{
                     return html`   <f-div width="320px" state="secondary" padding="medium" gap="medium" border="small solid default bottom" clickable>
-            <!--Start : section-left : This data-f-id=\"section-left\" is swappable, Find examples in \`Swappable items\`  -->
-            <f-div data-f-id="section-left" gap="medium" align="middle-left">
+            <!--Start : menu-list-left : This data-f-id=\"menu-list-left\" is swappable, Find examples in \`Swappable items\`  -->
+            <f-div data-f-id="menu-list-left" gap="medium" align="middle-left">
                 <f-icon size="small" source="i-icon"></f-icon>
               <f-text variant="para" size="medium" weight="regular">Text</f-text>
             </f-div>
-            <!--End : section-left : This data-f-id=\"section-left\" is swappable, Find examples in \`Swappable items\`  -->
-            <!--Start : section-right : This data-f-id=\"section-right\" is swappable, Find examples in \`Swappable items\`  -->
-            <f-div data-f-id="section-right" height="hug-content" width="hug-content">
+            <!--End : menu-list-left : This data-f-id=\"menu-list-left\" is swappable, Find examples in \`Swappable items\`  -->
+            <!--Start : menu-list-right : This data-f-id=\"menu-list-right\" is swappable, Find examples in \`Swappable items\`  -->
+            <f-div data-f-id="menu-list-right" height="hug-content" width="hug-content">
                 <f-icon-button icon="i-icon" variant="block" type="packed" state="inherit" size="small"></f-icon-button>
             </f-div>
-            <!--End : section-right : This data-f-id=\"section-right\" is swappable, Find examples in \`Swappable items\`  -->
+            <!--End : menu-list-right : This data-f-id=\"menu-list-right\" is swappable, Find examples in \`Swappable items\`  -->
           </f-div>`
                 })}
             </f-div>
@@ -103,35 +105,37 @@ Menu List overview.
 
 <br />
 
-## Available templates
-
-<hr />
+#### Available templates
 
 <br />
 
-### menu-list
-
-<hr />
+###### menu-list-01
 
 <Canvas>
   <Story
-    name="menu-list"
+    name="menu-list-01"
+      parameters={{
+    docs: {
+      inlineStories: false,
+      iframeHeight: 65,
+    },
+  }}
   >
     {(args) => {
       return html`
         <!--Start : menu-list -->
           <f-div width="320px" state="secondary" padding="medium" gap="medium" border="small solid default bottom" clickable>
-            <!--Start : section-left : This data-f-id=\"section-left\" is swappable, Find examples in \`Swappable items\`  -->
-            <f-div data-f-id="section-left" gap="medium" align="middle-left">
+            <!--Start : menu-list-left : This data-f-id=\"menu-list-left\" is swappable, Find examples in \`Swappable items\`  -->
+            <f-div data-f-id="menu-list-left" gap="medium" align="middle-left">
                 <f-icon size="small" source="i-icon"></f-icon>
               <f-text variant="para" size="medium" weight="regular">Text</f-text>
             </f-div>
-            <!--End : section-left : This data-f-id=\"section-left\" is swappable, Find examples in \`Swappable items\`  -->
-            <!--Start : section-right : This data-f-id=\"section-right\" is swappable, Find examples in \`Swappable items\`  -->
-            <f-div data-f-id="section-right" height="hug-content" width="hug-content">
+            <!--End : menu-list-left : This data-f-id=\"menu-list-left\" is swappable, Find examples in \`Swappable items\`  -->
+            <!--Start : menu-list-right : This data-f-id=\"menu-list-right\" is swappable, Find examples in \`Swappable items\`  -->
+            <f-div data-f-id="menu-list-right" height="hug-content" width="hug-content">
                 <f-icon-button icon="i-icon" variant="block" type="packed" state="inherit" size="small"></f-icon-button>
             </f-div>
-            <!--End : section-right : This data-f-id=\"section-right\" is swappable, Find examples in \`Swappable items\`  -->
+            <!--End : menu-list-right : This data-f-id=\"menu-list-right\" is swappable, Find examples in \`Swappable items\`  -->
           </f-div>
         <!--End : menu-list -->
       `;
@@ -139,78 +143,63 @@ Menu List overview.
   </Story>
 </Canvas>
 
-<br />
-
-## Swappable items
-
-Readily avaialable snippets to swap the content of sections mentioned in anatomy.
-
-<br />
-
-### section-left
-
-<hr />
-
-### 1.text
-
-<hr />
+###### menu-list-02
 
 <Canvas>
   <Story
-    name="text"
+    name="menu-list-02"
+      parameters={{
+    docs: {
+      inlineStories: false,
+      iframeHeight: 65,
+    },
+  }}
   >
     {(args) => {
       return html`
-            <!--Swap data-f-id="section-left" with following content to get desired results-->
-            <f-div data-f-id="section-left" gap="medium" align="middle-left">
+        <!--Start : menu-list -->
+          <f-div width="320px" state="secondary" padding="medium" gap="medium" border="small solid default bottom" clickable>
+            <!--Start : menu-list-left : This data-f-id=\"menu-list-left\" is swappable, Find examples in \`Swappable items\`  -->
+            <f-div data-f-id="menu-list-left" gap="medium" align="middle-left">
               <f-text variant="para" size="medium" weight="regular">Text</f-text>
             </f-div>
-            <!--Swap data-f-id="section-left" with following content to get desired results-->
+            <!--End : menu-list-left : This data-f-id=\"menu-list-left\" is swappable, Find examples in \`Swappable items\`  -->
+            <!--Start : menu-list-right : This data-f-id=\"menu-list-right\" is swappable, Find examples in \`Swappable items\`  -->
+            <f-div data-f-id="menu-list-right" height="hug-content" width="hug-content">
+                <f-icon-button icon="i-icon" variant="block" type="packed" state="inherit" size="small"></f-icon-button>
+            </f-div>
+            <!--End : menu-list-right : This data-f-id=\"menu-list-right\" is swappable, Find examples in \`Swappable items\`  -->
+          </f-div>
+        <!--End : menu-list -->
       `;
     }}
   </Story>
 </Canvas>
 
-### 2.icon+text
-
-<hr />
+###### menu-list-03
 
 <Canvas>
   <Story
-    name="icon+text"
+    name="menu-list-03"
+      parameters={{
+    docs: {
+      inlineStories: false,
+      iframeHeight: 65,
+    },
+  }}
   >
     {(args) => {
       return html`
-            <!--Swap data-f-id="section-left" with following content to get desired results-->
-            <f-div data-f-id="section-left" gap="medium" align="middle-left">
+        <!--Start : menu-list -->
+          <f-div width="320px" state="secondary" padding="medium" gap="medium" border="small solid default bottom" clickable>
+            <!--Start : menu-list-left : This data-f-id=\"menu-list-left\" is swappable, Find examples in \`Swappable items\`  -->
+            <f-div data-f-id="menu-list-left" gap="medium" align="middle-left">
                 <f-icon size="small" source="i-icon"></f-icon>
               <f-text variant="para" size="medium" weight="regular">Text</f-text>
             </f-div>
-            <!--Swap data-f-id="section-left" with following content to get desired results-->
-      `;
-    }}
-  </Story>
-</Canvas>
-
-### section-right
-
-<hr />
-
-### 1.icon-button
-
-<hr />
-
-<Canvas>
-  <Story
-    name="icon-button"
-  >
-    {(args) => {
-      return html`
-            <!--Swap data-f-id="section-right" with following content to get desired results-->
-                 <f-div data-f-id="section-right" height="hug-content" width="hug-content">
-                    <f-icon-button icon="i-icon" variant="block" type="packed" state="inherit" size="small"></f-icon-button>
-                </f-div>
-            <!--Swap data-f-id="section-right" with following content to get desired results-->
+            <!--End : menu-list-left : This data-f-id=\"menu-list-left\" is swappable, Find examples in \`Swappable items\`  -->
+          </f-div>
+        <!--End : menu-list -->
       `;
     }}
   </Story>

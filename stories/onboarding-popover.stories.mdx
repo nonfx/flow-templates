@@ -18,25 +18,31 @@ import { ConfigUtil } from "@cldcvr/flow-core";
 
 <br />
 
-## Overview
+#### Overview
+
+<br />
 
 Onboarding Popover templates
 
 <br />
 
-<br />
-
-## Available templates
-
-<br />
-
-### onboarding-setup-1
+#### Available templates
 
 <hr />
 
+<br />
+
+###### onboarding-setup-01
+
 <Canvas>
   <Story
-    name="onboarding-setup-1"
+    name="onboarding-setup-01"
+    parameters={{
+    docs: {
+      inlineStories: false,
+      iframeHeight: 240,
+    },
+  }}
   >
     {(args) => {
       return html`
@@ -59,15 +65,17 @@ Onboarding Popover templates
   </Story>
 </Canvas>
 
-<br />
-
-### onboarding-setup-2
-
-<hr />
+###### onboarding-setup-02
 
 <Canvas>
   <Story
-    name="onboarding-setup-2"
+    name="onboarding-setup-02"
+    parameters={{
+    docs: {
+      inlineStories: false,
+      iframeHeight: 550,
+    },
+  }}
   >
     {(args) => {
       return html`
