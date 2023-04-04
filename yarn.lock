@@ -1139,10 +1139,23 @@
   dependencies:
     "@cldcvr/flow-core" "*"
 
-"@cldcvr/flow-core@*", "@cldcvr/flow-core@latest":
+"@cldcvr/flow-core@*":
   version "1.6.8"
   resolved "https://registry.yarnpkg.com/@cldcvr/flow-core/-/flow-core-1.6.8.tgz#5c152426c7cfb492e764f61527f227908a7b9885"
   integrity sha512-TohVMR68W4DlD1+82zLfJZr+5Y13t8KekcyLKB3Ofv979ZVtjaTFzFMCd2Y5zweabQvzdk3Mtm7ZGJG1GOo1jQ==
+  dependencies:
+    "@emoji-mart/data" "^1.1.2"
+    "@floating-ui/dom" "^1.0.2"
+    axios "^0.27.2"
+    emoji-mart "^5.5.2"
+    lit "^2.2.4"
+    rxjs "^7.5.7"
+    validate-color "^2.2.1"
+
+"@cldcvr/flow-core@1.7.2":
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/@cldcvr/flow-core/-/flow-core-1.7.2.tgz#cdf85a624f49ead83b67ba6953a4a83667b1d82a"
+  integrity sha512-qT/DS3s27J8HShqY+c48ZDm3PMJliCfPkQ7u/g2g7SSAKLJ1nhs3CJmk/OdskObxDkjOLbFgIMHc02zeG//9Ow==
   dependencies:
     "@emoji-mart/data" "^1.1.2"
     "@floating-ui/dom" "^1.0.2"
