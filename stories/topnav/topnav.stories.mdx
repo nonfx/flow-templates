@@ -8,49 +8,53 @@ import { ConfigUtil } from "@cldcvr/flow-core";
 import popoverSampleSnippet from "./popoverSampleSnippet.js";
 
 <Meta
-  title="Top nav"
-  parameters={{
-    docs: {
-      inlineStories: false,
-    },
-  }}
+	title="Top nav"
+	parameters={{
+		docs: {
+			inlineStories: false
+		}
+	}}
 />
 
 # Top nav
 
 <br />
 
-## Overview
+#### Overview
+
+<br />
 
 Top nav template sits at the top of the product/application. It provides the navigation to the core tasks a user can perform like search, manage profile, notifications, etc.
 
-### Anatomy
+<br />
+
+###### Anatomy
 
 <hr />
 
 <Story
-  name="Anatomy"
-  parameters={{
-    docs: {
-      inlineStories: false,
-      iframeHeight: 140,
-    },
-  }}
+	name="Anatomy"
+	parameters={{
+		docs: {
+			inlineStories: false,
+			iframeHeight: 140
+		}
+	}}
 >
-  {() => html`<f-div>${unsafeSVG(anatomySVG)}</f-div>`}
+	{() => html`<f-div>${unsafeSVG(anatomySVG)}</f-div>`}
 </Story>
 
-All sections shown in aanatomy are swappable. Some possible suggestions are given under Swappable items.
+<br />
 
-## Available templates
+#### Available templates
 
-### top-nav-breadcrumb-search-1
+<br />
 
-<hr />
+###### top-nav-01
 
 <Canvas>
   <Story
-    name="top-nav-breadcrumb-search-1"
+    name="top-nav-01"
     args={{
       open: false,
       theme: "f-dark",
@@ -82,7 +86,7 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
 		height="hug-content"
 		border="small solid default bottom"
       >
-	  <!--Start : top-nav-left : This data-f-id=\"top-nav-left\" is swappable, Find examples in \`Swappable items\`  -->
+	  <!--Start : top-nav-left -->
         <f-div
           data-f-id="top-nav-left"
           width="hug-content"
@@ -90,25 +94,21 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
         >
           <f-icon source="p-cloudcover-dark" size="large"></f-icon>
         </f-div>
-	  <!--End : top-nav-left : This data-f-id=\"top-nav-left\" is swappable, Find examples in \`Swappable items\`  -->
-	  
-	  <!--Start : top-nav-middle : This data-f-id=\"top-nav-middle\" is swappable, Find examples in \`Swappable items\`  -->
+	  <!--End : top-nav-left -->
+	  <!--Start : top-nav-middle -->
         <f-div data-f-id="top-nav-middle" gap="small" align="middle-left">
           <f-icon source="i-arrow-left"></f-icon>
           <f-text size="small"
             >Home / Project / Environment / Application / Logs
           </f-text>
         </f-div>
-		<!--End : top-nav-middle : This data-f-id=\"top-nav-right\" is swappable, Find examples in \`Swappable items\`  -->
-		
-		<!--START : top-nav-right : This data-f-id=\"top-nav-right\" is swappable, Find examples in \`Swappable items\`  -->
-        <f-div data-f-id="top-nav-right" align="middle-right" gap="large">
-          <f-icon-button
-            icon="i-search"
-            size="small"
-            state="neutral"
-          ></f-icon-button>
-          <f-div gap="small" width="hug-content">
+		<!--End : top-nav-middle -->
+		<!--START : top-nav-right -->
+        <f-div data-f-id="top-nav-right" gap="large" width="hug-content">
+          <f-div width="240px">
+          <f-search size="small" variant="round" placeholder="Enter search keyword"></f-search>
+          </f-div>
+            <f-div gap="small" width="hug-content">
             <f-icon-button
               icon="i-icon"
               variant="round"
@@ -191,19 +191,17 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
             </f-div>
           </f-popover>
         </f-div>
-		<!--END : top-nav-right : This data-f-id=\"top-nav-right\" is swappable, Find examples in \`Swappable items\`  -->
+		<!--END : top-nav-right -->
       </f-div>`;
     }}
   </Story>
 </Canvas>
 
-### top-nav-search-action-buttons-1
-
-<hr />
+###### top-nav-02
 
 <Canvas>
   <Story
-    name="top-nav-search-action-buttons-1"
+    name="top-nav-02"
     args={{
       open: false,
       theme: "f-dark",
@@ -235,7 +233,7 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
 		height="hug-content"
 		border="small solid default bottom"
       >
-	  <!--This data-f-id=\"top-nav-left\" is swappable, Find examples in \`Swappable items\`  -->
+	  <!--Start : top-nav-left -->
         <f-div
           data-f-id="top-nav-left"
           width="hug-content"
@@ -243,13 +241,12 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
         >
           <f-icon source="p-cloudcover-dark" size="large"></f-icon>
         </f-div>
-		<!--This data-f-id=\"top-nav-middle\" is swappable, Find examples in \`Swappable items\`  -->
-        <f-div data-f-id="top-nav-middle" gap="small" align="middle-left">
-          <f-icon-button
-            icon="i-search"
-            size="small"
-            state="neutral"
-          ></f-icon-button>
+       <!--End : top-nav-left -->
+		 <!--Start : top-nav-middle -->
+        <f-div data-f-id="top-nav-middle" gap="small" align="middle-left" >
+          <f-div width="240px">
+          <f-search size="small" variant="round" placeholder="Enter search keyword"></f-search>
+          </f-div>
           <f-div width="hug-content" gap="small">
             <f-button
               size="small"
@@ -277,8 +274,9 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
             ></f-button>
           </f-div>
         </f-div>
-		<!--This data-f-id=\"top-nav-right\" is swappable, Find examples in \`Swappable items\`  -->
-        <f-div data-f-id="top-nav-right" align="middle-right" gap="large">
+         <!--End : top-nav-middle -->
+		 <!--Start : top-nav-right -->
+        <f-div data-f-id="top-nav-right" gap="large" width="hug-content">
           <f-div gap="small" width="hug-content">
             <f-icon-button
               icon="i-icon"
@@ -362,18 +360,17 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
             </f-div>
           </f-popover>
         </f-div>
+         <!--Start : top-nav-right -->
       </f-div>`;
     }}
   </Story>
 </Canvas>
 
-### top-nav-search-action-buttons-2
-
-<hr />
+###### top-nav-03
 
 <Canvas>
   <Story
-    name="top-nav-search-action-buttons-2"
+    name="top-nav-03"
     args={{
       open: false,
       theme: "f-dark",
@@ -405,7 +402,7 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
 		height="hug-content"
 		border="small solid default bottom"
       >
-	  <!--This data-f-id=\"top-nav-left\" is swappable, Find examples in \`Swappable items\`  -->
+	   <!--Start : top-nav-left -->
         <f-div
           data-f-id="top-nav-left"
           width="hug-content"
@@ -413,16 +410,16 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
         >
           <f-icon source="p-cloudcover-dark" size="large"></f-icon>
         </f-div>
-		<!--This data-f-id=\"top-nav-middle\" is swappable, Find examples in \`Swappable items\`  -->
+         <!--End : top-nav-left -->
+		 <!--Start : top-nav-middle -->
         <f-div data-f-id="top-nav-middle" gap="small" align="middle-left">
-          <f-icon-button
-            icon="i-search"
-            size="small"
-            state="neutral"
-          ></f-icon-button>
+          <f-div width="320px">
+          <f-search size="small" variant="round" placeholder="Enter search keyword"></f-search>
+          </f-div>
         </f-div>
-		<!--This data-f-id=\"top-nav-right\" is swappable, Find examples in \`Swappable items\`  -->
-        <f-div data-f-id="top-nav-right" align="middle-right" gap="large">
+         <!--End : top-nav-middle -->
+		 <!--Start : top-nav-right -->
+        <f-div data-f-id="top-nav-right" gap="large" width="hug-content">
           <f-div gap="small" width="hug-content">
             <f-button size="small" label="label" variant="curved"></f-button>
             <f-button
@@ -515,18 +512,17 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
             </f-div>
           </f-popover>
         </f-div>
+         <!--End : top-nav-right -->
       </f-div>`;
     }}
   </Story>
 </Canvas>
 
-### top-nav-action-buttons-search-1
-
-<hr />
+###### top-nav-04
 
 <Canvas>
   <Story
-    name="top-nav-action-buttons-search-1"
+    name="top-nav-04"
     args={{
       open: false,
       theme: "f-dark",
@@ -558,7 +554,7 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
 		height="hug-content"
 		border="small solid default bottom"
       >
-	  <!--This data-f-id=\"top-nav-left\" is swappable, Find examples in \`Swappable items\`  -->
+	   <!--Start : top-nav-left -->
         <f-div
           width="hug-content"
           align="middle-center"
@@ -566,7 +562,8 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
         >
           <f-icon source="p-cloudcover-dark" size="large"></f-icon>
         </f-div>
-		<!--This data-f-id=\"top-nav-middle\" is swappable, Find examples in \`Swappable items\`  -->
+         <!--End : top-nav-left -->
+		 <!--Start : top-nav-middle -->
         <f-div data-f-id="top-nav-middle" gap="small" align="middle-left">
           <f-div width="hug-content" gap="small">
             <f-button
@@ -595,13 +592,12 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
             ></f-button>
           </f-div>
         </f-div>
-		<!--This data-f-id=\"top-nav-right\" is swappable, Find examples in \`Swappable items\`  -->
-        <f-div data-f-id="top-nav-right" align="middle-right" gap="large">
-          <f-icon-button
-            icon="i-search"
-            size="small"
-            state="neutral"
-          ></f-icon-button>
+         <!--End : top-nav-middle -->
+		 <!--Start : top-nav-right -->
+        <f-div data-f-id="top-nav-right" gap="large" width="hug-content">
+            <f-div width="240px">
+          <f-search size="small" variant="round" placeholder="Enter search keyword"></f-search>
+          </f-div>
           <f-div gap="small" width="hug-content">
             <f-icon-button
               icon="i-icon"
@@ -685,429 +681,8 @@ All sections shown in aanatomy are swappable. Some possible suggestions are give
             </f-div>
           </f-popover>
         </f-div>
+        <!--End : top-nav-right -->
       </f-div>`;
-    }}
-  </Story>
-</Canvas>
-
-## Swappable items
-
-Readily avaialable snippets to swap the content of sections mentioned in anatomy.
-
-### top-nav-left
-
-<hr />
-
-#### 1.logo
-
-<hr />
-
-<Canvas>
-  <Story name="top-nav-left - logo">
-    {() => html`<f-div
-      data-f-id="top-nav"
-      padding="medium"
-      gap="small"
-      state="secondary"
-      align="middle-left"
-	  height="hug-content"
-	  border="small solid default bottom"
-    >
-	<!--Swap data-f-id="top-nav-left" with following content to get desired results-->
-      <f-div data-f-id="top-nav-left" width="hug-content" align="middle-center">
-        <f-icon source="p-codepipes" size="large"></f-icon>
-      </f-div>
-    </f-div> `}
-  </Story>
-</Canvas>
-
-Replace the logo URL to change the logo
-
-#### 2.home
-
-<hr />
-
-<Canvas>
-  <Story name="top-nav-left - home">
-    {() => html` <f-div
-      data-f-id="top-nav"
-      padding="medium"
-      gap="small"
-      state="secondary"
-      align="middle-left"
-	  height="hug-content"
-	  border="small solid default bottom"
-    >
-	<!--Swap data-f-id="top-nav-left" with following content to get desired results-->
-      <f-div data-f-id="top-nav-left" width="hug-content" align="middle-center">
-        <f-icon source="i-home" size="large"></f-icon>
-      </f-div>
-    </f-div>`}
-  </Story>
-</Canvas>
-
-### top-nav-middle
-
-<hr />
-
-#### 1. breadcrumb
-
-<hr />
-
-<Canvas>
-  <Story name="top-nav-middle - breadcrumb">
-    {() => html` <f-div
-      data-f-id="top-nav"
-      padding="medium"
-      gap="small"
-      state="secondary"
-      align="middle-left"
-	  height="hug-content"
-	  border="small solid default bottom"
-    >
-	<!--Swap data-f-id="top-nav-middle" with following content to get desired results-->
-      <f-div data-f-id="top-nav-middle" gap="small" align="middle-left">
-        <f-icon source="i-arrow-left"></f-icon>
-        <f-text size="small"
-          >Home / Project / Environment / Application / Logs
-        </f-text>
-      </f-div>
-    </f-div>`}
-  </Story>
-</Canvas>
-
-#### 2. search-action-buttons
-
-<hr />
-
-<Canvas>
-  <Story name="top-nav-middle - search-action-buttons">
-    {() => {
-      return html` 
-	  <f-div
-        data-f-id="top-nav"
-        padding="medium"
-        gap="small"
-        state="secondary"
-        align="middle-left"
-		height="hug-content"
-	    border="small solid default bottom"
-      >
-	  <!--Swap data-f-id="top-nav-middle" with following content to get desired results-->
-        <f-div data-f-id="top-nav-middle" gap="small" align="middle-left">
-          <f-icon-button
-            icon="i-search"
-            size="small"
-            state="neutral"
-          ></f-icon-button>
-          <f-div width="hug-content" gap="small">
-            <f-button
-              size="small"
-              label="label"
-              category="transparent"
-              state="neutral"
-            ></f-button>
-            <f-button
-              size="small"
-              label="label"
-              category="transparent"
-              state="neutral"
-            ></f-button>
-            <f-button
-              size="small"
-              label="label"
-              category="transparent"
-              state="neutral"
-            ></f-button>
-            <f-button
-              size="small"
-              label="label"
-              category="transparent"
-              state="neutral"
-            ></f-button>
-          </f-div>
-        </f-div>
-      </f-div>`;
-    }}
-  </Story>
-</Canvas>
-
-### top-nav-right
-
-<hr />
-
-#### 1. search
-
-<hr />
-
-<Canvas>
-  <Story
-    name="top-nav-right - search"
-    args={{
-      open: false,
-      theme: "f-dark",
-    }}
-    parameters={{
-      docs: {
-        inlineStories: false,
-        iframeHeight: 250,
-      },
-    }}
-  >
-    {(args) => {
-      const [_, updateArgs] = useArgs();
-      const toggle = (e, f) => {
-        updateArgs({ open: !args.open });
-      };
-      const setTheme = (theme) => {
-        ConfigUtil.setConfig({ theme });
-        updateArgs({ ...args, theme });
-      };
-      return html`
-	  ${unsafeHTML(popoverSampleSnippet)}
-        <f-div
-          data-f-id="top-nav"
-          padding="medium"
-          gap="small"
-          state="secondary"
-          align="middle-left"
-		   height="hug-content"
-	  border="small solid default bottom"
-        >
-		<!--Swap data-f-id="top-nav-right" with following content to get desired results-->
-          <f-div data-f-id="top-nav-right" align="middle-right" gap="large">
-            <f-icon-button
-              icon="i-search"
-              size="small"
-              state="neutral"
-            ></f-icon-button>
-            <f-div gap="small" width="hug-content">
-              <f-icon-button
-                icon="i-icon"
-                variant="round"
-                size="large"
-                state="neutral"
-                type="packed"
-              ></f-icon-button>
-              <f-icon-button
-                icon="i-icon"
-                variant="round"
-                size="large"
-                state="neutral"
-                type="packed"
-              ></f-icon-button>
-              <f-icon-button
-                icon="i-icon"
-                variant="round"
-                size="large"
-                state="neutral"
-                type="packed"
-              ></f-icon-button>
-            </f-div>
-            <f-icon-button
-              icon="i-user"
-              size="small"
-              state="neutral"
-              id="profile-popover"
-              @click=${toggle}
-            ></f-icon-button>
-            <f-popover
-              size="small"
-              .open=${args.open}
-              @overlay-click=${toggle}
-              target="#profile-popover"
-            >
-              <f-div direction="column" state="secondary">
-                <f-div
-                  padding="medium"
-                  gap="small"
-                  border="small solid default bottom"
-                >
-                  <f-pictogram source="i-user" variant="circle"></f-pictogram>
-                  <f-div direction="column">
-                    <f-text size="x-small" state="secondary"
-                      >Logged in as</f-text
-                    >
-                    <f-text>no@email.com</f-text>
-                  </f-div>
-                  <f-div align="top-right">
-                    <f-icon source="i-edit" state="secondary"></f-icon>
-                  </f-div>
-                </f-div>
-                <f-div
-                  padding="medium"
-                  gap="small"
-                  clickable
-                  state="default"
-                  .selected=${args.theme === "f-dark" ? "background" : "none"}
-                  @click=${() => setTheme("f-dark")}
-                >
-                  <f-text>Dark theme</f-text>
-                  ${args.theme === "f-dark"
-                    ? html`<f-icon source="i-tick" state="success"></f-icon>`
-                    : ""}
-                </f-div>
-                <f-div
-                  padding="medium"
-                  gap="small"
-                  border="small solid default bottom"
-                  clickable
-                  .selected=${args.theme === "f-light" ? "background" : "none"}
-                  @click=${() => setTheme("f-light")}
-                >
-                  <f-text>Light theme</f-text>
-                  ${args.theme === "f-light"
-                    ? html`<f-icon source="i-tick" state="success"></f-icon>`
-                    : ""}
-                </f-div>
-                <f-div padding="medium" gap="small" clickable>
-                  <f-text>Logout</f-text>
-                </f-div>
-              </f-div>
-            </f-popover>
-          </f-div>
-        </f-div>
-      `;
-    }}
-  </Story>
-</Canvas>
-
-#### 2. action-buttons
-
-<hr />
-
-<Canvas>
-  <Story
-    name="top-nav-right - action-buttons"
-    args={{
-      open: false,
-      theme: "f-dark",
-    }}
-    parameters={{
-      docs: {
-        inlineStories: false,
-        iframeHeight: 250,
-      },
-    }}
-  >
-    {(args) => {
-      const [_, updateArgs] = useArgs();
-      const toggle = (e, f) => {
-        updateArgs({ open: !args.open });
-      };
-      const setTheme = (theme) => {
-        ConfigUtil.setConfig({ theme });
-        updateArgs({ ...args, theme });
-      };
-      return html`
-	  ${unsafeHTML(popoverSampleSnippet)}
-        <f-div
-          data-f-id="top-nav"
-          padding="medium"
-          gap="small"
-          state="secondary"
-          align="middle-left"
-		  height="hug-content"
-	      border="small solid default bottom"
-        >
-		<!--Swap data-f-id="top-nav-right" with following content to get desired results-->
-          <f-div data-f-id="top-nav-right" align="middle-right" gap="large">
-            <f-div gap="small" width="hug-content">
-              <f-button size="small" label="label" variant="curved"></f-button>
-              <f-button
-                size="small"
-                label="label"
-                variant="curved"
-                state="neutral"
-              ></f-button>
-            </f-div>
-            <f-div gap="small" width="hug-content">
-              <f-icon-button
-                icon="i-icon"
-                variant="round"
-                size="large"
-                state="neutral"
-                type="packed"
-              ></f-icon-button>
-              <f-icon-button
-                icon="i-icon"
-                variant="round"
-                size="large"
-                state="neutral"
-                type="packed"
-              ></f-icon-button>
-              <f-icon-button
-                icon="i-icon"
-                variant="round"
-                size="large"
-                state="neutral"
-                type="packed"
-              ></f-icon-button>
-            </f-div>
-            <f-icon-button
-              icon="i-user"
-              size="small"
-              state="neutral"
-              id="profile-popover"
-              @click=${toggle}
-            ></f-icon-button>
-            <f-popover
-              size="small"
-              .open=${args.open}
-              target="#profile-popover"
-              @overlay-click=${toggle}
-            >
-              <f-div direction="column" state="secondary">
-                <f-div
-                  padding="medium"
-                  gap="small"
-                  border="small solid default bottom"
-                >
-                  <f-pictogram source="i-user" variant="circle"></f-pictogram>
-                  <f-div direction="column">
-                    <f-text size="x-small" state="secondary"
-                      >Logged in as</f-text
-                    >
-                    <f-text>no@email.com</f-text>
-                  </f-div>
-                  <f-div align="top-right">
-                    <f-icon source="i-edit" state="secondary"></f-icon>
-                  </f-div>
-                </f-div>
-                <f-div
-                  padding="medium"
-                  gap="small"
-                  clickable
-                  state="default"
-                  .selected=${args.theme === "f-dark" ? "background" : "none"}
-                  @click=${() => setTheme("f-dark")}
-                >
-                  <f-text>Dark theme</f-text>
-                  ${args.theme === "f-dark"
-                    ? html`<f-icon source="i-tick" state="success"></f-icon>`
-                    : ""}
-                </f-div>
-                <f-div
-                  padding="medium"
-                  gap="small"
-                  border="small solid default bottom"
-                  clickable
-                  .selected=${args.theme === "f-light" ? "background" : "none"}
-                  @click=${() => setTheme("f-light")}
-                >
-                  <f-text>Light theme</f-text>
-                  ${args.theme === "f-light"
-                    ? html`<f-icon source="i-tick" state="success"></f-icon>`
-                    : ""}
-                </f-div>
-                <f-div padding="medium" gap="small" clickable>
-                  <f-text>Logout</f-text>
-                </f-div>
-              </f-div>
-            </f-popover>
-          </f-div>
-        </f-div>
-      `;
     }}
   </Story>
 </Canvas>
