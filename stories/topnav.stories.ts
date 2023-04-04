@@ -3,7 +3,7 @@ import { ConfigUtil } from "@cldcvr/flow-core";
 import { defineComponent } from "vue";
 
 export default {
-	title: "Vue Top Nav",
+	title: "Top Nav",
 	parameters: {
 		docs: {
 			inlineStories: false,
@@ -67,21 +67,21 @@ export const TopNav01 = () =>
               variant="round"
               size="large"
               state="neutral"
-              type="packed"
+              category="packed"
             ></f-icon-button>
             <f-icon-button
               icon="i-icon"
               variant="round"
               size="large"
               state="neutral"
-              type="packed"
+              category="packed"
             ></f-icon-button>
             <f-icon-button
               icon="i-icon"
               variant="round"
               size="large"
               state="neutral"
-              type="packed"
+              category="packed"
             ></f-icon-button>
           </f-div>
           <f-icon-button
@@ -222,21 +222,21 @@ export const TopNav02 = () =>
               variant="round"
               size="large"
               state="neutral"
-              type="packed"
+              category="packed"
             ></f-icon-button>
             <f-icon-button
               icon="i-icon"
               variant="round"
               size="large"
               state="neutral"
-              type="packed"
+              category="packed"
             ></f-icon-button>
             <f-icon-button
               icon="i-icon"
               variant="round"
               size="large"
               state="neutral"
-              type="packed"
+              category="packed"
             ></f-icon-button>
           </f-div>
           <f-icon-button
@@ -359,21 +359,21 @@ export const TopNav03 = () =>
               variant="round"
               size="large"
               state="neutral"
-              type="packed"
+              category="packed"
             ></f-icon-button>
             <f-icon-button
               icon="i-icon"
               variant="round"
               size="large"
               state="neutral"
-              type="packed"
+              category="packed"
             ></f-icon-button>
             <f-icon-button
               icon="i-icon"
               variant="round"
               size="large"
               state="neutral"
-              type="packed"
+              category="packed"
             ></f-icon-button>
           </f-div>
           <f-icon-button
@@ -514,21 +514,21 @@ export const TopNav04 = () =>
               variant="round"
               size="large"
               state="neutral"
-              type="packed"
+              category="packed"
             ></f-icon-button>
             <f-icon-button
               icon="i-icon"
               variant="round"
               size="large"
               state="neutral"
-              type="packed"
+              category="packed"
             ></f-icon-button>
             <f-icon-button
               icon="i-icon"
               variant="round"
               size="large"
               state="neutral"
-              type="packed"
+              category="packed"
             ></f-icon-button>
           </f-div>
           <f-icon-button

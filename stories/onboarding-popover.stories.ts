@@ -2,7 +2,7 @@
 import { defineComponent } from "vue";
 
 export default {
-	title: "Vue Onboarding Popover",
+	title: "Onboarding Popover",
 	parameters: {
 		docs: {
 			inlineStories: false,
@@ -68,7 +68,7 @@ export const OnboardingSetup02 = () =>
 									<f-icon-button
 										icon="i-chevron-right"
 										variant="block"
-										type="packed"
+										category="packed"
 										size="small"
 										state="inherit"
 									></f-icon-button>

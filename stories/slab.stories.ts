@@ -2,7 +2,7 @@
 import { defineComponent } from "vue";
 
 export default {
-	title: "Vue Slab",
+	title: "Slab",
 	parameters: {
 		docs: {
 			inlineStories: false,
@@ -28,21 +28,21 @@ export const SingleLineSlab01 = () =>
                 <f-icon-button
                   icon="i-icon"
                   variant="block"
-                  type="packed"
+                  category="packed"
                   size="small"
                   state="inherit"
                 ></f-icon-button>
                 <f-icon-button
                   icon="i-icon"
                   variant="block"
-                  type="packed"
+                  category="packed"
                   size="small"
                   state="inherit"
                 ></f-icon-button>
                 <f-icon-button
                   icon="i-icon"
                   variant="block"
-                  type="packed"
+                  category="packed"
                   size="small"
                   state="inherit"
                 ></f-icon-button>
@@ -54,21 +54,21 @@ export const SingleLineSlab01 = () =>
               <f-icon-button
                 icon="i-icon"
                 variant="block"
-                type="packed"
+                category="packed"
                 size="medium"
                 state="inherit"
               ></f-icon-button>
               <f-icon-button
                 icon="i-icon"
                 variant="block"
-                type="packed"
+                category="packed"
                 size="medium"
                 state="inherit"
               ></f-icon-button>
               <f-icon-button
                 icon="i-icon"
                 variant="block"
-                type="packed"
+                category="packed"
                 size="medium"
                 state="inherit"
               ></f-icon-button>
@@ -101,21 +101,21 @@ export const SingleLineSlab02 = () =>
               <f-icon-button
                 icon="i-icon"
                 variant="block"
-                type="packed"
+                category="packed"
                 size="medium"
                 state="inherit"
               ></f-icon-button>
               <f-icon-button
                 icon="i-icon"
                 variant="block"
-                type="packed"
+                category="packed"
                 size="medium"
                 state="inherit"
               ></f-icon-button>
               <f-icon-button
                 icon="i-icon"
                 variant="block"
-                type="packed"
+                category="packed"
                 size="medium"
                 state="inherit"
               ></f-icon-button>
@@ -143,21 +143,21 @@ export const SingleLineSlab03 = () =>
                 <f-icon-button
                   icon="i-icon"
                   variant="block"
-                  type="packed"
+                  category="packed"
                   size="small"
                   state="inherit"
                 ></f-icon-button>
                 <f-icon-button
                   icon="i-icon"
                   variant="block"
-                  type="packed"
+                  category="packed"
                   size="small"
                   state="inherit"
                 ></f-icon-button>
                 <f-icon-button
                   icon="i-icon"
                   variant="block"
-                  type="packed"
+                  category="packed"
                   size="small"
                   state="inherit"
                 ></f-icon-button>
@@ -217,21 +217,21 @@ export const MultiLineSlab01 = () =>
                 <f-icon-button
                   icon="i-icon"
                   variant="block"
-                  type="packed"
+                  category="packed"
                   size="small"
                   state="inherit"
                 ></f-icon-button>
                 <f-icon-button
                   icon="i-icon"
                   variant="block"
-                  type="packed"
+                  category="packed"
                   size="small"
                   state="inherit"
                 ></f-icon-button>
                 <f-icon-button
                   icon="i-icon"
                   variant="block"
-                  type="packed"
+                  category="packed"
                   size="small"
                   state="inherit"
                 ></f-icon-button>
@@ -247,21 +247,21 @@ export const MultiLineSlab01 = () =>
               <f-icon-button
                 icon="i-icon"
                 variant="block"
-                type="packed"
+                category="packed"
                 size="medium"
                 state="inherit"
               ></f-icon-button>
               <f-icon-button
                 icon="i-icon"
                 variant="block"
-                type="packed"
+                category="packed"
                 size="medium"
                 state="inherit"
               ></f-icon-button>
               <f-icon-button
                 icon="i-icon"
                 variant="block"
-                type="packed"
+                category="packed"
                 size="medium"
                 state="inherit"
               ></f-icon-button>
@@ -300,21 +300,21 @@ export const MultiLineSlab02 = () =>
               <f-icon-button
                 icon="i-icon"
                 variant="block"
-                type="packed"
+                category="packed"
                 size="medium"
                 state="inherit"
               ></f-icon-button>
               <f-icon-button
                 icon="i-icon"
                 variant="block"
-                type="packed"
+                category="packed"
                 size="medium"
                 state="inherit"
               ></f-icon-button>
               <f-icon-button
                 icon="i-icon"
                 variant="block"
-                type="packed"
+                category="packed"
                 size="medium"
                 state="inherit"
               ></f-icon-button>
@@ -353,21 +353,21 @@ export const MultiLineSlab03 = () =>
               <f-icon-button
                 icon="i-icon"
                 variant="block"
-                type="packed"
+                category="packed"
                 size="medium"
                 state="inherit"
               ></f-icon-button>
               <f-icon-button
                 icon="i-icon"
                 variant="block"
-                type="packed"
+                category="packed"
                 size="medium"
                 state="inherit"
               ></f-icon-button>
               <f-icon-button
                 icon="i-icon"
                 variant="block"
-                type="packed"
+                category="packed"
                 size="medium"
                 state="inherit"
               ></f-icon-button>

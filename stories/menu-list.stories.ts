@@ -2,7 +2,7 @@
 import { defineComponent } from "vue";
 
 export default {
-	title: "Vue Menu List",
+	title: "Menu List",
 	parameters: {
 		docs: {
 			inlineStories: false,
@@ -28,7 +28,7 @@ export const Example = () =>
             id="more"
             icon="i-more"
             variant="block"
-            type="packed"
+            category="packed"
             @click="toggle"
           ></f-icon-button>
           <f-popover target="#more" :open="open" @overlay-click="toggle" size="small">
@@ -39,7 +39,7 @@ export const Example = () =>
     			<f-text variant="para" size="medium" weight="regular">Text</f-text>
     			</f-div>
     				<f-div data-f-id="menu-list-section-right" height="hug-content" width="hug-content">
-    				<f-icon-button icon="i-icon" variant="block" type="packed" state="inherit" size="small"></f-icon-button>
+    				<f-icon-button icon="i-icon" variant="block" category="packed" state="inherit" size="small"></f-icon-button>
     			</f-div>
     		</f-div>
             </f-div>
@@ -47,71 +47,71 @@ export const Example = () =>
         </f-div>`
 	});
 
-export const text = () =>
+export const MenuList01 = () =>
 	defineComponent({
-		template: /*html*/ `<f-div padding="large" align="middle-center" direction="column">
+		template: /*html*/ `<f-div padding="large"  direction="column">
         <!--Start : menu-list -->
           <f-div width="220px" state="secondary" padding="medium" gap="medium" border="small solid default bottom" clickable>
-            <!--Start : menu-list-section-left : This data-f-id=\"menu-list-section-left\" is swappable, Find examples in \`Swappable items\`  -->
+            <!--Start : menu-list-section-left -->
             <f-div data-f-id="menu-list-section-left" gap="medium" align="middle-left">
               <f-text variant="para" size="medium" weight="regular">Text</f-text>
             </f-div>
-            <!--End : menu-list-section-left : This data-f-id=\"menu-list-section-left\" is swappable, Find examples in \`Swappable items\`  -->
+            <!--End : menu-list-section-left -->
           </f-div>
         <!--End : menu-list -->
         </f-div>`
 	});
 
-export const icon_text = () =>
+export const MenuList02 = () =>
 	defineComponent({
-		template: /*html*/ `<f-div padding="large" align="middle-center">
+		template: /*html*/ `<f-div padding="large">
         <!--Start : menu-list -->
           <f-div width="220px" state="secondary" padding="medium" gap="medium" border="small solid default bottom" clickable>
-            <!--Start : menu-list-section-left : This data-f-id=\"menu-list-section-left\" is swappable, Find examples in \`Swappable items\`  -->
+            <!--Start : menu-list-section-left -->
             <f-div data-f-id="menu-list-section-left" gap="medium" align="middle-left">
                 <f-icon size="small" source="i-icon"></f-icon>
               <f-text variant="para" size="medium" weight="regular">Text</f-text>
             </f-div>
-            <!--End : menu-list-section-left : This data-f-id=\"menu-list-section-left\" is swappable, Find examples in \`Swappable items\`  -->
+            <!--End : menu-list-section-left -->
           </f-div>
         <!--End : menu-list -->
         </f-div>`
 	});
-export const text_icon_button = () =>
+export const MenuList03 = () =>
 	defineComponent({
-		template: /*html*/ `   <f-div padding="large" align="middle-center">
+		template: /*html*/ `   <f-div padding="large">
         <!--Start : menu-list -->
           <f-div width="220px" state="secondary" padding="medium" gap="medium" border="small solid default bottom" clickable>
-            <!--Start : menu-list-section-left : This data-f-id=\"menu-list-section-left\" is swappable, Find examples in \`Swappable items\`  -->
+            <!--Start : menu-list-section-left -->
             <f-div data-f-id="menu-list-section-left" gap="medium" align="middle-left">
               <f-text variant="para" size="medium" weight="regular">Text</f-text>
             </f-div>
-            <!--End : menu-list-section-left : This data-f-id=\"menu-list-section-left\" is swappable, Find examples in \`Swappable items\`  -->
-            <!--Start : menu-list-section-right : This data-f-id=\"menu-list-section-right\" is swappable, Find examples in \`Swappable items\`  -->
+            <!--End : menu-list-section-left -->
+            <!--Start : menu-list-section-right-->
             <f-div data-f-id="menu-list-section-right" height="hug-content" width="hug-content">
-                <f-icon-button icon="i-icon" variant="block" type="packed" state="inherit" size="small"></f-icon-button>
+                <f-icon-button icon="i-icon" variant="block" category="packed" state="inherit" size="small"></f-icon-button>
             </f-div>
-            <!--End : menu-list-section-right : This data-f-id=\"menu-list-section-right\" is swappable, Find examples in \`Swappable items\`  -->
+            <!--End : menu-list-section-right-->
           </f-div>
         <!--End : menu-list -->
         </f-div>`
 	});
-export const icon_text_icon_button = () =>
+export const MenuList04 = () =>
 	defineComponent({
-		template: /*html*/ `   <f-div padding="large" align="middle-center">
+		template: /*html*/ `   <f-div padding="large">
         <!--Start : menu-list -->
           <f-div width="220px" state="secondary" padding="medium" gap="medium" border="small solid default bottom" clickable>
-            <!--Start : menu-list-section-left : This data-f-id=\"menu-list-section-left\" is swappable, Find examples in \`Swappable items\`  -->
+            <!--Start : menu-list-section-left -->
             <f-div data-f-id="menu-list-section-left" gap="medium" align="middle-left">
                 <f-icon size="small" source="i-icon"></f-icon>
               <f-text variant="para" size="medium" weight="regular">Text</f-text>
             </f-div>
-            <!--End : menu-list-section-left : This data-f-id=\"menu-list-section-left\" is swappable, Find examples in \`Swappable items\`  -->
-            <!--Start : menu-list-section-right : This data-f-id=\"menu-list-section-right\" is swappable, Find examples in \`Swappable items\`  -->
+            <!--End : menu-list-section-left -->
+            <!--Start : menu-list-section-right-->
             <f-div data-f-id="menu-list-section-right" height="hug-content" width="hug-content">
-                <f-icon-button icon="i-icon" variant="block" type="packed" state="inherit" size="small"></f-icon-button>
+                <f-icon-button icon="i-icon" variant="block" category="packed" state="inherit" size="small"></f-icon-button>
             </f-div>
-            <!--End : menu-list-section-right : This data-f-id=\"menu-list-section-right\" is swappable, Find examples in \`Swappable items\`  -->
+            <!--End : menu-list-section-right-->
           </f-div>
         <!--End : menu-list -->
         </f-div>`
