@@ -6,39 +6,46 @@ import { useArgs } from "@storybook/client-api";
 import { ConfigUtil } from "@cldcvr/flow-core";
 
 <Meta
-  title="Onboarding Popover"
-  parameters={{
-    docs: {
-      inlineStories: false,
-    },
-  }}
+	title="Onboarding Popover"
+	parameters={{
+		docs: {
+			inlineStories: false
+		}
+	}}
 />
 
 # Onboarding Popover
 
 <br />
 
-## Overview
+#### Overview
+
+<br />
 
 Onboarding Popover templates
 
 <br />
 
-<br />
-
-## Available templates
-
-### onboarding
+#### Available templates
 
 <hr />
 
+<br />
+
+###### onboarding-setup-01
+
 <Canvas>
   <Story
-    name="onboarding"
+    name="onboarding-setup-01"
+    parameters={{
+    docs: {
+      inlineStories: false,
+      iframeHeight: 240,
+    },
+  }}
   >
     {(args) => {
       return html`
-        <f-div padding="large" align="middle-center" direction="column">
         <!--Start : onboarding-popover -->
           <f-div width="320px" state="secondary" padding="large" gap="large" direction="column">
             <f-text variant="heading" size="medium" weight="bold">Step 1: Heading</f-text>
@@ -53,23 +60,25 @@ Onboarding Popover templates
             <f-button variant="round" size="small" icon-left="👍" counter="88" label="GOT IT"></f-button>
           </f-div>
         <!--End : onboarding-popover -->
-        </f-div>
       `;
     }}
   </Story>
 </Canvas>
 
-### onboarding-setup
-
-<hr />
+###### onboarding-setup-02
 
 <Canvas>
   <Story
-    name="onboarding-setup"
+    name="onboarding-setup-02"
+    parameters={{
+    docs: {
+      inlineStories: false,
+      iframeHeight: 550,
+    },
+  }}
   >
     {(args) => {
       return html`
-        <f-div padding="large" align="middle-center" direction="column">
         <!--Start : onboarding-popover -->
           <f-div width="432px" state="secondary" padding="medium" gap="x-large" direction="column">
             <f-text data-f-id="popover-header-section" variant="para" size="small" weight="bold">Heading</f-text>
@@ -79,7 +88,7 @@ Onboarding Popover templates
             <f-text variant="para" size="medium" weight="regular">Steps to get started</f-text>
             ${[0,1,2].map(item=>{return html`
              <f-div padding="medium" gap="medium" clickable>
-            <f-div data-f-id="slab-section-left" height="hug-content" width="hug-content">
+            <f-div height="hug-content" width="hug-content">
                <f-icon-button
                 icon="i-icon"
                 variant="round"
@@ -88,8 +97,7 @@ Onboarding Popover templates
                 state="neutral"
               ></f-icon-button>
             </f-div>
-             <!--Start : slab-section-center : This data-f-id=\"slab-section-center\" is swappable, Find examples in \`Swappable items\`  -->
-            <f-div data-f-id="slab-section-center" width="fill-container" gap="x-small" direction="column">
+            <f-div width="fill-container" gap="x-small" direction="column">
             <f-div direction="row" gap="medium" align="middle-left">
               <f-text variant="heading" size="small" weight="medium" ?inline=${true}>Heading</f-text>
               <f-div gap="medium" width="hug-content">
@@ -98,8 +106,6 @@ Onboarding Popover templates
               </f-div>
                 <f-text variant="para" size="small" weight="regular" ?inline=${true}>Description</f-text>
             </f-div>
-            <!--End : slab-section-center : This data-f-id=\"slab-section-center\" is swappable, Find examples in \`Swappable items\`  -->
-            <!--START : slab-section-right : This data-f-id=\"slab-section-right\" is swappable, Find examples in \`Swappable items\`  -->
             <f-div data-f-id="slab-section-right" width="hug-content" gap="medium">
               <f-icon-button
                 icon="i-chevron-right"
@@ -109,12 +115,10 @@ Onboarding Popover templates
                 state="inherit"
               ></f-icon-button>
             </f-div>
-            <!--End : slab-section-right : This data-f-id=\"slab-section-right\" is swappable, Find examples in \`Swappable items\`  -->
           </f-div>`})}
             </f-div>
           </f-div>
         <!--End : onboarding-popover -->
-        </f-div>
       `;
     }}
   </Story>
