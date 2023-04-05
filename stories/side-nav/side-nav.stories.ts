@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import sideNavCode from "./side-nav-code";
 import SideNav011 from "./SideNav01.vue";
-import { Story } from "@storybook/web-components";
+import { StoryFn } from "@storybook/web-components";
 
 export default {
 	title: "Side Nav",
@@ -13,7 +13,7 @@ export default {
 	}
 };
 
-const Template: Story<any> = () => {
+const Template: StoryFn<any> = () => {
 	return SideNav011;
 };
 
