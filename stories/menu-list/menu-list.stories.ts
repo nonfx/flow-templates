@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { StoryFn } from "@storybook/web-components";
+import type { StoryFn } from "@storybook/vue3";
 import ExampleVue from "./Example.vue";
 import exampleFile from "./Example.vue?raw";
 import MenuList1 from "./MenuList01.vue";

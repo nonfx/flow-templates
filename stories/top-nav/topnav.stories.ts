@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { StoryFn } from "@storybook/web-components";
+import type { StoryFn } from "@storybook/vue3";
 import TopNav1 from "./TopNav01.vue";
 import topNavFile1 from "./TopNav01.vue?raw";
 import TopNav2 from "./TopNav02.vue";

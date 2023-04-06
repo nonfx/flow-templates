@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { StoryFn } from "@storybook/web-components";
+import type { StoryFn } from "@storybook/vue3";
 
 import SingleLineSlab1 from "./SingleLineSlab01.vue";
 import singleLineSlabFile1 from "./SingleLineSlab01.vue?raw";

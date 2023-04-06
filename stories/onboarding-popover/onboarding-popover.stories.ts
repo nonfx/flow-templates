@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { StoryFn } from "@storybook/web-components";
+import type { StoryFn } from "@storybook/vue3";
 import OnboardingSetup1 from "./OnboardingSetup01.vue";
 import onboardingSetupFile1 from "./OnboardingSetup01.vue?raw";
 import OnboardingSetup2 from "./OnboardingSetup02.vue";
