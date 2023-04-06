@@ -26,6 +26,11 @@ export const parameters = {
 	},
 	previewTabs: {
 		"storybook/docs/panel": { index: -1 }
+	},
+	docs: {
+		source: {
+			language: "html"
+		}
 	}
 };
 
