@@ -134,6 +134,7 @@ export default defineComponent({
 });
 </script>
 
+<!-- style custom css-->
 <style lang="scss">
 .sidebar-expanded {
 	width: inherit;
