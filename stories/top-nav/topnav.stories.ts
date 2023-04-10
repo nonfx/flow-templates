@@ -8,6 +8,8 @@ import TopNav3 from "./TopNav03.vue";
 import topNavFile3 from "./TopNav03.vue?raw";
 import TopNav4 from "./TopNav04.vue";
 import topNavFile4 from "./TopNav04.vue?raw";
+import TopNav5 from "./TopNav05.vue";
+import topNavFile5 from "./TopNav05.vue?raw";
 
 export default {
 	title: "Top Nav",
@@ -71,6 +73,20 @@ TopNav04.parameters = {
 	docs: {
 		source: {
 			code: topNavFile4
+		}
+	}
+};
+
+const Template5: StoryFn = () => {
+	return TopNav5;
+};
+
+export const TopNav05 = Template5.bind({});
+
+TopNav05.parameters = {
+	docs: {
+		source: {
+			code: topNavFile5
 		}
 	}
 };
