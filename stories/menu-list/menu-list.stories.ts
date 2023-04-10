@@ -10,6 +10,8 @@ import MenuList3 from "./MenuList03.vue";
 import menuListFile3 from "./MenuList03.vue?raw";
 import MenuList4 from "./MenuList04.vue";
 import menuListFile4 from "./MenuList04.vue?raw";
+import MenuList5 from "./MenuList05.vue";
+import menuListFile5 from "./MenuList05.vue?raw";
 
 export default {
 	title: "Menu List",
@@ -87,6 +89,20 @@ MenuList04.parameters = {
 	docs: {
 		source: {
 			code: menuListFile4
+		}
+	}
+};
+
+const Template05: StoryFn = () => {
+	return MenuList5;
+};
+
+export const MenuList05 = Template05.bind({});
+
+MenuList05.parameters = {
+	docs: {
+		source: {
+			code: menuListFile5
 		}
 	}
 };
