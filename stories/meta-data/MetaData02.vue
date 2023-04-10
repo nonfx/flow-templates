@@ -24,7 +24,6 @@ import { defineComponent } from "vue";
 export default defineComponent({
 	data() {
 		return {
-			open: false,
 			metaData: {
 				["Name"]: { type: "text", value: "Office of CTO" },
 				["Id"]: { type: "text", value: "#4343943" },
@@ -32,11 +31,6 @@ export default defineComponent({
 				["Policy(s)"]: { type: "text", value: "Monetary Authority of Singapore (MAS)" }
 			} as MetaDataType
 		};
-	},
-	methods: {
-		toggleAccordion() {
-			this.open = !this.open;
-		}
 	}
 });
 

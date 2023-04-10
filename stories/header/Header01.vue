@@ -14,7 +14,7 @@
 			<f-div data-f-id="slab-left" height="hug-content" width="hug-content">
 				<!-- <f-icon source="stance-department" size="x-large"></f-icon> -->
 				<f-div
-					class="stance-department-block"
+					class="circular-block"
 					height="44px"
 					width="44px"
 					state="subtle"
@@ -23,7 +23,7 @@
 					<f-icon source="i-app" state="primary"></f-icon>
 				</f-div>
 				<f-icon
-					class="stance-department-shield"
+					class="absolute-icon-position"
 					size="x-small"
 					source="i-shield"
 					state="warning"
@@ -104,11 +104,11 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-.stance-department-block {
+.circular-block {
 	position: relative;
 	border-radius: 50%;
 }
-.stance-department-shield {
+.absolute-icon-position {
 	position: absolute;
 	bottom: 0;
 	right: 0;

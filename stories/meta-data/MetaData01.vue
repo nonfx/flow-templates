@@ -1,11 +1,6 @@
 <template>
 	<f-div width="373px" direction="column">
-		<f-div
-			height="hug-content"
-			align="middle-center"
-			class="pointer-cursor"
-			@click="toggleAccordion"
-		>
+		<f-div height="hug-content" align="middle-center" clickable @click="toggleAccordion">
 			<f-div>
 				<f-text variant="para" size="small" weight="bold">Requester details</f-text>
 			</f-div>
@@ -19,7 +14,7 @@
 				></f-icon-button>
 			</f-div>
 		</f-div>
-		<f-div direction="column" class="accordion-list" :accordion-state="open" overflow="hidden">
+		<f-div direction="column" class="accordion-list" :data-accordion-open="open" overflow="hidden">
 			<f-div
 				v-for="(value, name) in metaData"
 				direction="row"
@@ -90,15 +85,12 @@ export type MetaDataType = Record<string, EntryType>;
 </script>
 
 <style lang="scss">
-.pointer-cursor {
-	cursor: pointer;
-}
 .accordion-list {
-	&[accordion-state="false"] {
+	&[data-accordion-open="false"] {
 		max-height: 0 !important;
 		transition: max-height 0.15s ease-out !important;
 	}
-	&[accordion-state="true"] {
+	&[data-accordion-open="true"] {
 		max-height: 500px !important;
 		transition: max-height 0.25s ease-in !important;
 	}
