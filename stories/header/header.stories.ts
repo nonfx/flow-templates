@@ -4,7 +4,7 @@ import Header1 from "./Header01.vue";
 import HeaderFile1 from "./Header01.vue?raw";
 
 export default {
-	title: "Header",
+	title: "Patterns/Header",
 	parameters: {
 		docs: {
 			inlineStories: false,

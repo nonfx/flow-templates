@@ -34,8 +34,10 @@
 					><f-text variant="para" size="small" weight="regular">{{ value.value }}</f-text></f-div
 				>
 				<f-div v-else direction="column" gap="small" align="middle-center">
-					<f-div gap="x-small" v-for="item in (value.value as ConnectArrayType)"
-						><f-icon :source="item.icon" size="small"></f-icon>
+					<f-div gap="x-small" v-for="item in (value.value as ConnectArrayType)" :key="item.name"
+						><a @click="connectOn(item.name)"
+							><f-icon :source="item.icon" size="small" clickable></f-icon
+						></a>
 						<f-text :inline="true" variant="para" size="small" weight="medium">{{
 							item.name
 						}}</f-text>
@@ -72,6 +74,9 @@ export default defineComponent({
 	methods: {
 		toggleAccordion() {
 			this.open = !this.open;
+		},
+		connectOn(app: string) {
+			console.log(`Connect On: ${app}`);
 		}
 	}
 });

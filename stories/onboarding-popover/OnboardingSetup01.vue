@@ -16,7 +16,26 @@
 				>
 			</f-div>
 		</f-div>
-		<f-button variant="round" size="small" icon-left="👍" counter="88" label="GOT IT"></f-button>
+		<f-button
+			variant="round"
+			size="small"
+			icon-left="👍"
+			counter="88"
+			label="GOT IT"
+			@click="confirm"
+		></f-button>
 	</f-div>
 	<!--End : onboarding-popover -->
 </template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+	methods: {
+		confirm() {
+			console.log("'GOT IT' button clicked!!");
+		}
+	}
+});
+</script>

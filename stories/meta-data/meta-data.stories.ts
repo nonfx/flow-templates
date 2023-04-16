@@ -6,7 +6,7 @@ import MetaData2 from "./MetaData02.vue";
 import MetaDataFile2 from "./MetaData02.vue?raw";
 
 export default {
-	title: "MetaData",
+	title: "Templates/MetaData",
 	parameters: {
 		docs: {
 			inlineStories: false,

@@ -4,7 +4,7 @@ import Cards1 from "./Cards01.vue";
 import cardsFile1 from "./Cards01.vue?raw";
 
 export default {
-	title: "Cards",
+	title: "Templates/Cards",
 	parameters: {
 		docs: {
 			inlineStories: false,

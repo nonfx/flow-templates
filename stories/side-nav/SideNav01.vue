@@ -4,7 +4,7 @@
 		<f-div
 			data-f-id="side-nav"
 			align="top-center"
-			border="small solid default right"
+			border="small solid secondary right"
 			variant="curved"
 			direction="column"
 			height="fill-container"
@@ -16,9 +16,9 @@
 			<!--Start : side-nav-top  -->
 			<f-div
 				data-f-id="side-nav-top"
-				padding="small"
+				padding="small medium"
 				gap="small"
-				:align="open ? 'middle-left' : 'middle-center'"
+				:align="'middle-left'"
 				height="hug-content"
 				:direction="open ? 'row' : 'column'"
 				state="default"
@@ -50,18 +50,29 @@
 				<f-div
 					v-for="item in dummyData"
 					padding="medium"
-					border="small solid default bottom"
-					:align="open ? 'middle-left' : 'middle-center'"
+					border="small solid secondary bottom"
+					:align="'middle-left'"
 					height="hug-content"
-					:selected="item.id === 0 ? 'notch-right' : 'none'"
+					:selected="item.id === selected ? 'notch-right' : 'none'"
 					:gap="open ? 'medium' : 'none'"
-					state="item.id === 0 ? 'secondary' : 'default'"
+					:state="item.id === selected ? 'secondary' : 'default'"
 					clickable
+					overflow="hidden"
+					:tooltip="`Heading ${item.id}`"
+					@click="selectMenu(item.id)"
 				>
-					<f-pictogram size="medium" source="💬" state="default" variant="square"></f-pictogram>
-					<f-text v-if="open" variant="heading" size="small" weight="medium"
-						>Heading {{ item.id }}</f-text
-					>
+					<f-pictogram
+						size="medium"
+						source="💬"
+						state="default"
+						variant="square"
+						clickable
+					></f-pictogram>
+					<f-div v-if="open" align="middle-center">
+						<f-text variant="heading" size="small" weight="medium" :ellipsis="true">
+							Heading {{ item.id }}</f-text
+						>
+					</f-div>
 				</f-div>
 			</f-div>
 			<!--End : side-nav-center  -->
@@ -71,17 +82,18 @@
 				direction="column"
 				:align="open ? 'bottom-left' : 'top-center'"
 				height="hug-content"
-				border="small solid default top"
+				border="small solid secondary top"
 			>
 				<f-div
 					v-for="item in [0, 1, 2]"
 					padding="medium"
-					:align="open ? 'middle-left' : 'middle-center'"
+					:align="'middle-left'"
 					height="hug-content"
 					gap="medium"
 					:id="item"
 					overflow="hidden"
 					state="default"
+					tooltip="Heading"
 					clickable
 				>
 					<f-div width="hug-content">
@@ -93,7 +105,9 @@
 							state="inherit"
 						></f-icon-button>
 					</f-div>
-					<f-text v-if="open" variant="heading" size="small" weight="medium">Heading</f-text>
+					<f-div v-if="open" align="middle-center">
+						<f-text variant="heading" size="small" weight="medium" :ellipsis="true">Heading</f-text>
+					</f-div>
 				</f-div>
 			</f-div>
 			<!--End : side-nav-bottom  -->
@@ -109,6 +123,7 @@ export default defineComponent({
 	data() {
 		return {
 			open: false,
+			selected: 0,
 			dummyData: [
 				{ id: 0, hover: false },
 				{ id: 1, hover: false },
@@ -129,6 +144,9 @@ export default defineComponent({
 	methods: {
 		toggleSidebar() {
 			this.open = !this.open;
+		},
+		selectMenu(id: number) {
+			this.selected = id;
 		}
 	}
 });
@@ -141,10 +159,10 @@ export default defineComponent({
 }
 @keyframes slide-right {
 	from {
-		margin-left: -10%;
+		width: 55px;
 	}
 	to {
-		margin-left: 0%;
+		width: 320px;
 	}
 }
 @media (max-width: 600px) {

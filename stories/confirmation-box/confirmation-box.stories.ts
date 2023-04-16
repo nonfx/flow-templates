@@ -10,7 +10,7 @@ import ConfirmationBox4 from "./ConfirmationBox04.vue";
 import ConfirmationBoxFile4 from "./ConfirmationBox04.vue?raw";
 
 export default {
-	title: "Confirmation Box",
+	title: "Templates/Confirmation Box",
 	parameters: {
 		docs: {
 			inlineStories: false,

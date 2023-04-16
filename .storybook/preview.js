@@ -24,9 +24,15 @@ export const parameters = {
 			date: /Date$/
 		}
 	},
+	options: {
+		storySort: {
+			order: ["Patterns", "Templates"]
+		}
+	},
 	previewTabs: {
 		"storybook/docs/panel": { index: -1 }
 	},
+	viewMode: "docs",
 	docs: {
 		source: {
 			language: "html"

@@ -17,6 +17,8 @@
 					gap="medium"
 					border="small solid default bottom"
 					clickable
+					:selected="item === selected ? 'background' : 'none'"
+					@click="select(item)"
 				>
 					<f-div data-f-id="menu-list-section-left" gap="medium" align="middle-left">
 						<f-icon size="small" source="i-icon"></f-icon>
@@ -29,6 +31,7 @@
 							category="packed"
 							state="inherit"
 							size="small"
+							@click="rightIconClick($event, item)"
 						></f-icon-button>
 					</f-div>
 				</f-div>
@@ -43,12 +46,20 @@ import { defineComponent } from "vue";
 export default defineComponent({
 	data() {
 		return {
+			selected: 0,
 			open: true
 		};
 	},
 	methods: {
 		toggle() {
 			this.open = !this.open;
+		},
+		select(id: number) {
+			this.selected = id;
+		},
+		rightIconClick(event: Event, id: number) {
+			event.stopPropagation();
+			console.log(`Icon Clicked: ${id}`);
 		}
 	}
 });

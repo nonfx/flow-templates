@@ -10,6 +10,9 @@
 			variant="curved"
 			padding="medium"
 			gap="small"
+			:selected="item.id === selectedCard ? 'background' : 'none'"
+			:clickable="item.id === selectedCard ? false : true"
+			@click="selectCard(item.id)"
 		>
 			<f-icon :source="item.icon" size="large"></f-icon>
 			<f-div direction="column">
@@ -28,6 +31,7 @@ import { defineComponent } from "vue";
 export default defineComponent({
 	data() {
 		return {
+			selectedCard: 1,
 			data: [
 				{ id: 1, title: "AWS IoT Core", subTitle: "stream", icon: "aws-storage-S3" },
 				{ id: 2, title: "PostgresSQL", subTitle: "RDBMS", icon: "p-postgresql" },
@@ -41,6 +45,11 @@ export default defineComponent({
 				{ id: 10, title: "SFTP", subTitle: "SFTP", icon: "i-file-SFTP" }
 			] as Data
 		};
+	},
+	methods: {
+		selectCard(id: number) {
+			this.selectedCard = id;
+		}
 	}
 });
 

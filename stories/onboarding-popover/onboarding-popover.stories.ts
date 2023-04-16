@@ -6,7 +6,7 @@ import OnboardingSetup2 from "./OnboardingSetup02.vue";
 import onboardingSetupFile2 from "./OnboardingSetup02.vue?raw";
 
 export default {
-	title: "Onboarding Popover",
+	title: "Templates/Onboarding Popover",
 	parameters: {
 		docs: {
 			inlineStories: false,
