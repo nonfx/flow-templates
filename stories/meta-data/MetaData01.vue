@@ -1,6 +1,6 @@
 <template>
 	<f-div direction="column">
-		<f-accordion :open="open">
+		<f-accordion :open="open" @toggle="handleToggle">
 			<f-div><f-text variant="para" size="small" weight="bold">Requester details</f-text></f-div>
 			<f-div slot="body" direction="column" width="400px">
 				<f-div
@@ -63,6 +63,10 @@ export default defineComponent({
 	methods: {
 		connectOn(app: string) {
 			console.log(`Connect On: ${app}`);
+		},
+		handleToggle(e: CustomEvent) {
+			console.log(e.detail.value);
+			this.open = e.detail.value;
 		}
 	}
 });
