@@ -35,7 +35,7 @@
 					>
 					</f-icon-button>
 				</f-div>
-				<f-search v-if="open" variant="round" size="small"></f-search>
+				<f-search v-if="open" variant="round" size="small" @input="filterSidebar"></f-search>
 			</f-div>
 			<!--End : side-nav-top  -->
 			<!--Start : side-nav-center  -->
@@ -48,7 +48,7 @@
 				class="remove-scrollbar"
 			>
 				<f-div
-					v-for="item in dummyData"
+					v-for="item in filteredSidebarData"
 					padding="medium"
 					border="small solid secondary bottom"
 					:align="'middle-left'"
@@ -68,9 +68,9 @@
 						variant="square"
 						clickable
 					></f-pictogram>
-					<f-div v-if="open" align="middle-center">
+					<f-div v-if="open" align="middle-left">
 						<f-text variant="heading" size="small" weight="medium" :ellipsis="true">
-							Heading {{ item.id }}</f-text
+							{{ item.title }}</f-text
 						>
 					</f-div>
 				</f-div>
@@ -105,7 +105,7 @@
 							state="inherit"
 						></f-icon-button>
 					</f-div>
-					<f-div v-if="open" align="middle-center">
+					<f-div v-if="open" align="middle-left">
 						<f-text variant="heading" size="small" weight="medium" :ellipsis="true">Heading</f-text>
 					</f-div>
 				</f-div>
@@ -124,22 +124,26 @@ export default defineComponent({
 		return {
 			open: false,
 			selected: 0,
-			dummyData: [
-				{ id: 0, hover: false },
-				{ id: 1, hover: false },
-				{ id: 2, hover: false },
-				{ id: 3, hover: false },
-				{ id: 4, hover: false },
-				{ id: 5, hover: false },
-				{ id: 6, hover: false },
-				{ id: 7, hover: false },
-				{ id: 8, hover: false },
-				{ id: 9, hover: false },
-				{ id: 10, hover: false },
-				{ id: 11, hover: false },
-				{ id: 12, hover: false }
-			]
+			sidebarData: [
+				{ id: 0, title: "Heading 1" },
+				{ id: 1, title: "Heading 2" },
+				{ id: 2, title: "Heading 3" },
+				{ id: 3, title: "Heading 4" },
+				{ id: 4, title: "Heading 5" },
+				{ id: 5, title: "Heading 6" },
+				{ id: 6, title: "Heading 7" },
+				{ id: 7, title: "Heading 8" },
+				{ id: 8, title: "Heading 9" },
+				{ id: 9, title: "Heading 10" },
+				{ id: 10, title: "Heading 11" },
+				{ id: 11, title: "Heading 12" },
+				{ id: 12, title: "Heading 13" }
+			] as SidebarDataType,
+			filteredSidebarData: [] as filteredSidebarDataType
 		};
+	},
+	mounted() {
+		this.filteredSidebarData = [...this.sidebarData];
 	},
 	methods: {
 		toggleSidebar() {
@@ -147,9 +151,17 @@ export default defineComponent({
 		},
 		selectMenu(id: number) {
 			this.selected = id;
+		},
+		filterSidebar(e: CustomEvent) {
+			this.filteredSidebarData = this.sidebarData.filter(item =>
+				item.title.toLowerCase().includes(e.detail.value.toLowerCase())
+			);
 		}
 	}
 });
+
+export type SidebarDataType = { id: number; title: string }[];
+export type filteredSidebarDataType = SidebarDataType | [];
 </script>
 
 <!-- style custom css-->

@@ -48,7 +48,10 @@
 						size="small"
 						variant="round"
 						placeholder="Enter search keyword"
-						@blur="closeExpandedSearch"
+						:result="navSearch"
+						ref="searchRef"
+						@input="handleNavSearchInput"
+						@focusout="closeExpandedSearch"
 					></f-search>
 				</f-div>
 				<f-div gap="small" width="hug-content">
@@ -163,11 +166,13 @@
 								gap="small"
 								clickable
 								state="secondary"
-								align="middle-center"
+								align="middle-left"
 								border="small solid default bottom"
 							>
 								<f-icon source="i-icon" size="medium" state="default"></f-icon>
-								<f-text>Heading {{ item }}</f-text>
+								<f-div>
+									<f-text>Heading {{ item }}</f-text></f-div
+								>
 								<f-div width="hug-content" height="hug-content"
 									><f-icon-button
 										icon="i-chevron-right"
@@ -275,7 +280,12 @@
 						>
 						</f-icon-button>
 					</f-div>
-					<f-search v-if="openSidebar" variant="round" size="small"></f-search>
+					<f-search
+						v-if="openSidebar"
+						variant="round"
+						size="small"
+						@input="filterSidebar"
+					></f-search>
 				</f-div>
 				<!--End : side-nav-top  -->
 				<!--Start : side-nav-center  -->
@@ -288,7 +298,7 @@
 					class="remove-scrollbar"
 				>
 					<f-div
-						v-for="item in dummyData"
+						v-for="item in filteredSidebarData"
 						padding="medium"
 						border="small solid secondary bottom"
 						:align="'middle-left'"
@@ -308,9 +318,9 @@
 							variant="square"
 							clickable
 						></f-pictogram>
-						<f-div v-if="openSidebar" align="middle-center">
+						<f-div v-if="openSidebar" align="middle-left">
 							<f-text variant="heading" size="small" weight="medium" :ellipsis="true">
-								Heading {{ item.id }}</f-text
+								{{ item.title }}</f-text
 							>
 						</f-div>
 					</f-div>
@@ -345,7 +355,7 @@
 								state="inherit"
 							></f-icon-button>
 						</f-div>
-						<f-div v-if="openSidebar" align="middle-center">
+						<f-div v-if="openSidebar" align="middle-left">
 							<f-text variant="heading" size="small" weight="medium" :ellipsis="true"
 								>Heading</f-text
 							>
@@ -369,7 +379,7 @@
 </template>
 
 <script lang="ts">
-import { ConfigUtil } from "@cldcvr/flow-core";
+import { ConfigUtil, FSearch } from "@cldcvr/flow-core";
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -377,26 +387,31 @@ export default defineComponent({
 		return {
 			openSidebar: false,
 			selected: 0,
-			dummyData: [
-				{ id: 0, hover: false },
-				{ id: 1, hover: false },
-				{ id: 2, hover: false },
-				{ id: 3, hover: false },
-				{ id: 4, hover: false },
-				{ id: 5, hover: false },
-				{ id: 6, hover: false },
-				{ id: 7, hover: false },
-				{ id: 8, hover: false },
-				{ id: 9, hover: false },
-				{ id: 10, hover: false },
-				{ id: 11, hover: false },
-				{ id: 12, hover: false }
-			],
+			sidebarData: [
+				{ id: 0, title: "Heading 1" },
+				{ id: 1, title: "Heading 2" },
+				{ id: 2, title: "Heading 3" },
+				{ id: 3, title: "Heading 4" },
+				{ id: 4, title: "Heading 5" },
+				{ id: 5, title: "Heading 6" },
+				{ id: 6, title: "Heading 7" },
+				{ id: 7, title: "Heading 8" },
+				{ id: 8, title: "Heading 9" },
+				{ id: 9, title: "Heading 10" },
+				{ id: 10, title: "Heading 11" },
+				{ id: 11, title: "Heading 12" },
+				{ id: 12, title: "Heading 13" }
+			] as SidebarDataType,
 			open: false,
 			theme: "f-dark",
 			expandedSearch: false,
-			openMenuMobile: false
+			openMenuMobile: false,
+			navSearch: ["Search 1", "Search 2", "Search 3", "Search 4", "Search 5", "Search 6"],
+			filteredSidebarData: [] as filteredSidebarDataType
 		};
+	},
+	mounted() {
+		this.filteredSidebarData = [...this.sidebarData];
 	},
 	methods: {
 		toggleSidebar() {
@@ -428,9 +443,20 @@ export default defineComponent({
 		},
 		checkWindowSizeStatus(): boolean {
 			return this.openSidebar ? !window.matchMedia("(max-width: 600px)").matches : true;
+		},
+		filterSidebar(e: CustomEvent) {
+			this.filteredSidebarData = this.sidebarData.filter(item =>
+				item.title.toLowerCase().includes(e.detail.value.toLowerCase())
+			);
+		},
+		handleNavSearchInput(e: CustomEvent) {
+			console.log(e.detail.value);
 		}
 	}
 });
+
+export type SidebarDataType = { id: number; title: string }[];
+export type filteredSidebarDataType = SidebarDataType | [];
 </script>
 
 <!-- style custom css-->
@@ -439,10 +465,20 @@ export default defineComponent({
 	width: inherit;
 }
 
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 @media screen and (max-width: 768px) {
 	.nav-responsive-search-bar {
 		&[data-expanded-search="false"] {
 			width: 0px !important;
+			transition: width 0.15s ease-out !important;
 		}
 		&[data-expanded-search="true"] {
 			width: 240px !important;
@@ -451,6 +487,7 @@ export default defineComponent({
 	}
 	.nav-responsive-search-icon {
 		display: inline-block;
+		animation: fadeIn 1s;
 	}
 }
 @media screen and (min-width: 768px) {
@@ -560,7 +597,7 @@ export default defineComponent({
 	display: none;
 }
 .remove-scrollbar {
-	-ms-overflow-style: none; /* IE and Edge */
-	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none;
+	scrollbar-width: none;
 }
 </style>

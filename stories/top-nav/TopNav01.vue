@@ -43,7 +43,9 @@
 					size="small"
 					variant="round"
 					placeholder="Enter search keyword"
-					@blur="closeExpandedSearch"
+					:result="navSearch"
+					@input="handleNavSearchInput"
+					@focusout="closeExpandedSearch"
 				></f-search>
 			</f-div>
 			<f-div gap="small" width="hug-content">
@@ -158,11 +160,13 @@
 							gap="small"
 							clickable
 							state="secondary"
-							align="middle-center"
+							align="middle-left"
 							border="small solid default bottom"
 						>
 							<f-icon source="i-icon" size="medium" state="default"></f-icon>
-							<f-text>Heading {{ item }}</f-text>
+							<f-div>
+								<f-text>Heading {{ item }}</f-text></f-div
+							>
 							<f-div width="hug-content" height="hug-content"
 								><f-icon-button
 									icon="i-chevron-right"
@@ -244,7 +248,8 @@ export default defineComponent({
 			open: false,
 			theme: "f-dark",
 			expandedSearch: false,
-			openMenuMobile: false
+			openMenuMobile: false,
+			navSearch: ["Search 1", "Search 2", "Search 3", "Search 4", "Search 5", "Search 6"]
 		};
 	},
 	methods: {
@@ -265,16 +270,28 @@ export default defineComponent({
 			if (this.expandedSearch) {
 				this.expandedSearch = false;
 			}
+		},
+		handleNavSearchInput(e: CustomEvent) {
+			console.log(e.detail.value);
 		}
 	}
 });
 </script>
 
 <style lang="scss">
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
 @media screen and (max-width: 768px) {
 	.nav-responsive-search-bar {
 		&[data-expanded-search="false"] {
 			width: 0px !important;
+			transition: width 0.15s ease-out !important;
 		}
 		&[data-expanded-search="true"] {
 			width: 240px !important;
@@ -283,6 +300,7 @@ export default defineComponent({
 	}
 	.nav-responsive-search-icon {
 		display: inline-block;
+		animation: fadeIn 1s;
 	}
 }
 @media screen and (min-width: 768px) {
