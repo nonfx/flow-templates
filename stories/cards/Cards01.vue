@@ -1,10 +1,9 @@
 <template>
-	<f-div gap="medium">
+	<f-grid>
 		<f-div
 			v-for="item in data"
 			:key="item.id"
 			:id="item.id"
-			width="200px"
 			height="hug-content"
 			state="default"
 			variant="curved"
@@ -22,7 +21,7 @@
 				}}</f-text>
 			</f-div>
 		</f-div>
-	</f-div>
+	</f-grid>
 </template>
 
 <script lang="ts">
