@@ -284,6 +284,7 @@
 						v-if="openSidebar"
 						variant="round"
 						size="small"
+						:value="sidebarSearchValue"
 						@input="filterSidebar"
 					></f-search>
 				</f-div>
@@ -407,7 +408,8 @@ export default defineComponent({
 			expandedSearch: false,
 			openMenuMobile: false,
 			navSearch: ["Search 1", "Search 2", "Search 3", "Search 4", "Search 5", "Search 6"],
-			filteredSidebarData: [] as filteredSidebarDataType
+			filteredSidebarData: [] as filteredSidebarDataType,
+			sidebarSearchValue: ""
 		};
 	},
 	mounted() {
@@ -445,6 +447,7 @@ export default defineComponent({
 			return this.openSidebar ? !window.matchMedia("(max-width: 600px)").matches : true;
 		},
 		filterSidebar(e: CustomEvent) {
+			this.sidebarSearchValue = e.detail.value;
 			this.filteredSidebarData = this.sidebarData.filter(item =>
 				item.title.toLowerCase().includes(e.detail.value.toLowerCase())
 			);

@@ -35,7 +35,13 @@
 					>
 					</f-icon-button>
 				</f-div>
-				<f-search v-if="open" variant="round" size="small" @input="filterSidebar"></f-search>
+				<f-search
+					v-if="open"
+					variant="round"
+					size="small"
+					:value="sidebarSearchValue"
+					@input="filterSidebar"
+				></f-search>
 			</f-div>
 			<!--End : side-nav-top  -->
 			<!--Start : side-nav-center  -->
@@ -139,7 +145,8 @@ export default defineComponent({
 				{ id: 11, title: "Heading 12" },
 				{ id: 12, title: "Heading 13" }
 			] as SidebarDataType,
-			filteredSidebarData: [] as filteredSidebarDataType
+			filteredSidebarData: [] as filteredSidebarDataType,
+			sidebarSearchValue: ""
 		};
 	},
 	mounted() {
@@ -153,6 +160,7 @@ export default defineComponent({
 			this.selected = id;
 		},
 		filterSidebar(e: CustomEvent) {
+			this.sidebarSearchValue = e.detail.value;
 			this.filteredSidebarData = this.sidebarData.filter(item =>
 				item.title.toLowerCase().includes(e.detail.value.toLowerCase())
 			);
