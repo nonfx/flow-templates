@@ -1,50 +1,39 @@
 <template>
-	<f-div width="373px" direction="column">
-		<f-div height="hug-content" align="middle-center" clickable @click="toggleAccordion">
-			<f-div>
-				<f-text variant="para" size="small" weight="bold">Requester details</f-text>
-			</f-div>
-			<f-div height="hug-content" width="hug-content">
-				<f-icon-button
-					:icon="open ? 'i-chevron-up' : 'i-chevron-down'"
-					variant="block"
-					category="transparent"
-					size="small"
-					state="inherit"
-				></f-icon-button>
-			</f-div>
-		</f-div>
-		<f-div direction="column" class="accordion-list" :data-accordion-open="open" overflow="hidden">
-			<f-div
-				v-for="(value, name) in metaData"
-				direction="row"
-				padding="small none"
-				overflow="visible"
-			>
-				<f-div width="33%"
-					><f-text variant="para" size="small" weight="regular" state="secondary">{{
-						name
-					}}</f-text></f-div
+	<f-div direction="column">
+		<f-accordion :open="open" @toggle="handleToggle">
+			<f-div><f-text variant="para" size="small" weight="bold">Requester details</f-text></f-div>
+			<f-div slot="body" direction="column" width="400px">
+				<f-div
+					v-for="(value, name) in metaData"
+					direction="row"
+					padding="small none"
+					height="hug-content"
 				>
-				<f-div v-if="value.type === 'label-text'" align="middle-center" gap="x-small">
-					<f-pictogram variant="circle" size="small" state="default" source="BC"></f-pictogram>
-					<f-text variant="para" size="small" weight="regular">{{ value.value }}</f-text></f-div
-				>
-				<f-div v-else-if="value.type === 'text'"
-					><f-text variant="para" size="small" weight="regular">{{ value.value }}</f-text></f-div
-				>
-				<f-div v-else direction="column" gap="small" align="middle-center">
-					<f-div gap="x-small" v-for="item in (value.value as ConnectArrayType)" :key="item.name"
-						><a @click="connectOn(item.name)"
-							><f-icon :source="item.icon" size="small" clickable></f-icon
-						></a>
-						<f-text :inline="true" variant="para" size="small" weight="medium">{{
-							item.name
-						}}</f-text>
+					<f-div width="33%"
+						><f-text variant="para" size="small" weight="regular" state="secondary">{{
+							name
+						}}</f-text></f-div
+					>
+					<f-div v-if="value.type === 'label-text'" align="middle-left" gap="x-small">
+						<f-pictogram variant="circle" size="small" state="default" source="BC"></f-pictogram>
+						<f-text variant="para" size="small" weight="regular">{{ value.value }}</f-text></f-div
+					>
+					<f-div v-else-if="value.type === 'text'"
+						><f-text variant="para" size="small" weight="regular">{{ value.value }}</f-text></f-div
+					>
+					<f-div v-else direction="column" gap="small" align="middle-left">
+						<f-div gap="x-small" v-for="item in (value.value as ConnectArrayType)" :key="item.name"
+							><a @click="connectOn(item.name)"
+								><f-icon :source="item.icon" size="small" clickable></f-icon
+							></a>
+							<f-text :inline="true" variant="para" size="small" weight="medium">{{
+								item.name
+							}}</f-text>
+						</f-div>
 					</f-div>
 				</f-div>
 			</f-div>
-		</f-div>
+		</f-accordion>
 	</f-div>
 </template>
 
@@ -72,11 +61,12 @@ export default defineComponent({
 		};
 	},
 	methods: {
-		toggleAccordion() {
-			this.open = !this.open;
-		},
 		connectOn(app: string) {
 			console.log(`Connect On: ${app}`);
+		},
+		handleToggle(e: CustomEvent) {
+			console.log(e.detail.value);
+			this.open = e.detail.value;
 		}
 	}
 });
@@ -88,16 +78,3 @@ export type EntryType = {
 };
 export type MetaDataType = Record<string, EntryType>;
 </script>
-
-<style lang="scss">
-.accordion-list {
-	&[data-accordion-open="false"] {
-		max-height: 0 !important;
-		transition: max-height 0.15s ease-out !important;
-	}
-	&[data-accordion-open="true"] {
-		max-height: 500px !important;
-		transition: max-height 0.25s ease-in !important;
-	}
-}
-</style>
