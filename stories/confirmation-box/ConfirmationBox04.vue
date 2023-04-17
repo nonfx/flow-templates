@@ -56,6 +56,17 @@ export default defineComponent({
 			open: true
 		};
 	},
+	// this watcher only for demo purpose, remove this code section - Start
+	watch: {
+		open(newValue) {
+			if (newValue === false) {
+				setTimeout(() => {
+					this.open = true;
+				}, 1500);
+			}
+		}
+	},
+	// this watcher only for demo purpose, remove this code section - End
 	methods: {
 		closePopover() {
 			this.open = false;

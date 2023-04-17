@@ -12,7 +12,7 @@ import TopNav5 from "./TopNav05.vue";
 import topNavFile5 from "./TopNav05.vue?raw";
 
 export default {
-	title: "Top Nav",
+	title: "Templates/Top Nav",
 	parameters: {
 		docs: {
 			inlineStories: false,

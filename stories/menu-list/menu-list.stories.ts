@@ -14,7 +14,7 @@ import MenuList5 from "./MenuList05.vue";
 import menuListFile5 from "./MenuList05.vue?raw";
 
 export default {
-	title: "Menu List",
+	title: "Patterns/Menu List",
 	parameters: {
 		docs: {
 			inlineStories: false,

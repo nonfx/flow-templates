@@ -1,6 +1,13 @@
 <template>
 	<f-div>
-		<f-div width="382px" state="secondary" padding="medium" :gap="'medium'" align="middle-left">
+		<f-div
+			width="382px"
+			state="secondary"
+			padding="medium"
+			:gap="'medium'"
+			align="middle-left"
+			clickable
+		>
 			<!--Start : slab-left -->
 			<f-div data-f-id="slab-left" height="hug-content" width="hug-content">
 				<f-icon source="i-icon"></f-icon>

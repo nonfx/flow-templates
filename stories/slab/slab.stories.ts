@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { StoryFn } from "@storybook/vue3";
+import type { Story, StoryFn } from "@storybook/vue3";
 
 import SingleLineSlab1 from "./SingleLineSlab01.vue";
 import singleLineSlabFile1 from "./SingleLineSlab01.vue?raw";
@@ -18,7 +18,7 @@ import MultiLineSlab3 from "./MultiLineSlab03.vue";
 import multiLineSlabFile3 from "./MultiLineSlab03.vue?raw";
 
 export default {
-	title: "Slab",
+	title: "Patterns/Slab",
 	parameters: {
 		docs: {
 			inlineStories: false,

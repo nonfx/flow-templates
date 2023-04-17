@@ -4,7 +4,7 @@
 		<f-div
 			data-f-id="side-nav"
 			align="top-center"
-			border="small solid default right"
+			border="small solid secondary right"
 			variant="curved"
 			direction="column"
 			height="fill-container"
@@ -16,9 +16,9 @@
 			<!--Start : side-nav-top  -->
 			<f-div
 				data-f-id="side-nav-top"
-				padding="small"
+				padding="small medium"
 				gap="small"
-				:align="open ? 'middle-left' : 'middle-center'"
+				:align="'middle-left'"
 				height="hug-content"
 				:direction="open ? 'row' : 'column'"
 				state="default"
@@ -35,7 +35,13 @@
 					>
 					</f-icon-button>
 				</f-div>
-				<f-search v-if="open" variant="round" size="small"></f-search>
+				<f-search
+					v-if="open"
+					variant="round"
+					size="small"
+					:value="sidebarSearchValue"
+					@input="filterSidebar"
+				></f-search>
 			</f-div>
 			<!--End : side-nav-top  -->
 			<!--Start : side-nav-center  -->
@@ -48,20 +54,31 @@
 				class="remove-scrollbar"
 			>
 				<f-div
-					v-for="item in dummyData"
+					v-for="item in filteredSidebarData"
 					padding="medium"
-					border="small solid default bottom"
-					:align="open ? 'middle-left' : 'middle-center'"
+					border="small solid secondary bottom"
+					:align="'middle-left'"
 					height="hug-content"
-					:selected="item.id === 0 ? 'notch-right' : 'none'"
+					:selected="item.id === selected ? 'notch-right' : 'none'"
 					:gap="open ? 'medium' : 'none'"
-					state="item.id === 0 ? 'secondary' : 'default'"
+					:state="item.id === selected ? 'secondary' : 'default'"
 					clickable
+					overflow="hidden"
+					:tooltip="`Heading ${item.id}`"
+					@click="selectMenu(item.id)"
 				>
-					<f-pictogram size="medium" source="💬" state="default" variant="square"></f-pictogram>
-					<f-text v-if="open" variant="heading" size="small" weight="medium"
-						>Heading {{ item.id }}</f-text
-					>
+					<f-pictogram
+						size="medium"
+						source="💬"
+						state="default"
+						variant="square"
+						clickable
+					></f-pictogram>
+					<f-div v-if="open" align="middle-left">
+						<f-text variant="heading" size="small" weight="medium" :ellipsis="true">
+							{{ item.title }}</f-text
+						>
+					</f-div>
 				</f-div>
 			</f-div>
 			<!--End : side-nav-center  -->
@@ -71,17 +88,18 @@
 				direction="column"
 				:align="open ? 'bottom-left' : 'top-center'"
 				height="hug-content"
-				border="small solid default top"
+				border="small solid secondary top"
 			>
 				<f-div
 					v-for="item in [0, 1, 2]"
 					padding="medium"
-					:align="open ? 'middle-left' : 'middle-center'"
+					:align="'middle-left'"
 					height="hug-content"
 					gap="medium"
 					:id="item"
 					overflow="hidden"
 					state="default"
+					tooltip="Heading"
 					clickable
 				>
 					<f-div width="hug-content">
@@ -93,7 +111,9 @@
 							state="inherit"
 						></f-icon-button>
 					</f-div>
-					<f-text v-if="open" variant="heading" size="small" weight="medium">Heading</f-text>
+					<f-div v-if="open" align="middle-left">
+						<f-text variant="heading" size="small" weight="medium" :ellipsis="true">Heading</f-text>
+					</f-div>
 				</f-div>
 			</f-div>
 			<!--End : side-nav-bottom  -->
@@ -109,29 +129,47 @@ export default defineComponent({
 	data() {
 		return {
 			open: false,
-			dummyData: [
-				{ id: 0, hover: false },
-				{ id: 1, hover: false },
-				{ id: 2, hover: false },
-				{ id: 3, hover: false },
-				{ id: 4, hover: false },
-				{ id: 5, hover: false },
-				{ id: 6, hover: false },
-				{ id: 7, hover: false },
-				{ id: 8, hover: false },
-				{ id: 9, hover: false },
-				{ id: 10, hover: false },
-				{ id: 11, hover: false },
-				{ id: 12, hover: false }
-			]
+			selected: 0,
+			sidebarData: [
+				{ id: 0, title: "Heading 1" },
+				{ id: 1, title: "Heading 2" },
+				{ id: 2, title: "Heading 3" },
+				{ id: 3, title: "Heading 4" },
+				{ id: 4, title: "Heading 5" },
+				{ id: 5, title: "Heading 6" },
+				{ id: 6, title: "Heading 7" },
+				{ id: 7, title: "Heading 8" },
+				{ id: 8, title: "Heading 9" },
+				{ id: 9, title: "Heading 10" },
+				{ id: 10, title: "Heading 11" },
+				{ id: 11, title: "Heading 12" },
+				{ id: 12, title: "Heading 13" }
+			] as SidebarDataType,
+			filteredSidebarData: [] as filteredSidebarDataType,
+			sidebarSearchValue: ""
 		};
+	},
+	mounted() {
+		this.filteredSidebarData = [...this.sidebarData];
 	},
 	methods: {
 		toggleSidebar() {
 			this.open = !this.open;
+		},
+		selectMenu(id: number) {
+			this.selected = id;
+		},
+		filterSidebar(e: CustomEvent) {
+			this.sidebarSearchValue = e.detail.value;
+			this.filteredSidebarData = this.sidebarData.filter(item =>
+				item.title.toLowerCase().includes(e.detail.value.toLowerCase())
+			);
 		}
 	}
 });
+
+export type SidebarDataType = { id: number; title: string }[];
+export type filteredSidebarDataType = SidebarDataType | [];
 </script>
 
 <!-- style custom css-->
@@ -141,10 +179,10 @@ export default defineComponent({
 }
 @keyframes slide-right {
 	from {
-		margin-left: -10%;
+		width: 55px;
 	}
 	to {
-		margin-left: 0%;
+		width: 320px;
 	}
 }
 @media (max-width: 600px) {

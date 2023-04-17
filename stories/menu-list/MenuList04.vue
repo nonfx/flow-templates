@@ -23,6 +23,7 @@
 					category="packed"
 					state="inherit"
 					size="small"
+					@click="rightIconClick($event)"
 				></f-icon-button>
 			</f-div>
 			<!--End : menu-list-section-right-->
@@ -30,3 +31,16 @@
 		<!--End : menu-list -->
 	</f-div>
 </template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+	methods: {
+		rightIconClick(event: Event) {
+			event.stopPropagation();
+			console.log(`Icon clicked`);
+		}
+	}
+});
+</script>
