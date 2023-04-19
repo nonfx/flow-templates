@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { StoryFn } from "@storybook/vue3";
 import TopNav1 from "./TopNav01.vue";
 import topNavFile1 from "./TopNav01.vue?raw";
 import TopNav2 from "./TopNav02.vue";
@@ -21,72 +20,62 @@ export default {
 	}
 };
 
-const Template1: StoryFn = () => {
-	return TopNav1;
-};
-
-export const TopNav01 = Template1.bind({});
-
-TopNav01.parameters = {
-	docs: {
-		source: {
-			code: topNavFile1
+export const Template01 = {
+	name: "ft-top-nav-01",
+	parameters: {
+		docs: {
+			source: {
+				code: topNavFile1
+			}
 		}
-	}
+	},
+	render: () => TopNav1
 };
 
-const Template2: StoryFn = () => {
-	return TopNav2;
-};
-
-export const TopNav02 = Template2.bind({});
-
-TopNav02.parameters = {
-	docs: {
-		source: {
-			code: topNavFile2
+export const Template02 = {
+	name: "ft-top-nav-02",
+	parameters: {
+		docs: {
+			source: {
+				code: topNavFile2
+			}
 		}
-	}
+	},
+	render: () => TopNav2
 };
 
-const Template3: StoryFn = () => {
-	return TopNav3;
-};
-
-export const TopNav03 = Template3.bind({});
-
-TopNav03.parameters = {
-	docs: {
-		source: {
-			code: topNavFile3
+export const Template03 = {
+	name: "ft-top-nav-03",
+	parameters: {
+		docs: {
+			source: {
+				code: topNavFile3
+			}
 		}
-	}
+	},
+	render: () => TopNav3
 };
 
-const Template4: StoryFn = () => {
-	return TopNav4;
-};
-
-export const TopNav04 = Template4.bind({});
-
-TopNav04.parameters = {
-	docs: {
-		source: {
-			code: topNavFile4
+export const Template04 = {
+	name: "ft-top-nav-04",
+	parameters: {
+		docs: {
+			source: {
+				code: topNavFile4
+			}
 		}
-	}
+	},
+	render: () => TopNav4
 };
 
-const Template5: StoryFn = () => {
-	return TopNav5;
-};
-
-export const TopNav05 = Template5.bind({});
-
-TopNav05.parameters = {
-	docs: {
-		source: {
-			code: topNavFile5
+export const Template05 = {
+	name: "ft-top-nav-05",
+	parameters: {
+		docs: {
+			source: {
+				code: topNavFile5
+			}
 		}
-	}
+	},
+	render: () => TopNav5
 };

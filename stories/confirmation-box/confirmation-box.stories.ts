@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { StoryFn } from "@storybook/vue3";
 import ConfirmationBox1 from "./ConfirmationBox01.vue";
 import ConfirmationBoxFile1 from "./ConfirmationBox01.vue?raw";
 import ConfirmationBox2 from "./ConfirmationBox02.vue";
@@ -19,58 +18,50 @@ export default {
 	}
 };
 
-const Template01: StoryFn = () => {
-	return ConfirmationBox1;
-};
-
-export const ConfirmationBoxPrimary = Template01.bind({});
-
-ConfirmationBoxPrimary.parameters = {
-	docs: {
-		source: {
-			code: ConfirmationBoxFile1
+export const Template01 = {
+	name: "ft-confirmation-box-01",
+	parameters: {
+		docs: {
+			source: {
+				code: ConfirmationBoxFile1
+			}
 		}
-	}
+	},
+	render: () => ConfirmationBox1
 };
 
-const Template02: StoryFn = () => {
-	return ConfirmationBox2;
-};
-
-export const ConfirmationBoxDanger = Template02.bind({});
-
-ConfirmationBoxDanger.parameters = {
-	docs: {
-		source: {
-			code: ConfirmationBoxFile2
+export const Template02 = {
+	name: "ft-confirmation-box-02",
+	parameters: {
+		docs: {
+			source: {
+				code: ConfirmationBoxFile2
+			}
 		}
-	}
+	},
+	render: () => ConfirmationBox2
 };
 
-const Template03: StoryFn = () => {
-	return ConfirmationBox3;
-};
-
-export const ConfirmationBoxSuccess = Template03.bind({});
-
-ConfirmationBoxSuccess.parameters = {
-	docs: {
-		source: {
-			code: ConfirmationBoxFile3
+export const Template03 = {
+	name: "ft-confirmation-box-03",
+	parameters: {
+		docs: {
+			source: {
+				code: ConfirmationBoxFile3
+			}
 		}
-	}
+	},
+	render: () => ConfirmationBox3
 };
 
-const Template04: StoryFn = () => {
-	return ConfirmationBox4;
-};
-
-export const ConfirmationBoxWarning = Template04.bind({});
-
-ConfirmationBoxWarning.parameters = {
-	docs: {
-		source: {
-			code: ConfirmationBoxFile4
+export const Template04 = {
+	name: "ft-confirmation-box-04",
+	parameters: {
+		docs: {
+			source: {
+				code: ConfirmationBoxFile4
+			}
 		}
-	}
+	},
+	render: () => ConfirmationBox4
 };

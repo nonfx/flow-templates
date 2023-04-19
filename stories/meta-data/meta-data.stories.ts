@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { StoryFn } from "@storybook/vue3";
 import MetaData1 from "./MetaData01.vue";
 import MetaDataFile1 from "./MetaData01.vue?raw";
 import MetaData2 from "./MetaData02.vue";
@@ -15,30 +14,26 @@ export default {
 	}
 };
 
-const Template01: StoryFn = () => {
-	return MetaData1;
-};
-
-export const MetaData01 = Template01.bind({});
-
-MetaData01.parameters = {
-	docs: {
-		source: {
-			code: MetaDataFile1
+export const Template01 = {
+	name: "ft-metadata-01",
+	parameters: {
+		docs: {
+			source: {
+				code: MetaDataFile1
+			}
 		}
-	}
+	},
+	render: () => MetaData1
 };
 
-const Template02: StoryFn = () => {
-	return MetaData2;
-};
-
-export const MetaData02 = Template02.bind({});
-
-MetaData02.parameters = {
-	docs: {
-		source: {
-			code: MetaDataFile2
+export const Template02 = {
+	name: "ft-metadata-02",
+	parameters: {
+		docs: {
+			source: {
+				code: MetaDataFile2
+			}
 		}
-	}
+	},
+	render: () => MetaData2
 };

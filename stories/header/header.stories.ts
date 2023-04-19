@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { StoryFn } from "@storybook/vue3";
 import Header1 from "./Header01.vue";
 import HeaderFile1 from "./Header01.vue?raw";
 
@@ -13,16 +12,14 @@ export default {
 	}
 };
 
-const Template01: StoryFn = () => {
-	return Header1;
-};
-
-export const SlabHeader = Template01.bind({});
-
-SlabHeader.parameters = {
-	docs: {
-		source: {
-			code: HeaderFile1
+export const Template01 = {
+	name: "ft-slab-header-01",
+	parameters: {
+		docs: {
+			source: {
+				code: HeaderFile1
+			}
 		}
-	}
+	},
+	render: () => Header1
 };
