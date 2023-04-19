@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { StoryFn } from "@storybook/vue3";
 import EmptyStateSmall1 from "./EmptyStateSmall01.vue";
 import EmptyStateFile1 from "./EmptyStateSmall01.vue?raw";
 import EmptyStateSmall2 from "./EmptyStateSmall02.vue";
@@ -17,44 +16,38 @@ export default {
 	}
 };
 
-const Template01: StoryFn = () => {
-	return EmptyStateSmall1;
-};
-
-export const EmptyStateSmall01 = Template01.bind({});
-
-EmptyStateSmall01.parameters = {
-	docs: {
-		source: {
-			code: EmptyStateFile1
+export const Template01 = {
+	name: "ft-empty-state-small-01",
+	parameters: {
+		docs: {
+			source: {
+				code: EmptyStateFile1
+			}
 		}
-	}
+	},
+	render: () => EmptyStateSmall1
 };
 
-const Template02: StoryFn = () => {
-	return EmptyStateSmall2;
-};
-
-export const EmptyStateSmall02 = Template02.bind({});
-
-EmptyStateSmall02.parameters = {
-	docs: {
-		source: {
-			code: EmptyStateFile2
+export const Template02 = {
+	name: "ft-empty-state-small-02",
+	parameters: {
+		docs: {
+			source: {
+				code: EmptyStateFile2
+			}
 		}
-	}
+	},
+	render: () => EmptyStateSmall2
 };
 
-const Template03: StoryFn = () => {
-	return EmptyStateSmall3;
-};
-
-export const EmptyStateSmall03 = Template03.bind({});
-
-EmptyStateSmall03.parameters = {
-	docs: {
-		source: {
-			code: EmptyStateFile3
+export const Template03 = {
+	name: "ft-empty-state-small-03",
+	parameters: {
+		docs: {
+			source: {
+				code: EmptyStateFile3
+			}
 		}
-	}
+	},
+	render: () => EmptyStateSmall3
 };

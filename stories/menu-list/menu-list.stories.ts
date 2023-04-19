@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { StoryFn } from "@storybook/vue3";
 import ExampleVue from "./Example.vue";
 import exampleFile from "./Example.vue?raw";
 import MenuList1 from "./MenuList01.vue";
@@ -23,86 +22,74 @@ export default {
 	}
 };
 
-const ExampleTemplate: StoryFn = () => {
-	return ExampleVue;
-};
-
-export const Example = ExampleTemplate.bind({});
-
-Example.parameters = {
-	docs: {
-		source: {
-			code: exampleFile
+export const ExampleTemplate = {
+	name: "ft-example",
+	parameters: {
+		docs: {
+			source: {
+				code: exampleFile
+			}
 		}
-	}
+	},
+	render: () => ExampleVue
 };
 
-const Template01: StoryFn = () => {
-	return MenuList1;
-};
-
-export const MenuList01 = Template01.bind({});
-
-MenuList01.parameters = {
-	docs: {
-		source: {
-			code: menuListFile1
+export const Template01 = {
+	name: "ft-menu-list-01",
+	parameters: {
+		docs: {
+			source: {
+				code: menuListFile1
+			}
 		}
-	}
+	},
+	render: () => MenuList1
 };
 
-const Template02: StoryFn = () => {
-	return MenuList2;
-};
-
-export const MenuList02 = Template02.bind({});
-
-MenuList02.parameters = {
-	docs: {
-		source: {
-			code: menuListFile2
+export const Template02 = {
+	name: "ft-menu-list-02",
+	parameters: {
+		docs: {
+			source: {
+				code: menuListFile2
+			}
 		}
-	}
+	},
+	render: () => MenuList2
 };
 
-const Template03: StoryFn = () => {
-	return MenuList3;
-};
-
-export const MenuList03 = Template03.bind({});
-
-MenuList03.parameters = {
-	docs: {
-		source: {
-			code: menuListFile3
+export const Template03 = {
+	name: "ft-menu-list-03",
+	parameters: {
+		docs: {
+			source: {
+				code: menuListFile3
+			}
 		}
-	}
+	},
+	render: () => MenuList3
 };
 
-const Template04: StoryFn = () => {
-	return MenuList4;
-};
-
-export const MenuList04 = Template04.bind({});
-
-MenuList04.parameters = {
-	docs: {
-		source: {
-			code: menuListFile4
+export const Template04 = {
+	name: "ft-menu-list-04",
+	parameters: {
+		docs: {
+			source: {
+				code: menuListFile4
+			}
 		}
-	}
+	},
+	render: () => MenuList4
 };
 
-const Template05: StoryFn = () => {
-	return MenuList5;
-};
-
-export const MenuList05 = Template05.bind({});
-
-MenuList05.parameters = {
-	docs: {
-		source: {
-			code: menuListFile5
+export const Template05 = {
+	name: "ft-menu-list-05",
+	parameters: {
+		docs: {
+			source: {
+				code: menuListFile5
+			}
 		}
-	}
+	},
+	render: () => MenuList5
 };

@@ -1,6 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { Story, StoryFn } from "@storybook/vue3";
-
 import SingleLineSlab1 from "./SingleLineSlab01.vue";
 import singleLineSlabFile1 from "./SingleLineSlab01.vue?raw";
 import SingleLineSlab2 from "./SingleLineSlab02.vue";
@@ -27,100 +25,86 @@ export default {
 	}
 };
 
-const SingleLineSlabTemplate01: StoryFn = () => {
-	return SingleLineSlab1;
-};
-
-export const SingleLineSlab01 = SingleLineSlabTemplate01.bind({});
-
-SingleLineSlab01.parameters = {
-	docs: {
-		source: {
-			code: singleLineSlabFile1
+export const SingleLineSlabTemplate01 = {
+	name: "ft-single-line-slab-01",
+	parameters: {
+		docs: {
+			source: {
+				code: singleLineSlabFile1
+			}
 		}
-	}
+	},
+	render: () => SingleLineSlab1
 };
 
-const SingleLineSlabTemplate02: StoryFn = () => {
-	return SingleLineSlab2;
-};
-
-export const SingleLineSlab02 = SingleLineSlabTemplate02.bind({});
-
-SingleLineSlab02.parameters = {
-	docs: {
-		source: {
-			code: singleLineSlabFile2
+export const SingleLineSlabTemplate02 = {
+	name: "ft-single-line-slab-02",
+	parameters: {
+		docs: {
+			source: {
+				code: singleLineSlabFile2
+			}
 		}
-	}
+	},
+	render: () => SingleLineSlab2
 };
 
-const SingleLineSlabTemplate03: StoryFn = () => {
-	return SingleLineSlab3;
-};
-
-export const SingleLineSlab03 = SingleLineSlabTemplate03.bind({});
-
-SingleLineSlab03.parameters = {
-	docs: {
-		source: {
-			code: singleLineSlabFile3
+export const SingleLineSlabTemplate03 = {
+	name: "ft-single-line-slab-03",
+	parameters: {
+		docs: {
+			source: {
+				code: singleLineSlabFile3
+			}
 		}
-	}
+	},
+	render: () => SingleLineSlab3
 };
 
-const SingleLineSlabTemplate04: StoryFn = () => {
-	return SingleLineSlab4;
-};
-
-export const SingleLineSlab04 = SingleLineSlabTemplate04.bind({});
-
-SingleLineSlab04.parameters = {
-	docs: {
-		source: {
-			code: singleLineSlabFile4
+export const SingleLineSlabTemplate04 = {
+	name: "ft-single-line-slab-04",
+	parameters: {
+		docs: {
+			source: {
+				code: singleLineSlabFile4
+			}
 		}
-	}
+	},
+	render: () => SingleLineSlab4
 };
 
-const MultiLineSlabTemplate01: StoryFn = () => {
-	return MultiLineSlab1;
-};
-
-export const MultiLineSlab01 = MultiLineSlabTemplate01.bind({});
-
-MultiLineSlab01.parameters = {
-	docs: {
-		source: {
-			code: multiLineSlabFile1
+export const MultiLineSlabTemplate01 = {
+	name: "ft-multi-line-slab-01",
+	parameters: {
+		docs: {
+			source: {
+				code: multiLineSlabFile1
+			}
 		}
-	}
+	},
+	render: () => MultiLineSlab1
 };
 
-const MultiLineSlabTemplate02: StoryFn = () => {
-	return MultiLineSlab2;
-};
-
-export const MultiLineSlab02 = MultiLineSlabTemplate02.bind({});
-
-MultiLineSlab02.parameters = {
-	docs: {
-		source: {
-			code: multiLineSlabFile2
+export const MultiLineSlabTemplate02 = {
+	name: "ft-multi-line-slab-02",
+	parameters: {
+		docs: {
+			source: {
+				code: multiLineSlabFile2
+			}
 		}
-	}
+	},
+	render: () => MultiLineSlab2
 };
 
-const MultiLineSlabTemplate03: StoryFn = () => {
-	return MultiLineSlab3;
-};
-
-export const MultiLineSlab03 = MultiLineSlabTemplate03.bind({});
-
-MultiLineSlab03.parameters = {
-	docs: {
-		source: {
-			code: multiLineSlabFile3
+export const MultiLineSlabTemplate03 = {
+	name: "ft-multi-line-slab-03",
+	parameters: {
+		docs: {
+			source: {
+				code: multiLineSlabFile3
+			}
 		}
-	}
+	},
+	render: () => MultiLineSlab3
 };

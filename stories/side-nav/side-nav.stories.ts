@@ -1,7 +1,6 @@
 import SideNav011 from "./SideNav01.vue";
-
 import file from "./SideNav01.vue?raw";
-import type { StoryFn } from "@storybook/vue3";
+
 export default {
 	title: "Templates/Side Nav",
 	parameters: {
@@ -12,16 +11,14 @@ export default {
 	}
 };
 
-const Template: StoryFn = () => {
-	return SideNav011;
-};
-
-export const SideNav01 = Template.bind({});
-
-SideNav01.parameters = {
-	docs: {
-		source: {
-			code: file
+export const Template01 = {
+	name: "ft-side-nav-01",
+	parameters: {
+		docs: {
+			source: {
+				code: file
+			}
 		}
-	}
+	},
+	render: () => SideNav011
 };
