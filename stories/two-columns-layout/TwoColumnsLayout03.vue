@@ -1,5 +1,11 @@
 <template>
-	<f-div height="100%" overflow="hidden" state="default">
+	<f-div
+		height="100%"
+		overflow="hidden"
+		state="default"
+		class="left-column"
+		:data-column-open="open"
+	>
 		<div class="overlay" :data-column-open="open"></div>
 		<f-div overflow="scroll" state="default">
 			<f-div padding="medium large none large" direction="column" gap="medium" height="hug-content">
@@ -421,14 +427,17 @@ export type MetaDataLeftType = Record<string, EntryType>;
 	scrollbar-width: none;
 }
 @media (max-width: 768px) {
-	.overlay[data-column-open="true"] {
-		background-color: rgba(0, 0, 0, 0.5);
-		z-index: 10;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
+	.left-column[data-column-open="true"] {
+		&::before {
+			content: "";
+			position: fixed;
+			width: 100vw;
+			height: 100vh;
+			background-color: rgba(0, 0, 0, 0.5);
+			z-index: 10;
+			top: 0;
+			left: 0;
+		}
 	}
 }
 </style>

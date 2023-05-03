@@ -1,6 +1,11 @@
 <template>
-	<f-div height="100%" overflow="hidden" state="default">
-		<div class="overlay" :data-column-open="open"></div>
+	<f-div
+		height="100%"
+		overflow="hidden"
+		state="default"
+		class="left-column"
+		:data-column-open="open"
+	>
 		<f-div
 			:width="open ? '300px' : '0px'"
 			:class="open ? 'left-column-expanded' : 'left-column-collapsed'"
@@ -372,14 +377,17 @@ export type LeftColumnData = LeftColumnDataObject[];
 	scrollbar-width: none;
 }
 @media (max-width: 768px) {
-	.overlay[data-column-open="true"] {
-		background-color: rgba(0, 0, 0, 0.5);
-		z-index: 10;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
+	.left-column[data-column-open="true"] {
+		&::before {
+			content: "";
+			position: fixed;
+			width: 100vw;
+			height: 100vh;
+			background-color: rgba(0, 0, 0, 0.5);
+			z-index: 10;
+			top: 0;
+			left: 0;
+		}
 	}
 }
 </style>
