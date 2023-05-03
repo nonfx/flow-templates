@@ -3,10 +3,9 @@
 		height="100%"
 		overflow="hidden"
 		state="default"
-		class="left-column"
+		class="left-column-hightlight"
 		:data-column-open="open"
 	>
-		<div class="overlay" :data-column-open="open"></div>
 		<f-div overflow="scroll" state="default">
 			<f-div padding="medium large none large" direction="column" gap="medium" height="hug-content">
 				<f-div gap="medium" direction="column" height="hug-content">
@@ -427,7 +426,7 @@ export type MetaDataLeftType = Record<string, EntryType>;
 	scrollbar-width: none;
 }
 @media (max-width: 768px) {
-	.left-column[data-column-open="true"] {
+	.left-column-hightlight[data-column-open="true"] {
 		&::before {
 			content: "";
 			position: fixed;

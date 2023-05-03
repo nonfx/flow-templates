@@ -3,7 +3,7 @@
 		height="100%"
 		overflow="hidden"
 		state="default"
-		class="left-column"
+		class="left-column-hightlight"
 		:data-column-open="open"
 	>
 		<f-div
@@ -377,7 +377,7 @@ export type LeftColumnData = LeftColumnDataObject[];
 	scrollbar-width: none;
 }
 @media (max-width: 768px) {
-	.left-column[data-column-open="true"] {
+	.left-column-hightlight[data-column-open="true"] {
 		&::before {
 			content: "";
 			position: fixed;
