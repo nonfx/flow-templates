@@ -1154,18 +1154,28 @@
     rxjs "^7.5.7"
     validate-color "^2.2.1"
 
-"@cldcvr/flow-core@1.10.1":
-  version "1.10.1"
-  resolved "https://registry.yarnpkg.com/@cldcvr/flow-core/-/flow-core-1.10.1.tgz#09833a635097333f49efec2c54d63de1b85d989f"
-  integrity sha512-cwbV+k2NRmR95cVBmPgGgFytbO8Un1YJbhVQrwRm2QvL430hZxQuJK0Tg6w8PiHogJdUeRZxZjoKZpN4XoZAAQ==
+"@cldcvr/flow-core@1.14.1":
+  version "1.14.1"
+  resolved "https://registry.yarnpkg.com/@cldcvr/flow-core/-/flow-core-1.14.1.tgz#50a3545261d128a6de3842084457e63c36a68895"
+  integrity sha512-TfKIGDk6XCSgpmpNyceRVunMVzdGbSO9yQzS1u3Nf3bVV0OTH95eZb0clcPEZJsko9Th0y5cPdErkvnZbFmjRA==
   dependencies:
     "@emoji-mart/data" "^1.1.2"
     "@floating-ui/dom" "^1.0.2"
     axios "^0.27.2"
     emoji-mart "^5.5.2"
+    flatpickr "^4.6.13"
     lit "^2.2.4"
     rxjs "^7.5.7"
     validate-color "^2.2.1"
+
+"@cldcvr/flow-form-builder@1.5.14":
+  version "1.5.14"
+  resolved "https://registry.yarnpkg.com/@cldcvr/flow-form-builder/-/flow-form-builder-1.5.14.tgz#4bc0ade7eaafbbc171b1359d47133b0ac49e4ab4"
+  integrity sha512-VA6IhFNVXTXsyxyYGU/wjCi4w3of+HVZpFfAjAsVgUGNV028UeXnwWpPXHL9jsEMs03bHX28xD7RgxKJ2XSxjg==
+  dependencies:
+    lit "^2.2.4"
+    lodash-es "^4.17.21"
+    rxjs "^7.8.0"
 
 "@cldcvr/flow-gcp-icon@latest":
   version "1.4.2"
@@ -6222,6 +6232,11 @@ flat-cache@^3.0.4:
     flatted "^3.1.0"
     rimraf "^3.0.2"
 
+flatpickr@^4.6.13:
+  version "4.6.13"
+  resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.6.13.tgz#8a029548187fd6e0d670908471e43abe9ad18d94"
+  integrity sha512-97PMG/aywoYpB4IvbvUJi0RQi8vearvU0oov1WW3k0WZPBMrTQVqekSX5CjSG/M4Q3i6A/0FKXC7RyAoAUUSPw==
+
 flatted@^3.1.0:
   version "3.2.7"
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.7.tgz#609f39207cb614b89d0765b477cb2d437fbf9787"
@@ -7967,6 +7982,11 @@ locate-path@^6.0.0:
   integrity sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==
   dependencies:
     p-locate "^5.0.0"
+
+lodash-es@^4.17.21:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
+  integrity sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==
 
 lodash.debounce@^4.0.8:
   version "4.0.8"
@@ -10127,6 +10147,13 @@ rxjs@^7.5.7:
   version "7.8.0"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.8.0.tgz#90a938862a82888ff4c7359811a595e14e1e09a4"
   integrity sha512-F2+gxDshqmIub1KdvZkaEfGDwLNpPvk9Fs6LD/MyQxNgMds/WH9OdDDXOmxUZpME+iSK3rQCctkL0DYyytUqMg==
+  dependencies:
+    tslib "^2.1.0"
+
+rxjs@^7.8.0:
+  version "7.8.1"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.8.1.tgz#6f6f3d99ea8044291efd92e7c7fcf562c4057543"
+  integrity sha512-AA3TVj+0A2iuIoQkWEK/tqFjBq2j+6PO6Y0zJcvzLAFhEFIO3HL0vls9hWLncZbAAbK0mar7oZ4V079I/qPMxg==
   dependencies:
     tslib "^2.1.0"
 

@@ -1,16 +1,22 @@
 <template>
 	<!-- Paste the below code in PipelineCard.vue -->
 	<f-div
-		:width="hasTitle ? (isCollapsed ? '44px' : '225px') : 'hug-content'"
+		:width="hasTitle ? (isCollapsed ? '46px' : '225px') : 'hug-content'"
 		:class="hasTitle ? (isCollapsed ? 'expand-header' : 'collapse-header') : ''"
 		padding="x-small small"
 		gap="medium"
 		align="middle-left"
-		border="small dashed secondary"
+		:border="
+			selectedSlab === label?.title
+				? 'none'
+				: isLoading
+				? 'small solid secondary'
+				: 'small dashed secondary'
+		"
 		variant="curved"
 		overflow="hidden"
 		:state="state"
-		clickable
+		:clickable="selectedSlab === label?.title ? false : true"
 		@click="$emit('action', label?.title)"
 		:selected="selectedSlab === label?.title ? 'background' : 'none'"
 	>
@@ -18,7 +24,7 @@
 			size="medium"
 			variant="square"
 			source="i-icon"
-			clickable
+			:clickable="selectedSlab === label?.title ? false : true"
 			:loading="isLoading"
 			:state="state"
 		></f-pictogram>
@@ -47,7 +53,13 @@
 				v-if="state !== 'default'"
 				overflow="hidden"
 			>
-				<f-icon size="x-small" source="i-alert" :state="state" class="state-icon-size"></f-icon>
+				<f-icon
+					size="x-small"
+					source="i-alert"
+					:state="state"
+					class="state-icon-size"
+					tooltip="error"
+				></f-icon>
 				<f-icon size="x-small" source="i-icon" class="state-icon-size"></f-icon>
 			</f-div>
 		</f-div>
@@ -98,13 +110,13 @@ export type LabelType = { title: string; subTitle?: string };
 		width: 225px;
 	}
 	to {
-		width: 44px;
+		width: 46px;
 	}
 }
 
 @keyframes slide-to-right {
 	from {
-		width: 44px;
+		width: 46px;
 	}
 	to {
 		width: 225px;
@@ -125,7 +137,7 @@ export type LabelType = { title: string; subTitle?: string };
 		display: none !important;
 	}
 	.collapse-header {
-		width: 44px !important;
+		width: 46px !important;
 	}
 }
 </style>

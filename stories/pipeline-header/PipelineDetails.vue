@@ -1,11 +1,12 @@
 <template>
 	<!-- Paste the below code in PipelineName.vue -->
-	<f-div gap="large" width="hug-content" align="middle-left">
+	<f-div gap="large" width="hug-content" align="middle-left" @click="enterPipelineDetails">
 		<f-pictogram
 			variant="squircle"
 			size="x-large"
 			:source="pipeline?.icon"
 			:state="state"
+			clickable
 		></f-pictogram>
 		<f-div
 			width="180px"
@@ -37,6 +38,11 @@ export default defineComponent({
 		state: {
 			type: String as PropType<PipelineStateTypes>,
 			default: "default"
+		}
+	},
+	methods: {
+		enterPipelineDetails() {
+			console.log("Open the Popover template here - 'ft-pipeline-details-popover'");
 		}
 	}
 });
