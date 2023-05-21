@@ -38,6 +38,26 @@ export default {
 	}
 };
 
+export const Template011 = {
+	name: "pipeline-header-walkthrough",
+	parameters: {
+		docs: {
+			iframeHeight: 500,
+			source: {
+				code: null
+			},
+
+			description: {
+				component:
+					"The pipeline header is a responsive interactive wizard for creating and managing an ingestion pipeline. The pipeline header template is a cumulative of Details, Source, Destination and mode of ingestion cards, which also pose as steps of the pipeline."
+			}
+		}
+	},
+	render: () => ({
+		template: "<img src='../../gifs/pipeline-header.gif'  width='950' height='480'></img>"
+	})
+};
+
 export const Template01 = {
 	name: "ft-pipeline-header-01",
 	parameters: {

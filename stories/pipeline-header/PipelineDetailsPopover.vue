@@ -77,6 +77,26 @@ export default defineComponent({
 								label: {
 									title: "Icon"
 								},
+								recent: [
+									"file_folder",
+									"brain",
+									"moneybag",
+									"hospital",
+									"earth_asia",
+									"test_tube",
+									"pencil2",
+									"cloud",
+									"chart_with_upwards_trend",
+									"classical_building",
+									"dollar",
+									"evergreen_tree",
+									"package",
+									"ship",
+									"truck",
+									"mountain",
+									"office",
+									"watch"
+								],
 								validationRules: [
 									{
 										name: "required"
