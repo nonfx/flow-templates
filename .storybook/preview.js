@@ -3,8 +3,12 @@ import ProductIconPack from "@cldcvr/flow-product-icon/dist/types/icon-pack";
 import GcpIconPack from "@cldcvr/flow-gcp-icon/dist/types/icon-pack";
 import AwsIconPack from "@cldcvr/flow-aws-icon/dist/types/icon-pack";
 import "@cldcvr/flow-core/dist/style.css";
-import "@cldcvr/flow-core";
-import "@cldcvr/flow-form-builder";
+import "@cldcvr/flow-form-builder/dist/style.css";
+
+await import("@cldcvr/flow-core").then(async () => {
+	await import("@cldcvr/flow-form-builder");
+});
+
 import "./storybook.css";
 import { ConfigUtil } from "@cldcvr/flow-core";
 
