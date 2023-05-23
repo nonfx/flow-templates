@@ -5,10 +5,8 @@ import AwsIconPack from "@cldcvr/flow-aws-icon/dist/types/icon-pack";
 import "@cldcvr/flow-core/dist/style.css";
 import "@cldcvr/flow-form-builder/dist/style.css";
 
-await import("@cldcvr/flow-core").then(async () => {
-	await import("@cldcvr/flow-form-builder");
-});
-
+import "@cldcvr/flow-core";
+import "@cldcvr/flow-form-builder";
 import "./storybook.css";
 import { ConfigUtil } from "@cldcvr/flow-core";
 
@@ -47,6 +45,9 @@ export const parameters = {
 
 export const decorators = [
 	() => {
+		import("@cldcvr/flow-core").then(async () => {
+			await import("@cldcvr/flow-form-builder");
+		});
 		window.onmessage = function (e) {
 			if (e.data && typeof e.data === "string") {
 				const message = JSON.parse(e.data);
