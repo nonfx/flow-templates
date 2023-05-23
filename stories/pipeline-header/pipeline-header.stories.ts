@@ -28,8 +28,6 @@ import TimeSchedulePopoverFile from "./TimeSchedulePopover.vue?raw";
 import SourceDetails from "./SourceDetails.vue";
 import SourceDetailsFile from "./SourceDetails.vue?raw";
 
-import PipelineHeaderGif from "./PipelineHeaderGif.vue";
-
 export default {
 	title: "Templates/Pipeline Header",
 	parameters: {
@@ -55,7 +53,9 @@ export const Template011 = {
 			}
 		}
 	},
-	render: () => PipelineHeaderGif
+	render: () => ({
+		template: `<img src="gifs/pipeline-header.gif" width="950" height="480" />`
+	})
 };
 
 export const Template01 = {
