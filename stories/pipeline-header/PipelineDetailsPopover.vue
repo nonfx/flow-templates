@@ -24,8 +24,8 @@
 		<f-div padding="medium">
 			<f-form-builder
 				class="form-builder-custom"
-				:field="field"
-				:values="fieldValues"
+				:field.prop="field"
+				:values.prop="fieldValues"
 				@keydown="handleKeydown"
 				@input="handleInput"
 				@state-change="handleStateChange"

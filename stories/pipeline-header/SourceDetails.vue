@@ -31,7 +31,7 @@
 				</f-div>
 			</f-div>
 			<f-div padding="medium">
-				<f-form-builder class="form-builder-custom" :field="field" :values="fieldValues">
+				<f-form-builder class="form-builder-custom" :field.prop="field" :values.prop="fieldValues">
 				</f-form-builder>
 			</f-div>
 		</f-div>
