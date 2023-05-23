@@ -7,12 +7,12 @@
 		align="middle-left"
 		state="default"
 	>
-		<!-- Start: PipelineName Card Component story is mentioned below -->
-		<!-- From a seperate Component file with name as 'PipelineName.vue' and paste the below story template inside it -->
-		<PipelineName
+		<!-- Start: PipelineDetails Card Component story is mentioned below -->
+		<!-- From a seperate Component file with name as 'PipelineDetails.vue' and paste the below story template inside it -->
+		<PipelineDetails
 			:pipeline="{ title: 'Title', subTitle: 'Status, date and time', icon: '🌏' }"
-		></PipelineName>
-		<!-- End: PipelineName Card Component story is mentioned below -->
+		></PipelineDetails>
+		<!-- End: PipelineDetails Card Component story is mentioned below -->
 		<f-divider state="secondary"></f-divider>
 		<!-- Start: PipelineCard Component story is mentioned below -->
 		<!-- From a seperate Component file with name as 'PipelineCard.vue' and paste the below story template inside it -->
@@ -73,7 +73,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import PipelineCard from "./PipelineCard.vue";
-import PipelineName from "./PipelineName.vue";
+import PipelineDetails from "./PipelineDetails.vue";
 
 export default defineComponent({
 	data() {
@@ -89,15 +89,18 @@ export default defineComponent({
 		pipelineAction(value: any) {
 			console.log(value);
 			this.selectedSlab = value;
+			console.log(
+				"Open the source/destination/ingestion-mode template on click of the cards respectively"
+			);
 		},
 		successAction() {
-			console.log("success button clicked!!!");
+			console.log("open configure-pipeline popover template here");
 		},
 		iconAction() {
 			console.log("clicked icon!!");
 		}
 	},
-	components: { PipelineCard, PipelineName }
+	components: { PipelineCard, PipelineDetails }
 });
 </script>
 
