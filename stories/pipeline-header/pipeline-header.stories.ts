@@ -54,7 +54,7 @@ export const Template011 = {
 		}
 	},
 	render: () => ({
-		template: "<img src='../../gifs/pipeline-header.gif'  width='950' height='480'></img>"
+		template: "<img src='gifs/pipeline-header.gif'  width='950' height='480'></img>"
 	})
 };
 
