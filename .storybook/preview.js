@@ -3,6 +3,8 @@ import ProductIconPack from "@cldcvr/flow-product-icon/dist/types/icon-pack";
 import GcpIconPack from "@cldcvr/flow-gcp-icon/dist/types/icon-pack";
 import AwsIconPack from "@cldcvr/flow-aws-icon/dist/types/icon-pack";
 import "@cldcvr/flow-core/dist/style.css";
+import "@cldcvr/flow-form-builder/dist/style.css";
+
 import "@cldcvr/flow-core";
 import "@cldcvr/flow-form-builder";
 import "./storybook.css";
@@ -43,6 +45,9 @@ export const parameters = {
 
 export const decorators = [
 	() => {
+		import("@cldcvr/flow-core").then(async () => {
+			await import("@cldcvr/flow-form-builder");
+		});
 		window.onmessage = function (e) {
 			if (e.data && typeof e.data === "string") {
 				const message = JSON.parse(e.data);
