@@ -2,7 +2,7 @@ import ContentDetails01 from "./ContentDetails01.vue";
 import file from "./ContentDetails01.vue?raw";
 
 export default {
-	title: "Templates/Content Details",
+	title: "Templates/Content Details Layout",
 	parameters: {
 		docs: {
 			inlineStories: false,
