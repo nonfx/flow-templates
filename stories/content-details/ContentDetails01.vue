@@ -521,7 +521,7 @@ export type MetaDataLeftType = Record<string, EntryType>;
 @media (max-width: 768px) {
 	.notch-right {
 		position: relative;
-		z-index: 1000;
+		z-index: 100 !important;
 	}
 	.notch-right[data-column-open="true"] {
 		right: 310px;
@@ -558,7 +558,7 @@ export type MetaDataLeftType = Record<string, EntryType>;
 		position: fixed !important;
 		right: 0px;
 		animation: 0.25s ease-out 0s 1 slide-column-right;
-		z-index: 1000;
+		z-index: 100 !important;
 		border-radius: 0px 8px 8px 0px;
 	}
 }
@@ -584,7 +584,7 @@ export type MetaDataLeftType = Record<string, EntryType>;
 		right: 0px;
 		width: inherit;
 		animation: 0.25s ease-out 0s 1 slide-column-left;
-		z-index: 1000;
+		z-index: 100 !important;
 	}
 }
 @media (min-width: 768px) {
