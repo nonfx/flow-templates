@@ -49,11 +49,107 @@
 					category="transparent"
 					size="medium"
 					state="inherit"
+					id="popoverTarget"
+					@click="toggleMenu"
 				></f-icon-button>
+				<f-popover
+					target="#popoverTarget"
+					:open="menuPopoverOpen"
+					@overlay-click="toggleMenu"
+					size="small"
+				>
+					<f-div state="tertiary" direction="column">
+						<!--Start : menu-list -->
+						<f-div
+							state="secondary"
+							padding="medium"
+							gap="medium"
+							border="small solid default bottom"
+							clickable
+							class="menu-mobile-display"
+						>
+							<!--Start : menu-list-section-left -->
+							<f-div data-f-id="menu-list-section-left" gap="medium" align="middle-left">
+								<f-icon size="small" source="i-star"></f-icon>
+								<f-text variant="para" size="medium" weight="regular">Text</f-text>
+							</f-div>
+							<!--End : menu-list-section-left -->
+						</f-div>
+						<!--End : menu-list -->
+						<!--Start : menu-list -->
+						<f-div
+							state="secondary"
+							padding="medium"
+							gap="medium"
+							border="small solid default bottom"
+							clickable
+							class="menu-mobile-display"
+						>
+							<!--Start : menu-list-section-left -->
+							<f-div data-f-id="menu-list-section-left" gap="medium" align="middle-left">
+								<f-icon size="small" source="i-app"></f-icon>
+								<f-text variant="para" size="medium" weight="regular">Text</f-text>
+							</f-div>
+							<!--End : menu-list-section-left -->
+						</f-div>
+						<!--End : menu-list --><!--Start : menu-list -->
+						<f-div
+							state="secondary"
+							padding="medium"
+							gap="medium"
+							border="small solid default bottom"
+							clickable
+							class="menu-mobile-display"
+						>
+							<!--Start : menu-list-section-left -->
+							<f-div data-f-id="menu-list-section-left" gap="medium" align="middle-left">
+								<f-icon size="small" source="i-share-2"></f-icon>
+								<f-text variant="para" size="medium" weight="regular">Text</f-text>
+							</f-div>
+							<!--End : menu-list-section-left -->
+						</f-div>
+						<!--End : menu-list -->
+						<!--End : menu-list --><!--Start : menu-list -->
+						<f-div
+							state="secondary"
+							padding="medium"
+							gap="medium"
+							border="small solid default bottom"
+							clickable
+							class="menu-mobile-display"
+						>
+							<!--Start : menu-list-section-left -->
+							<f-div data-f-id="menu-list-section-left" gap="medium" align="middle-left">
+								<f-icon size="small" source="i-download"></f-icon>
+								<f-text variant="para" size="medium" weight="regular">Text</f-text>
+							</f-div>
+							<!--End : menu-list-section-left -->
+						</f-div>
+						<!--End : menu-list -->
+						<!--Start : menu-list -->
+						<f-div
+							state="secondary"
+							padding="medium"
+							gap="medium"
+							border="small solid default bottom"
+							clickable
+							v-for="item in [0, 1, 2]"
+							:key="item"
+						>
+							<!--Start : menu-list-section-left -->
+							<f-div data-f-id="menu-list-section-left" gap="medium" align="middle-left">
+								<f-icon size="small" source="i-icon"></f-icon>
+								<f-text variant="para" size="medium" weight="regular">Text {{ item }}</f-text>
+							</f-div>
+							<!--End : menu-list-section-left -->
+						</f-div>
+						<!--End : menu-list -->
+					</f-div>
+				</f-popover>
 			</f-div>
 		</f-div>
 		<f-div
-			height="100%"
+			height="100vh"
 			overflow="hidden"
 			state="default"
 			class="left-column-hightlight"
@@ -235,6 +331,7 @@ export default defineComponent({
 				{ id: 2, title: "Queries" },
 				{ id: 3, title: "Glossary" }
 			],
+			menuPopoverOpen: false,
 			rightArray: ["Overview", "Other Details"],
 			selectedTab: 0,
 			selectedRightTab: "Overview",
@@ -374,6 +471,9 @@ export default defineComponent({
 		},
 		handleChangeRightTab(item: string) {
 			this.selectedRightTab = item;
+		},
+		toggleMenu() {
+			this.menuPopoverOpen = !this.menuPopoverOpen;
 		}
 	}
 });
@@ -515,9 +615,16 @@ export type MetaDataLeftType = Record<string, EntryType>;
 	}
 }
 
+.menu-mobile-display {
+	display: none !important;
+}
+
 @media (max-width: 570px) {
 	.icon-menu-hide-mobile {
 		display: none !important;
+	}
+	.menu-mobile-display {
+		display: flex !important;
 	}
 }
 </style>
