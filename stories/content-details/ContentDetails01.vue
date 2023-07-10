@@ -19,6 +19,7 @@
 						category="transparent"
 						size="medium"
 						state="inherit"
+						@click="handleClickMenuItems('star')"
 					></f-icon-button>
 					<f-icon-button
 						icon="i-app"
@@ -26,6 +27,7 @@
 						category="transparent"
 						size="medium"
 						state="inherit"
+						@click="handleClickMenuItems('app')"
 					></f-icon-button>
 					<f-icon-button
 						icon="i-share-2"
@@ -33,6 +35,7 @@
 						category="transparent"
 						size="medium"
 						state="inherit"
+						@click="handleClickMenuItems('share')"
 					></f-icon-button>
 					<f-icon-button
 						icon="i-download"
@@ -40,9 +43,14 @@
 						category="transparent"
 						size="medium"
 						state="inherit"
+						@click="handleClickMenuItems('download')"
 					></f-icon-button>
 				</f-div>
-				<f-button label="Button" variant="curved"></f-button>
+				<f-button
+					label="Button"
+					variant="curved"
+					@click="handleClickMenuItems('button')"
+				></f-button>
 				<f-icon-button
 					icon="i-more"
 					variant="block"
@@ -66,7 +74,27 @@
 							gap="medium"
 							border="small solid default bottom"
 							clickable
+							v-for="item in [0, 1, 2]"
+							:key="item"
+							@click="handleClickMenu(item)"
+						>
+							<!--Start : menu-list-section-left -->
+							<f-div data-f-id="menu-list-section-left" gap="medium" align="middle-left">
+								<f-icon size="small" source="i-icon"></f-icon>
+								<f-text variant="para" size="medium" weight="regular">Text {{ item }}</f-text>
+							</f-div>
+							<!--End : menu-list-section-left -->
+						</f-div>
+						<!--End : menu-list -->
+						<!--Start : menu-list -->
+						<f-div
+							state="secondary"
+							padding="medium"
+							gap="medium"
+							border="small solid default bottom"
+							clickable
 							class="menu-mobile-display"
+							@click="handleClickMenuItems('star')"
 						>
 							<!--Start : menu-list-section-left -->
 							<f-div data-f-id="menu-list-section-left" gap="medium" align="middle-left">
@@ -84,6 +112,7 @@
 							border="small solid default bottom"
 							clickable
 							class="menu-mobile-display"
+							@click="handleClickMenuItems('app')"
 						>
 							<!--Start : menu-list-section-left -->
 							<f-div data-f-id="menu-list-section-left" gap="medium" align="middle-left">
@@ -100,6 +129,7 @@
 							border="small solid default bottom"
 							clickable
 							class="menu-mobile-display"
+							@click="handleClickMenuItems('share')"
 						>
 							<!--Start : menu-list-section-left -->
 							<f-div data-f-id="menu-list-section-left" gap="medium" align="middle-left">
@@ -117,29 +147,12 @@
 							border="small solid default bottom"
 							clickable
 							class="menu-mobile-display"
+							@click="handleClickMenuItems('download')"
 						>
 							<!--Start : menu-list-section-left -->
 							<f-div data-f-id="menu-list-section-left" gap="medium" align="middle-left">
 								<f-icon size="small" source="i-download"></f-icon>
 								<f-text variant="para" size="medium" weight="regular">Text</f-text>
-							</f-div>
-							<!--End : menu-list-section-left -->
-						</f-div>
-						<!--End : menu-list -->
-						<!--Start : menu-list -->
-						<f-div
-							state="secondary"
-							padding="medium"
-							gap="medium"
-							border="small solid default bottom"
-							clickable
-							v-for="item in [0, 1, 2]"
-							:key="item"
-						>
-							<!--Start : menu-list-section-left -->
-							<f-div data-f-id="menu-list-section-left" gap="medium" align="middle-left">
-								<f-icon size="small" source="i-icon"></f-icon>
-								<f-text variant="para" size="medium" weight="regular">Text {{ item }}</f-text>
 							</f-div>
 							<!--End : menu-list-section-left -->
 						</f-div>
@@ -474,6 +487,12 @@ export default defineComponent({
 		},
 		toggleMenu() {
 			this.menuPopoverOpen = !this.menuPopoverOpen;
+		},
+		handleClickMenu(item: number) {
+			console.log("Menu Clicked", item);
+		},
+		handleClickMenuItems(str: string) {
+			console.log(`${str} clicked menu!!`);
 		}
 	}
 });
