@@ -7,7 +7,6 @@
 		@toggle-row-details="toggleRowDetails"
 	>
 	</f-table-schema>
-	<f-icon source="i-loader" size="small" state="success" class="loading"></f-icon>
 </template>
 
 <script lang="ts">
@@ -59,10 +58,8 @@ export default defineComponent({
 							pipelineRun: {
 								value: "Monday, 18 Jun 10:15 AM",
 								template: function () {
-									return html` <f-div height="100%" align="middle-left">
-										<f-text variant="para" size="small" weight="regular"
-											>${this.value}</f-text
-										></f-div
+									return html` <f-text variant="para" size="small" weight="regular"
+										>${this.value}</f-text
 									>`;
 								}
 							},
