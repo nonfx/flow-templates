@@ -69,7 +69,7 @@
 									>A brief description of the empty state goes here.</f-text
 								>
 							</f-div>
-							<f-div align="middle-center">
+							<f-div align="middle-center" height="hug-content">
 								<f-button
 									label="PRIMARY ACTION"
 									size="small"
