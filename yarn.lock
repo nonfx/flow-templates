@@ -1187,10 +1187,10 @@
   dependencies:
     "@cldcvr/flow-core" "*"
 
-"@cldcvr/flow-table@1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@cldcvr/flow-table/-/flow-table-1.1.1.tgz#4f204fa336832f07fc54efd7784396a1a7c0818f"
-  integrity sha512-bw9a9FrQy1oYLUVa1HDDLx/qmSFkuQ6+aMn5A+WD9Gnmg9bs86y8AqRM8VVKlSEfF0Id0bvzVuAK4uGWwLiX1g==
+"@cldcvr/flow-table@1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@cldcvr/flow-table/-/flow-table-1.2.0.tgz#22d19bf2ee07dcb1883dac547fab6d04c3f500a0"
+  integrity sha512-dTG4U7iMYaTPK8IwLKhhm6i5u2DUpSrK1d6CGcRDDB4gQ1OxqmK58cgzsrZ/6qtovVcao+G8OQjQEP0mwRjoyQ==
   dependencies:
     lit "^2.2.4"
 
