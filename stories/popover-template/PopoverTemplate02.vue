@@ -1,161 +1,124 @@
 <template>
-	<f-div state="secondary" direction="column" width="432px">
-		<f-div direction="column" class="overlay">
-			<f-div gap="auto" align="middle-left" padding="medium">
-				<f-div gap="medium">
-					<f-icon-button
-						variant="block"
-						category="packed"
-						size="small"
-						state="inherit"
-						icon="i-arrow-left"
-					></f-icon-button>
-					<f-text variant="para" size="small" weight="bold">Heading</f-text>
-					<f-icon-button
-						variant="block"
-						category="packed"
-						size="small"
-						state="inherit"
-						icon="i-icon"
-					></f-icon-button>
-					<f-icon-button
-						variant="block"
-						category="packed"
-						size="small"
-						state="inherit"
-						icon="i-icon"
-					></f-icon-button
-					><f-icon-button
-						variant="block"
-						category="packed"
-						size="small"
-						state="inherit"
-						icon="i-icon"
-					></f-icon-button>
-				</f-div>
-				<f-div width="hug-content" align="middle-left" gap="medium">
-					<f-icon-button
-						variant="block"
-						category="packed"
-						size="small"
-						state="inherit"
-						icon="i-icon"
-					></f-icon-button>
-					<f-icon-button
-						variant="block"
-						category="packed"
-						size="small"
-						state="inherit"
-						icon="i-icon"
-					></f-icon-button
-					><f-icon-button
-						variant="block"
-						category="packed"
-						size="small"
-						state="inherit"
-						icon="i-icon"
-					></f-icon-button>
-					<f-icon-button
-						icon="i-close"
-						variant="block"
-						categroy="packed"
-						size="small"
-						state="inherit"
-						@click="openBanner = true"
-					></f-icon-button>
-				</f-div>
-			</f-div>
-			<f-div direction="column" gap="large" v-if="openBanner">
-				<!-- Please Copy/paste code from here -->
-				<!-- Iteration has been used here just for demo purpose -->
-				<f-div padding="medium" gap="auto" align="middle-left" state="warning">
-					<f-div gap="medium" align="middle-left" state="inherit" padding="none medium none none"
-						><f-text variant="heading" size="small" weight="regular" state="inherit"
-							>The changes will be lost. Are you sure to close this?</f-text
-						></f-div
-					>
-					<f-div width="hug-content" align="middle-left">
-						<f-button
-							label="YES, CLOSE"
-							category="outline"
-							variant="round"
-							size="small"
-							state="warning"
-							@click="openBanner = false"
-						></f-button>
+	<f-div>
+		<!-- Please Copy/paste code from here -->
+		<!-- Iteration has been used here just for demo purpose -->
+		<f-popover
+			:open="openPopover"
+			@overlay-click="openPopover = false"
+			size="small"
+			target="#popover-dropdown"
+		>
+			<f-div state="secondary" direction="column" height="432px">
+				<f-div direction="column" overflow="hidden" align="middle-left">
+					<f-div gap="auto" padding="medium" height="hug-content">
+						<f-div gap="medium" align="middle-left">
+							<f-icon-button
+								variant="block"
+								category="packed"
+								size="small"
+								state="inherit"
+								icon="i-arrow-left"
+							></f-icon-button>
+							<f-text variant="para" size="small" weight="bold">Heading</f-text>
+						</f-div>
+						<f-div width="hug-content" align="middle-left" gap="medium">
+							<f-icon-button
+								variant="block"
+								category="packed"
+								size="small"
+								state="inherit"
+								icon="i-icon"
+							></f-icon-button>
+							<f-icon-button
+								variant="block"
+								category="packed"
+								size="small"
+								state="inherit"
+								icon="i-icon"
+							></f-icon-button
+							><f-icon-button
+								variant="block"
+								category="packed"
+								size="small"
+								state="inherit"
+								icon="i-icon"
+							></f-icon-button>
+							<f-icon-button
+								icon="i-close"
+								variant="block"
+								categroy="packed"
+								size="small"
+								state="inherit"
+								@click="openPopover = false"
+							></f-icon-button>
+						</f-div>
+					</f-div>
+					<f-div padding="medium" height="hug-content">
+						<f-tab>
+							<f-tab-node
+								v-for="item in list"
+								:active="selected === item.id ? true : false"
+								:content-id="`tab-${item.id}`"
+								@click="selected = item.id"
+								><f-div width="100%" height="100%" align="middle-center" direction="column"
+									><f-div align="middle-center" height="hug-content" width="hug-content">{{
+										item.title
+									}}</f-div></f-div
+								></f-tab-node
+							></f-tab
+						>
+					</f-div>
+					<f-div direction="column" overflow="scroll">
+						<f-tab-content v-for="item in list" :id="`tab-${item.id}`"
+							><f-div direction="column" width="100%" padding="large"
+								><f-div
+									><f-text variant="heading" size="x-large" weight="bold">{{
+										item.title
+									}}</f-text></f-div
+								>
+								<f-div>
+									<f-text
+										>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+										Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+										when an unknown printer took a galley of type and scrambled it to make a type
+										specimen book. It has survived not only five centuries, but also the leap into
+										electronic typesetting, remaining essentially unchanged. It was popularised in
+										the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+										and more recently with desktop publishing software like Aldus PageMaker
+										including versions of Lorem Ipsum.</f-text
+									></f-div
+								></f-div
+							></f-tab-content
+						>
 					</f-div>
 				</f-div>
-				<!-- End Snippet -->
+				<f-div padding="none" height="hug-content">
+					<f-button label="LABEL" variant="block" category="fill" state="success"></f-button>
+				</f-div>
 			</f-div>
-			<f-div padding="medium">
-				<f-form-builder class="form-builder-custom" :field.prop="field" :values.prop="fieldValues">
-				</f-form-builder>
-			</f-div>
-		</f-div>
-		<f-div padding="none">
-			<f-button label="SUBMIT" variant="block" category="fill"></f-button>
-		</f-div>
+		</f-popover>
+		<f-button id="popover-dropdown" label="Popover" @click="openPopover = true"></f-button>
 	</f-div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 
-//only for demo purpose -- please remove this import
-import { changeRoute } from "../../utils/utils";
-
 export default defineComponent({
 	data() {
 		return {
-			openBanner: false,
-			field: {
-				type: "object",
-				direction: "vertical",
-				isCollapsible: false,
-				isCollapsed: true,
-				fieldSeparator: true,
-				label: {
-					title: "Form title",
-					description: "A description will show here (optional)"
-				},
-				fields: {
-					source1: {
-						type: "object",
-						direction: "vertical",
-						fields: {
-							source: {
-								type: "textarea",
-								label: {
-									title: "Textarea",
-									iconTooltip: "Source"
-								},
-								placeholder: "Source",
-								iconLeft: "",
-								validationRules: [
-									{
-										name: "required"
-									}
-								]
-							}
-						}
-					}
-				}
-			},
-			fieldValues: {
-				source1: { source: "" }
-			},
-			submitDisabled: true,
-			timeoutLoader: 0
+			openPopover: true,
+			selected: 0,
+			list: [
+				{ id: 0, title: "Tab 1" },
+				{ id: 1, title: "Tab 2" },
+				{ id: 2, title: "Tab 3" }
+			] as ListDataType
 		};
-	},
-	methods: {}
+	}
 });
 
-export type DataObject = { id: number; title: string; subTitle: string; icon: string };
+export type ListDataType = { id: number; title: string }[];
 </script>
 
-<style lang="scss">
-.form-builder-custom {
-	width: 100%;
-}
-</style>
+<style lang="scss"></style>
