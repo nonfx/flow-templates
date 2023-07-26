@@ -4,9 +4,10 @@ import GcpIconPack from "@cldcvr/flow-gcp-icon/dist/types/icon-pack";
 import AwsIconPack from "@cldcvr/flow-aws-icon/dist/types/icon-pack";
 import "@cldcvr/flow-core/dist/style.css";
 import "@cldcvr/flow-form-builder/dist/style.css";
-
+import "@cldcvr/flow-table/dist/style.css";
 import "@cldcvr/flow-core";
 import "@cldcvr/flow-form-builder";
+import "@cldcvr/flow-table";
 import "./storybook.css";
 import { ConfigUtil } from "@cldcvr/flow-core";
 
