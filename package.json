@@ -55,7 +55,8 @@
     "@cldcvr/flow-gcp-icon": "latest",
     "@cldcvr/flow-product-icon": "latest",
     "@cldcvr/flow-system-icon": "latest",
-    "@cldcvr/flow-table": "1.2.0",
+    "@cldcvr/flow-table": "1.2.2",
+    "@faker-js/faker": "^8.0.2",
     "vue": "^3.2.47"
   }
 }

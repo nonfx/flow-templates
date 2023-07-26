@@ -8,23 +8,86 @@
 		part="cell"
 	>
 	</f-table-schema>
-	<f-popover :open="openPopover" target="#more-popover" @overlay-click="togglePopover">
-		<f-div state="secondary">hello</f-div>
+	<f-popover
+		ref="popoverRef"
+		@overlay-click="closeRefPopover"
+		size="small"
+		class="custom-popover-table"
+	>
+		<f-div state="secondary" direction="column">
+			<f-div padding="medium small" clickable @click="closePopover">
+				<f-text variant="para" size="medium" weight="regular">Download all table logs</f-text>
+			</f-div>
+			<f-divider></f-divider>
+			<f-div padding="medium small" clickable="">
+				<f-text variant="para" size="medium" weight="regular">Email all table logs</f-text>
+			</f-div>
+		</f-div>
+	</f-popover>
+	<f-popover size="medium" :open="openPopover" :overlay="true" @overlay-click="togglePopover">
+		<f-div width="432px" state="secondary" direction="column" variant="curved" padding="none">
+			<f-div align="middle-center" padding="medium">
+				<f-div height="hug-content"
+					><f-text variant="para" size="small" weight="bold"
+						>Download all table logs?</f-text
+					></f-div
+				>
+				<f-div width="hug-content" height="hug-content"
+					><f-icon-button
+						icon="i-close"
+						variant="block"
+						category="packed"
+						size="small"
+						state="inherit"
+						@click="togglePopover"
+					></f-icon-button
+				></f-div>
+			</f-div>
+			<f-div padding="medium">
+				<f-text variant="para" size="small" weight="regular">
+					Are you sure you want to download all table logs for Monday, 18Jun 10:15 AM pipeline run?
+					Depending on the size of the logs it make take up to 15mins.
+				</f-text>
+			</f-div>
+			<f-div padding="medium" align="middle-right" gap="small">
+				<f-button
+					label="Cancel"
+					variant="round"
+					category="outline"
+					size="small"
+					state="neutral"
+					icon-left="i-close"
+					@click="togglePopover"
+				></f-button>
+				<f-button
+					label="Download"
+					variant="round"
+					size="small"
+					state="primary"
+					@click="togglePopover"
+				></f-button>
+			</f-div>
+		</f-div>
 	</f-popover>
 </template>
 
 <script lang="ts">
+import { FPopover } from "@cldcvr/flow-core";
+import { FTableSchemaData } from "@cldcvr/flow-table";
 import { html } from "lit";
 import { defineComponent } from "vue";
-import { dataTable } from "./data.js";
-import { innerTableData } from "./inner-data.js";
+import { getFakeUsers } from "./data";
+import { getInnerData } from "./inner-data";
 
 export default defineComponent({
 	data() {
 		return {
 			openPopover: false,
-			data: dataTable(this.togglePopover)
+			data: null as FTableSchemaData | null
 		};
+	},
+	mounted() {
+		this.data = getFakeUsers(3, 4, this.$refs.popoverRef as FPopover);
 	},
 	methods: {
 		toggleRowDetails(e: any) {
@@ -57,14 +120,14 @@ export default defineComponent({
 					<f-table-schema
 						variant="underlined"
 						size="small"
-						.data=${innerTableData}
+						.data=${getInnerData()}
 						.showSearchBar=${false}
 						part="cell"
 					>
 					</f-table-schema>
 				</f-div>`;
 			};
-			if (this.data.rows.find(item => item.id === e.detail.id)) {
+			if (this.data !== null && this.data.rows.find(item => item.id === e.detail.id)) {
 				const index = this.data.rows.findIndex(item => item.id === e.detail.id);
 				const tempArray = [...this.data.rows];
 				tempArray.splice(index, 1, {
@@ -77,7 +140,20 @@ export default defineComponent({
 		},
 		togglePopover() {
 			this.openPopover = !this.openPopover;
+		},
+		closePopover() {
+			(this.$refs.popoverRef as FPopover).open = false;
+			this.openPopover = true;
+		},
+		closeRefPopover() {
+			(this.$refs.popoverRef as FPopover).open = false;
 		}
 	}
 });
 </script>
+
+<style lang="scss">
+.custom-popover-table {
+	width: 220px !important;
+}
+</style>
