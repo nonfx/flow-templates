@@ -1143,6 +1143,13 @@
   dependencies:
     "@cldcvr/flow-core" "*"
 
+"@cldcvr/flow-core-config@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@cldcvr/flow-core-config/-/flow-core-config-1.0.0.tgz#954689eef14fa8f4e53e25a0226740ae7cd458be"
+  integrity sha512-kZzem2b1FQEf3Bnf2Uwm5OzY0RqHn5R4oDs7dPsUWpBFK8QTuFPbymQIqtoFhq3DjbMMNbMF1FK0BjHjlW5ukA==
+  dependencies:
+    rxjs "^7.5.7"
+
 "@cldcvr/flow-core@*", "@cldcvr/flow-core@1.14.7":
   version "1.14.7"
   resolved "https://registry.yarnpkg.com/@cldcvr/flow-core/-/flow-core-1.14.7.tgz#56d12469ef828edd9b9d08347b41d430e893231d"
@@ -1180,12 +1187,12 @@
   dependencies:
     "@cldcvr/flow-core" "*"
 
-"@cldcvr/flow-system-icon@latest":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@cldcvr/flow-system-icon/-/flow-system-icon-1.3.1.tgz#b9c47d4b85c476f64fe2548b81ec23a916c77047"
-  integrity sha512-GAQEXhmKfHZgR1innN+ZrDLGVx7aJO9vjFIN6PTi96BDrq2NL2PecBK/5x2NHK+TpwfIl1b8tKaiL+mfV99g/w==
+"@cldcvr/flow-system-icon@1.9.1":
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/@cldcvr/flow-system-icon/-/flow-system-icon-1.9.1.tgz#4948e5116734230c3b8890a432d53eaec04ec8ad"
+  integrity sha512-3cbXubucSttJP/v1s6CNJSbw1ndpBchW+Fy3FfYU4vEfrn2Y32Pr3PNsHl5aJ1eCxwcnbpcv0l3D0Zzu2kiP8Q==
   dependencies:
-    "@cldcvr/flow-core" "*"
+    "@cldcvr/flow-core-config" "^1.0.0"
 
 "@cldcvr/flow-table@1.2.2":
   version "1.2.2"
