@@ -8,6 +8,9 @@ import twoColumnsLayoutFile02 from "./TwoColumnsLayout02.vue?raw";
 import TwoColumnsLayout03 from "./TwoColumnsLayout03.vue";
 import twoColumnsLayoutFile03 from "./TwoColumnsLayout03.vue?raw";
 
+import TwoColumnsLayout04 from "./TwoColumnsLayout04.vue";
+import twoColumnsLayoutFile04 from "./TwoColumnsLayout04.vue?raw";
+
 export default {
 	title: "Templates/2-Column Layout",
 	parameters: {
@@ -52,4 +55,16 @@ export const Template03 = {
 		}
 	},
 	render: () => TwoColumnsLayout03
+};
+
+export const Template04 = {
+	name: "ft-2-column-layout-04",
+	parameters: {
+		docs: {
+			source: {
+				code: twoColumnsLayoutFile04
+			}
+		}
+	},
+	render: () => TwoColumnsLayout04
 };
