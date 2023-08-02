@@ -50,11 +50,11 @@
   },
   "dependencies": {
     "@cldcvr/flow-aws-icon": "latest",
-    "@cldcvr/flow-core": "1.14.7",
+    "@cldcvr/flow-core": "1.20.1",
     "@cldcvr/flow-form-builder": "1.5.14",
     "@cldcvr/flow-gcp-icon": "latest",
     "@cldcvr/flow-product-icon": "latest",
-    "@cldcvr/flow-system-icon": "latest",
+    "@cldcvr/flow-system-icon": "1.9.1",
     "@cldcvr/flow-table": "1.2.2",
     "@faker-js/faker": "^8.0.2",
     "vue": "^3.2.47"
