@@ -2,7 +2,7 @@
 	<f-div
 		overflow="hidden"
 		state="default"
-		class="left-column-hightlight-cp"
+		class="left-column-hightlight-cps"
 		:data-column-open="open"
 	>
 		<f-div direction="column" padding="medium" gap="x-large" overflow="scroll">
@@ -46,7 +46,7 @@
 						:comments="true"
 						:copy-button="true"
 						title="YAML"
-						:show-line-numbers="false"
+						:show-line-numbers="undefined"
 						:read-only="true"
 					></f-code-editor>
 				</f-div>
@@ -144,12 +144,13 @@
 		</f-div>
 		<f-icon-button
 			:icon="open ? 'i-close' : 'i-info-solo'"
-			class="fab-toggle-cp"
+			class="fab-toggle-cps"
 			@click="toggleLeftcolumn"
 		></f-icon-button>
+
 		<f-div
 			:width="open ? '320px' : '0px'"
-			:class="open ? 'column-expanded-right-cp' : 'column-collapsed-right-cp'"
+			:class="open ? 'column-expanded-right-cps' : 'column-collapsed-right-cps'"
 			:border="open ? 'small solid subtle left' : 'none'"
 			direction="column"
 			state="default"
@@ -248,24 +249,34 @@ export type RowsTableType = Rows[];
 </script>
 
 <style lang="scss">
-.fab-toggle-cp {
+.fab-toggle-cps {
+	display: none;
+}
+.fab-scroll-up {
 	display: none;
 }
 
 @media (max-width: 1100px) {
-	.fab-toggle-cp {
+	.fab-toggle-cps {
 		display: block !important;
 		position: fixed;
 		bottom: 20px;
 		right: 20px;
-		z-index: 1100;
+		z-index: 1400;
+	}
+	.fab-scroll-up {
+		display: block !important;
+		position: fixed;
+		bottom: 70px;
+		right: 20px;
+		z-index: 100;
 	}
 }
 
-.column-expanded-right-cp {
+.column-expanded-right-cps {
 	width: inherit;
 }
-@keyframes slide-column-right-cp {
+@keyframes slide-column-right-cps {
 	from {
 		width: 0px;
 	}
@@ -274,24 +285,24 @@ export type RowsTableType = Rows[];
 	}
 }
 @media (max-width: 1100px) {
-	.column-expanded-right-cp {
+	.column-expanded-right-cps {
 		position: fixed !important;
 		right: 0px;
-		animation: 0.25s ease-out 0s 1 slide-column-right-cp;
-		z-index: 1000;
+		animation: 0.25s ease-out 0s 1 slide-column-right-cps;
+		z-index: 1300;
 		border-radius: 0px 8px 8px 0px;
 		top: 0;
 	}
 }
 @media (min-width: 1100px) {
-	.column-expanded-right-cp {
-		animation: 0.25s ease-out 0s 1 slide-column-right-cp;
+	.column-expanded-right-cps {
+		animation: 0.25s ease-out 0s 1 slide-column-right-cps;
 	}
 }
-.column-collapsed-right-cp {
+.column-collapsed-right-cps {
 	width: inherit;
 }
-@keyframes slide-column-left-cp {
+@keyframes slide-column-left-cps {
 	from {
 		width: 320px;
 	}
@@ -300,19 +311,19 @@ export type RowsTableType = Rows[];
 	}
 }
 @media (max-width: 1100px) {
-	.column-collapsed-right-cp {
+	.column-collapsed-right-cps {
 		position: fixed !important;
 		right: 0px;
 		width: inherit;
-		animation: 0.25s ease-out 0s 1 slide-column-left-cp;
-		z-index: 1000;
+		animation: 0.25s ease-out 0s 1 slide-column-left-cps;
+		z-index: 1300;
 		top: 0;
 	}
 }
 @media (min-width: 1100px) {
-	.column-collapsed-right-cp {
+	.column-collapsed-right-cps {
 		width: inherit;
-		animation: 0.25s ease-out 0s 1 slide-column-left-cp;
+		animation: 0.25s ease-out 0s 1 slide-column-left-cps;
 	}
 }
 .remove-scrollbar::-webkit-scrollbar {
@@ -323,14 +334,14 @@ export type RowsTableType = Rows[];
 	scrollbar-width: none;
 }
 @media (max-width: 1100px) {
-	.left-column-hightlight-cp[data-column-open="true"] {
+	.left-column-hightlight-cps[data-column-open="true"] {
 		&::before {
 			content: "";
 			position: fixed;
 			width: 100vw;
 			height: 100vh;
 			background-color: rgba(0, 0, 0, 0.5);
-			z-index: 10;
+			z-index: 1200;
 			top: 0;
 			left: 0;
 		}

@@ -1,5 +1,5 @@
 <template>
-	<f-div direction="column" class="custom-parent-overflow">
+	<f-div direction="column" class="custom-parent-overflow" ref="bodyRef">
 		<f-div height="hug-content">
 			<f-tab :node-width="checkWindowSizeStatus ? 'fill' : 'hug-content'">
 				<f-tab-node
@@ -35,6 +35,13 @@
 			<f-div direction="column" v-else> Coming Soon... </f-div>
 		</f-div>
 	</f-div>
+	<f-icon-button
+		v-if="step === 2"
+		icon="i-arrow-up"
+		class="fab-scroll-up"
+		state="neutral"
+		@click="scrollToTop"
+	></f-icon-button>
 </template>
 
 <script lang="ts">
@@ -42,6 +49,7 @@ import { defineComponent } from "vue";
 import TabContentSection from "./TabContentSection.vue";
 import SearchSection from "./SearchSection.vue";
 import AboutPlatform from "./AboutPlatform.vue";
+import { FDiv } from "@cldcvr/flow-core";
 
 export default defineComponent({
 	data() {
@@ -75,6 +83,9 @@ export default defineComponent({
 		},
 		changeStep(id: number) {
 			this.step = id;
+		},
+		scrollToTop() {
+			(this.$refs.bodyRef as FDiv).scrollTo({ top: 0, behavior: "smooth" });
 		}
 	},
 	components: { TabContentSection, SearchSection, AboutPlatform }

@@ -1,9 +1,14 @@
 <template>
-	<f-div overflow="hidden" state="default" class="left-column-hightlight" :data-column-open="open">
+	<f-div
+		overflow="hidden"
+		state="default"
+		class="left-column-hightlight-filter"
+		:data-column-open="open"
+	>
 		<FilterSection :open="open" @close-filter="closeFilter"></FilterSection>
 		<f-icon-button
 			:icon="open ? 'i-close' : 'i-filter'"
-			class="fab-toggle"
+			class="fab-toggle-filter"
 			@click="$emit('toggle-filter')"
 		></f-icon-button>
 		<f-div overflow="scroll" state="default">
@@ -66,28 +71,28 @@ export default defineComponent({
 
 <style lang="scss">
 @media (max-width: 768px) {
-	.left-column-hightlight[data-column-open="true"] {
+	.left-column-hightlight-filter[data-column-open="true"] {
 		&::before {
 			content: "";
 			position: fixed;
 			width: 100vw;
 			height: 100vh;
 			background-color: rgba(0, 0, 0, 0.5);
-			z-index: 10;
+			z-index: 1400;
 			top: 0;
 			left: 0;
 		}
 	}
-	.fab-toggle {
+	.fab-toggle-filter {
 		display: block !important;
 		position: fixed;
 		bottom: 20px;
 		left: 20px;
-		z-index: 1100;
+		z-index: 1700;
 	}
 }
 
-.fab-toggle {
+.fab-toggle-filter {
 	display: none;
 }
 </style>

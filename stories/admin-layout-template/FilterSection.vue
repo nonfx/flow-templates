@@ -148,7 +148,7 @@ export type FilterData = { id: number; icon: string; title: string; accordion: A
 @media (max-width: 768px) {
 	.left-column-expanded-filter {
 		position: fixed !important;
-		z-index: 1000;
+		z-index: 1500;
 		border-radius: 0px 8px 8px 0px;
 		height: 100%;
 		top: 0;
@@ -176,7 +176,7 @@ export type FilterData = { id: number; icon: string; title: string; accordion: A
 		position: fixed !important;
 		width: inherit;
 		animation: 0.25s ease-out 0s 1 slide-left-filter;
-		z-index: 1000;
+		z-index: 1500;
 		top: 0;
 	}
 }
