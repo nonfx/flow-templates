@@ -8,7 +8,7 @@
 				<f-text variant="para" size="small" weight="regular" state="secondary">{{ name }}</f-text>
 			</f-div>
 			<f-div gap="small" height="hug-content" v-if="value.type === 'git'">
-				<f-icon source="i-github" size="small" state="primary"></f-icon>
+				<f-icon source="p-github" size="small" state="primary"></f-icon>
 				<f-div width="hug-content">
 					<f-text :inline="true" variant="para" size="small" weight="regular" state="primary">{{
 						value.value

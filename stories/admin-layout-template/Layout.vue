@@ -273,7 +273,7 @@
 				></f-div>
 				<f-divider state="secondary"></f-divider>
 				<f-div gap="small" align="middle-center" height="hug-content">
-					<f-icon source="i-github" size="small" state="primary"></f-icon>
+					<f-icon source="p-github" size="small" state="primary"></f-icon>
 					<f-div align="middle-center">
 						<f-text :inline="true" variant="para" size="small" weight="regular" state="primary"
 							>View on GitHub</f-text

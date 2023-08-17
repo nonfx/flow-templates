@@ -105,7 +105,7 @@ export type TabsType = { id: number; title: string }[];
 }
 @media (max-width: 768px) {
 	.custom-parent-overflow {
-		overflow: auto !important;
+		overflow: initial !important;
 		flex-wrap: nowrap !important;
 	}
 	.custom-height-content {
