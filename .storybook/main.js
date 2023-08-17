@@ -6,14 +6,14 @@ const litcss = require("rollup-plugin-postcss-lit");
 const copyDir = (src, dest, callback) => {
 	const copy = (copySrc, copyDest) => {
 		fs.readdir(copySrc, (err, list) => {
-			if (err) {
+			if (err && callback) {
 				callback(err);
 				return;
 			}
 			list.forEach(item => {
 				const ss = path.resolve(copySrc, item);
 				fs.stat(ss, (err, stat) => {
-					if (err) {
+					if (err && callback) {
 						callback(err);
 					} else {
 						const curSrc = path.resolve(copySrc, item);

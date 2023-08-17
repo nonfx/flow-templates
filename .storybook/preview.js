@@ -53,9 +53,6 @@ export const parameters = {
 
 export const decorators = [
 	() => {
-		import("@cldcvr/flow-core").then(async () => {
-			await import("@cldcvr/flow-form-builder");
-		});
 		window.onmessage = function (e) {
 			if (e.data && typeof e.data === "string") {
 				const message = JSON.parse(e.data);

@@ -7,7 +7,7 @@
   "scripts": {
     "preinstall": "npx only-allow yarn",
     "storybook": "start-storybook -p 6008",
-    "start": "yarn storybook",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider yarn storybook",
     "build-storybook": "build-storybook"
   },
   "keywords": [
