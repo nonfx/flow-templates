@@ -7,7 +7,7 @@
   "scripts": {
     "preinstall": "npx only-allow yarn",
     "storybook": "start-storybook -p 6008",
-    "start": "yarn storybook",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider yarn storybook",
     "build-storybook": "build-storybook"
   },
   "keywords": [
@@ -50,7 +50,8 @@
   },
   "dependencies": {
     "@cldcvr/flow-aws-icon": "latest",
-    "@cldcvr/flow-core": "1.20.2",
+    "@cldcvr/flow-code-editor": "^0.2.0",
+    "@cldcvr/flow-core": "1.21.0",
     "@cldcvr/flow-form-builder": "1.5.14",
     "@cldcvr/flow-gcp-icon": "latest",
     "@cldcvr/flow-product-icon": "latest",
