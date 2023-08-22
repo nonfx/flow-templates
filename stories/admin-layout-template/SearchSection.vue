@@ -6,6 +6,7 @@
 		height="54px"
 		align="middle-left"
 		border="small solid subtle bottom"
+		state="default"
 	>
 		<f-div width="hug-content" class="hide-in-mobile-view">
 			<f-icon-button

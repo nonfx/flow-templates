@@ -11,14 +11,6 @@
 		>
 			<!--Start : top-nav-left -->
 			<f-div data-f-id="top-nav-left" width="hug-content" align="middle-center" gap="medium">
-				<f-icon-button
-					icon="i-hamburger"
-					variant="round"
-					size="large"
-					state="inherit"
-					category="packed"
-					class="top-nav-hamburger"
-				></f-icon-button>
 				<f-icon source="p-cloudcover-dark" size="large" clickable></f-icon>
 			</f-div>
 			<!--End : top-nav-left -->
@@ -162,115 +154,14 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-.custom-tag-label {
-	padding: 4px 8px 4px 8px !important;
-	border-radius: 4px 0px 0px 4px !important;
-}
-.custom-tag-counter {
-	padding: 4px 8px 4px 8px !important;
-	border-radius: 0px 4px 4px 0px !important;
-}
-.cp-min-width {
-	min-width: 150px !important;
-}
-
-.visible-on-desktop {
-	display: flex;
-}
-.visible-on-mobile {
-	display: none !important;
-}
-@keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-@media screen and (max-width: 768px) {
-	.nav-responsive-search-bar {
-		&[data-expanded-search="false"] {
-			width: 0px !important;
-			transition: width 0.15s ease-out !important;
-		}
-		&[data-expanded-search="true"] {
-			width: 240px !important;
-			transition: width 0.15s ease-out !important;
-		}
-	}
-	.nav-responsive-search-icon {
-		display: inline-block;
-		animation: fadeIn 1s;
-	}
-	.visible-on-desktop {
-		display: none !important;
-	}
-	.visible-on-mobile {
-		display: flex !important;
-	}
-}
-@media screen and (min-width: 768px) {
-	.nav-responsive-search-bar {
-		&[data-expanded-search="false"] {
-			display: flex;
-		}
-	}
-	.nav-responsive-search-icon {
-		display: none;
-	}
-}
-
 @media screen and (max-width: 600px) {
-	.profile-popover {
-		display: none;
-	}
-	.profile-popover-mobile {
-		display: inline-block;
-	}
-	.nav-menu-options {
-		display: none;
-	}
-	.nav-menu-options-mobile {
-		display: flex;
-	}
-	.profile-popover-content {
-		display: none;
-	}
-	.profile-popover-content-mobile {
-		display: flex;
-	}
 	.top-nav-middle {
 		display: none;
-	}
-	.top-nav-hamburger {
-		display: flex;
 	}
 }
 @media screen and (min-width: 600px) {
-	.profile-popover {
-		display: flex;
-	}
-	.profile-popover-mobile {
-		display: none;
-	}
-	.nav-menu-options {
-		display: flex;
-	}
-	.nav-menu-options-mobile {
-		display: none;
-	}
-	.profile-popover-content {
-		display: flex;
-	}
-	.profile-popover-content-mobile {
-		display: none;
-	}
 	.top-nav-middle {
 		display: flex;
-	}
-	.top-nav-hamburger {
-		display: none;
 	}
 }
 </style>
