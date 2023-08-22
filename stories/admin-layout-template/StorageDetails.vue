@@ -1,6 +1,12 @@
 <template>
-	<f-div direction="column">
-		<f-div direction="column" height="hug-content" sticky="top">
+	<f-div direction="column" class="custom-overflow-visible">
+		<f-div
+			direction="column"
+			height="hug-content"
+			sticky="top"
+			class="custom-overflow-visible"
+			state="default"
+		>
 			<f-div gap="medium" height="hug-content" padding="medium">
 				<f-div width="hug-content">
 					<f-icon-button
@@ -106,6 +112,9 @@ export type Data = { id: number; title: string }[];
 @media (max-width: 768px) {
 	.custom-width-applicable {
 		min-width: 150px !important;
+	}
+	.custom-overflow-visible {
+		overflow: visible !important;
 	}
 }
 </style>

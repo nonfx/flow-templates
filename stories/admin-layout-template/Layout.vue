@@ -33,169 +33,25 @@
 			</f-div>
 			<!--End : top-nav-middle -->
 			<!--START : top-nav-right -->
+
 			<f-div data-f-id="top-nav-right" gap="large" width="hug-content" align="middle-right">
-				<f-div
-					width="240px"
-					class="nav-responsive-search-bar"
-					:data-expanded-search="expandedSearch"
-					overflow="hidden"
-				>
-					<f-search
-						size="small"
-						variant="round"
-						placeholder="Enter search keyword"
-						:result="navSearch"
-						@input="handleNavSearchInput"
-						@focusout="closeExpandedSearch"
-					></f-search>
-				</f-div>
-				<f-div gap="small" width="hug-content">
-					<f-icon-button
-						v-if="expandedSearch === false"
-						icon="i-search"
-						variant="round"
-						size="small"
-						state="neutral"
-						category="fill"
-						class="nav-responsive-search-icon"
-						@click="searchExpand()"
-					></f-icon-button>
-					<f-icon-button
-						icon="i-user"
-						size="small"
-						state="neutral"
-						id="profilePopoverMobile"
-						@click="toggle"
-						class="profile-popover-mobile"
-					></f-icon-button>
-					<f-popover
-						size="small"
-						@overlay-click="toggle"
-						:open="open"
-						target="#profilePopoverMobile"
-						class="profile-popover-content-mobile"
-					>
-						<f-div direction="column" state="secondary">
-							<f-div padding="medium" gap="small" border="small solid default bottom">
-								<f-pictogram source="i-user" variant="circle"></f-pictogram>
-								<f-div direction="column">
-									<f-text size="x-small" state="secondary">Logged in as</f-text>
-									<f-text>no@email.com</f-text>
-								</f-div>
-								<f-div align="top-right">
-									<f-icon source="i-edit" state="secondary"></f-icon>
-								</f-div>
-							</f-div>
-							<f-div
-								padding="medium"
-								gap="small"
-								clickable
-								state="default"
-								:selected="theme === 'f-dark' ? 'background' : 'none'"
-								@click="setTheme('f-dark')"
-							>
-								<f-text>Dark theme</f-text>
-								<f-icon v-if="theme === 'f-dark'" source="i-tick" state="success"></f-icon>
-							</f-div>
-							<f-div
-								padding="medium"
-								gap="small"
-								border="small solid default bottom"
-								clickable
-								.selected="theme === 'f-light' ? 'background' : 'none'"
-								@click="setTheme('f-light')"
-							>
-								<f-text>Light theme</f-text>
-								<f-icon v-if="theme === 'f=light'" source="i-tick" state="success"></f-icon>
-							</f-div>
-							<f-div padding="medium" gap="small" clickable>
-								<f-text>Logout</f-text>
-							</f-div>
-						</f-div>
-					</f-popover>
-					<f-icon-button
-						icon="i-icon"
-						variant="block"
-						size="large"
-						state="inherit"
-						category="packed"
-						class="nav-menu-options"
-					></f-icon-button>
-					<f-icon-button
-						icon="i-icon"
-						variant="block"
-						size="large"
-						state="inherit"
-						category="packed"
-						class="nav-menu-options"
-					></f-icon-button>
-					<f-icon-button
-						icon="i-icon"
-						variant="block"
-						size="large"
-						state="inherit"
-						category="packed"
-						class="nav-menu-options"
-					></f-icon-button>
-					<f-icon-button
-						icon="i-more"
-						variant="block"
-						size="large"
-						state="inherit"
-						category="packed"
-						class="nav-menu-options-mobile"
-						id="more-items-mobile"
-						@click="toggleMenuMobile"
-					></f-icon-button>
-					<f-popover
-						size="stretch"
-						@overlay-click="toggleMenuMobile"
-						:open="openMenuMobile"
-						target="#more-items-mobile"
-					>
-						<f-div direction="column" state="secondary" padding="medium">
-							<f-div
-								v-for="item in [0, 1, 2]"
-								:key="item"
-								padding="medium"
-								gap="small"
-								clickable
-								state="secondary"
-								align="middle-left"
-								border="small solid default bottom"
-							>
-								<f-icon source="i-icon" size="medium" state="default"></f-icon>
-								<f-div>
-									<f-text>Heading {{ item }}</f-text></f-div
-								>
-								<f-div width="hug-content" height="hug-content"
-									><f-icon-button
-										icon="i-chevron-right"
-										variant="block"
-										category="packed"
-										size="small"
-										state="inherit"
-									></f-icon-button
-								></f-div>
-							</f-div>
-						</f-div>
-					</f-popover>
-				</f-div>
+				<f-icon-button
+					icon="i-question-filled"
+					size="medium"
+					state="neutral"
+					category="transparent"
+					variant="block"
+				></f-icon-button>
 				<f-icon-button
 					icon="i-user"
-					size="small"
+					size="medium"
 					state="neutral"
 					id="profilePopover"
 					@click="toggle"
-					class="profile-popover"
+					category="transparent"
+					variant="block"
 				></f-icon-button>
-				<f-popover
-					size="small"
-					@overlay-click="toggle"
-					:open="open"
-					target="#profilePopover"
-					class="profile-popover-content"
-				>
+				<f-popover size="small" @overlay-click="toggle" :open="open" target="#profilePopover">
 					<f-div direction="column" state="secondary">
 						<f-div padding="medium" gap="small" border="small solid default bottom">
 							<f-pictogram source="i-user" variant="circle"></f-pictogram>
@@ -237,87 +93,6 @@
 			</f-div>
 			<!--END : top-nav-right -->
 		</f-div>
-		<f-div state="subtle" padding="medium" gap="auto" height="hug-content">
-			<f-div gap="auto" align="middle-left" height="hug-content">
-				<f-div gap="small" align="middle-left" width="hug-content">
-					<f-icon source="p-cloudcover-dark" size="large"></f-icon>
-					<f-text :inline="true" variant="heading" size="medium" weight="bold"
-						>CC Core Platform</f-text
-					>
-					<f-icon source="i-verified" size="small" state="primary"></f-icon>
-					<!-- <f-icon source="i-git" size="small" state="primary" class="visible-on-mobile"></f-icon> -->
-				</f-div>
-				<f-div width="hug-content" padding="none medium none none">
-					<f-text variant="para" size="small" weight="regular" :inline="true" state="subtle">
-						Published 3 hours ago by
-						<f-text variant="para" size="small" weight="regular" :inline="true" state="primary"
-							>CloudCover</f-text
-						>
-					</f-text>
-				</f-div>
-			</f-div>
-			<f-div
-				gap="medium"
-				width="hug-content"
-				align="middle-center"
-				height="hug-content"
-				class="visible-on-desktop"
-			>
-				<f-div width="hug-content" height="hug-content">
-					<f-select
-						:options.prop="versions"
-						:value="selectedVersion"
-						size="small"
-						@input="handleSelect"
-					></f-select
-				></f-div>
-				<f-divider state="secondary"></f-divider>
-				<f-div gap="small" align="middle-center" height="hug-content">
-					<f-icon source="p-github" size="small" state="primary"></f-icon>
-					<f-div align="middle-center">
-						<f-text :inline="true" variant="para" size="small" weight="regular" state="primary"
-							>View on GitHub</f-text
-						></f-div
-					>
-				</f-div>
-				<f-div variant="curved" width="hug-content" height="hug-content">
-					<f-div state="tertiary" gap="small" width="hug-content" class="custom-tag-label">
-						<f-icon source="i-star-outline" size="small"></f-icon>
-						<f-text variant="para" weight="medium" size="medium" state="secondary">Star</f-text>
-					</f-div>
-					<f-div state="secondary" width="hug-content" class="custom-tag-counter">
-						<f-text variant="para" weight="medium" size="medium" state="secondary">123</f-text>
-					</f-div>
-				</f-div>
-			</f-div>
-
-			<f-div
-				gap="medium"
-				align="middle-right"
-				height="hug-content"
-				class="visible-on-mobile"
-				direction="column"
-				width="hug-content"
-			>
-				<f-div width="hug-content" height="hug-content">
-					<f-select
-						:options.prop="versions"
-						:value="selectedVersion"
-						size="small"
-						@input="handleSelect"
-					></f-select
-				></f-div>
-				<f-div variant="curved" width="hug-content" height="hug-content">
-					<f-div state="tertiary" gap="small" width="hug-content" class="custom-tag-label">
-						<f-icon source="i-star-outline" size="small"></f-icon>
-						<f-text variant="para" weight="medium" size="medium" state="secondary">Star</f-text>
-					</f-div>
-					<f-div state="secondary" width="hug-content" class="custom-tag-counter">
-						<f-text variant="para" weight="medium" size="medium" state="secondary">123</f-text>
-					</f-div>
-				</f-div>
-			</f-div>
-		</f-div>
 		<f-div>
 			<slot></slot>
 		</f-div>
@@ -357,15 +132,10 @@ export default defineComponent({
 			theme: "f-dark",
 			expandedSearch: false,
 			openMenuMobile: false,
-			navSearch: ["Search 1", "Search 2", "Search 3", "Search 4", "Search 5", "Search 6"],
-			versions: ["v11", "v12", "v13"],
-			selectedVersion: "v11"
+			navSearch: ["Search 1", "Search 2", "Search 3", "Search 4", "Search 5", "Search 6"]
 		};
 	},
 	methods: {
-		handleSelect(e: CustomEvent) {
-			this.selectedVersion = e.detail.value;
-		},
 		toggle() {
 			this.open = !this.open;
 		},
