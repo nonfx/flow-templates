@@ -16,6 +16,9 @@ import tabContentsFile from "./TabContentSection.vue?raw";
 import AboutSection from "./AboutPlatform.vue";
 import aboutSectionFile from "./AboutPlatform.vue?raw";
 
+import PlatformHeader from "./PlatformHeader.vue";
+import platformHeaderFile from "./PlatformHeader.vue?raw";
+
 import FilterSection from "./FilterSection.vue";
 import filterSectionFile from "./FilterSection.vue?raw";
 
@@ -115,6 +118,21 @@ export const BodySectionComponent = {
 		}
 	},
 	render: () => Body
+};
+
+export const PlatformHeaderComponent = {
+	name: "_platform_header",
+	parameters: {
+		docs: {
+			source: {
+				code: platformHeaderFile
+			},
+			description: {
+				story: `This is the PlatformHeader component used as ''< PlatformHeader > < / PlatformHeader >''.`
+			}
+		}
+	},
+	render: () => PlatformHeader
 };
 
 export const SearchSectionComponent = {

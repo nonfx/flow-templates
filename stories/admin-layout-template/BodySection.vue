@@ -1,6 +1,7 @@
 <template>
 	<f-div direction="column" class="custom-parent-overflow" ref="bodyRef">
-		<f-div height="hug-content">
+		<PlatformHeader></PlatformHeader>
+		<f-div height="hug-content" state="default">
 			<f-tab :node-width="checkWindowSizeStatus ? 'fill' : 'hug-content'">
 				<f-tab-node
 					v-for="item in array"
@@ -16,11 +17,8 @@
 				></f-tab
 			>
 		</f-div>
-		<f-div
-			:class="step === 2 ? 'custom-height-content' : 'custom-height-common'"
-			height="hug-content"
-		>
-			<f-div direction="column" v-if="selectedTab === 0">
+		<f-div :class="customHeight" height="hug-content">
+			<f-div direction="column" v-if="selectedTab === 0" :class="customOverflow">
 				<SearchSection :open="open" @toggle-filter="toggleFilter"></SearchSection>
 				<TabContentSection
 					:step="step"
@@ -36,7 +34,7 @@
 		</f-div>
 	</f-div>
 	<f-icon-button
-		v-if="step === 2"
+		v-if="checkStep"
 		icon="i-arrow-up"
 		class="fab-scroll-up"
 		state="neutral"
@@ -49,6 +47,7 @@ import { defineComponent } from "vue";
 import TabContentSection from "./TabContentSection.vue";
 import SearchSection from "./SearchSection.vue";
 import AboutPlatform from "./AboutPlatform.vue";
+import PlatformHeader from "./PlatformHeader.vue";
 import { FDiv } from "@cldcvr/flow-core";
 
 export default defineComponent({
@@ -61,12 +60,25 @@ export default defineComponent({
 				{ id: 2, title: "Advance configurations" }
 			] as TabsType,
 			selectedTab: 0,
-			step: 0
+			step: 0,
+			versions: ["v11", "v12", "v13"],
+			selectedVersion: "v11"
 		};
 	},
 	computed: {
 		checkWindowSizeStatus(): boolean {
 			return window.matchMedia("(max-width: 768px)").matches;
+		},
+		checkStep(): boolean {
+			return this.step === 2;
+		},
+		customOverflow() {
+			return this.step === 2 ? "custom-overflow-visible" : "";
+		},
+		customHeight() {
+			return this.step === 2
+				? "custom-height-content custom-overflow-visible"
+				: "custom-height-common";
 		}
 	},
 	mounted() {
@@ -75,6 +87,9 @@ export default defineComponent({
 		}
 	},
 	methods: {
+		handleSelect(e: CustomEvent) {
+			this.selectedVersion = e.detail.value;
+		},
 		handleChangeTab(num: number) {
 			this.selectedTab = num;
 		},
@@ -88,7 +103,7 @@ export default defineComponent({
 			(this.$refs.bodyRef as FDiv).scrollTo({ top: 0, behavior: "smooth" });
 		}
 	},
-	components: { TabContentSection, SearchSection, AboutPlatform }
+	components: { TabContentSection, SearchSection, AboutPlatform, PlatformHeader }
 });
 
 export type TabsType = { id: number; title: string }[];
@@ -111,6 +126,9 @@ export type TabsType = { id: number; title: string }[];
 	.custom-height-content {
 		height: fit-content !important;
 		flex: none !important;
+	}
+	.custom-overflow-visible {
+		overflow: visible !important;
 	}
 }
 </style>

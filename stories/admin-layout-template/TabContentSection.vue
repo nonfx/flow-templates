@@ -1,6 +1,6 @@
 <template>
 	<f-div
-		overflow="hidden"
+		:class="customOverflow"
 		state="default"
 		class="left-column-hightlight-filter"
 		:data-column-open="open"
@@ -11,7 +11,7 @@
 			class="fab-toggle-filter"
 			@click="$emit('toggle-filter')"
 		></f-icon-button>
-		<f-div overflow="scroll" state="default">
+		<f-div :class="customOverflow" state="default">
 			<template v-if="step === 0">
 				<GridCards @select-card="selectCard"></GridCards>
 			</template>
@@ -49,6 +49,11 @@ export default defineComponent({
 			selectedListCard: null as null | object
 		};
 	},
+	computed: {
+		customOverflow() {
+			return this.step === 2 ? "custom-overflow-visible" : "";
+		}
+	},
 	methods: {
 		closeFilter() {
 			this.$emit("toggle-filter");
@@ -71,6 +76,9 @@ export default defineComponent({
 
 <style lang="scss">
 @media (max-width: 768px) {
+	.custom-overflow-visible {
+		overflow: visible !important;
+	}
 	.left-column-hightlight-filter[data-column-open="true"] {
 		&::before {
 			content: "";
