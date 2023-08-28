@@ -33,7 +33,7 @@
 							><a @click="connectOn(item.name)"
 								><f-icon :source="item.icon" size="small" clickable></f-icon
 							></a>
-							<f-text :inline="true" variant="para" size="small" weight="medium" :editable="true">{{
+							<f-text :inline="true" variant="para" size="small" weight="medium">{{
 								item.name
 							}}</f-text>
 						</f-div>
