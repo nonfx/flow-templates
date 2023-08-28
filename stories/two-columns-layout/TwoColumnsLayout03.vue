@@ -113,9 +113,14 @@
 								}}</f-text></f-div
 							>
 							<f-div
-								><f-text variant="para" size="small" weight="regular">{{
-									value.value
-								}}</f-text></f-div
+								><f-text
+									variant="para"
+									size="small"
+									weight="regular"
+									:editable="true"
+									@input="($event:CustomEvent)=>handleTextEdit($event, name)"
+									>{{ value.value }}</f-text
+								></f-div
 							>
 						</f-div>
 					</f-div>
@@ -299,6 +304,9 @@ export default defineComponent({
 		handleToggleAccordion(e: CustomEvent, index: 1 | 2 | 3) {
 			console.log(e.detail.value);
 			this.openAccordion[index] = e.detail.value;
+		},
+		handleTextEdit(e: CustomEvent, name: string) {
+			this.metaData[name].value = e.detail.value;
 		}
 	}
 });

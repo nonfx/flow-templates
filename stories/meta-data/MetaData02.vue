@@ -12,7 +12,14 @@
 				}}</f-text></f-div
 			>
 			<f-div
-				><f-text variant="para" size="small" weight="regular">{{ value.value }}</f-text></f-div
+				><f-text
+					variant="para"
+					size="small"
+					weight="regular"
+					:editable="true"
+					@input="($event:CustomEvent)=>handleTextEdit($event, name)"
+					>{{ value.value }}</f-text
+				></f-div
 			>
 		</f-div>
 	</f-div>
@@ -31,6 +38,11 @@ export default defineComponent({
 				["Policy(s)"]: { type: "text", value: "Monetary Authority of Singapore (MAS)" }
 			} as MetaDataType
 		};
+	},
+	methods: {
+		handleTextEdit(e: CustomEvent, name: string) {
+			this.metaData[name].value = e.detail.value;
+		}
 	}
 });
 
