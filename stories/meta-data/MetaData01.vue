@@ -2,7 +2,7 @@
 	<f-div direction="column">
 		<f-accordion :open="open" @toggle="handleToggle">
 			<f-div><f-text variant="para" size="small" weight="bold">Requester details</f-text></f-div>
-			<f-div slot="body" direction="column" width="400px">
+			<f-div slot="body" direction="column" width="100%">
 				<f-div
 					v-for="(value, name) in metaData"
 					direction="row"
@@ -19,14 +19,21 @@
 						<f-text variant="para" size="small" weight="regular">{{ value.value }}</f-text></f-div
 					>
 					<f-div v-else-if="value.type === 'text'"
-						><f-text variant="para" size="small" weight="regular">{{ value.value }}</f-text></f-div
+						><f-text
+							variant="para"
+							size="small"
+							weight="regular"
+							:editable="true"
+							@input="($event:CustomEvent)=>handleTextEdit($event, name)"
+							>{{ value.value }}</f-text
+						></f-div
 					>
 					<f-div v-else direction="column" gap="small" align="middle-left">
 						<f-div gap="x-small" v-for="item in (value.value as ConnectArrayType)" :key="item.name"
 							><a @click="connectOn(item.name)"
 								><f-icon :source="item.icon" size="small" clickable></f-icon
 							></a>
-							<f-text :inline="true" variant="para" size="small" weight="medium">{{
+							<f-text :inline="true" variant="para" size="small" weight="medium" :editable="true">{{
 								item.name
 							}}</f-text>
 						</f-div>
@@ -67,6 +74,9 @@ export default defineComponent({
 		handleToggle(e: CustomEvent) {
 			console.log(e.detail.value);
 			this.open = e.detail.value;
+		},
+		handleTextEdit(e: CustomEvent, name: string) {
+			this.metaData[name].value = e.detail.value;
 		}
 	}
 });
