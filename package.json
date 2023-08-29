@@ -51,7 +51,7 @@
   "dependencies": {
     "@cldcvr/flow-aws-icon": "latest",
     "@cldcvr/flow-code-editor": "^0.2.0",
-    "@cldcvr/flow-core": "1.23.1",
+    "@cldcvr/flow-core": "1.24.0",
     "@cldcvr/flow-form-builder": "1.5.14",
     "@cldcvr/flow-gcp-icon": "latest",
     "@cldcvr/flow-product-icon": "latest",
