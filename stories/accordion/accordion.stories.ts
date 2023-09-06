@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Accordion1 from "./Accordion01.vue";
 import AccordionFile1 from "./Accordion01.vue?raw";
+import { descriptions } from "../../utils/stories-title-description";
 
 export default {
 	title: "Templates/Accordion",
@@ -18,6 +19,9 @@ export const Template01 = {
 		docs: {
 			source: {
 				code: AccordionFile1
+			},
+			description: {
+				component: descriptions["Templates"]["accordion"]
 			}
 		}
 	},

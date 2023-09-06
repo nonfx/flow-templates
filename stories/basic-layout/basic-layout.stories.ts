@@ -1,8 +1,9 @@
 import Layout011 from "./Layout01.vue";
 import file from "./Layout01.vue?raw";
+import { descriptions } from "../../utils/stories-title-description";
 
 export default {
-	title: "Templates/Layout",
+	title: "Templates/Basic Layout",
 	parameters: {
 		docs: {
 			inlineStories: false,
@@ -17,6 +18,9 @@ export const Template01 = {
 		docs: {
 			source: {
 				code: file
+			},
+			description: {
+				component: descriptions["Templates"]["basic-layout"]
 			}
 		}
 	},

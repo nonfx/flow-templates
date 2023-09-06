@@ -37,7 +37,7 @@ export const parameters = {
 	},
 	options: {
 		storySort: {
-			order: ["Patterns", "Templates"]
+			order: ["Introduction", "Patterns", "Templates"]
 		}
 	},
 	previewTabs: {

@@ -29,7 +29,7 @@ import SourceDetails from "./SourceDetails.vue";
 import SourceDetailsFile from "./SourceDetails.vue?raw";
 
 export default {
-	title: "Templates/Pipeline Header",
+	title: "Layouts/Pipeline Header",
 	parameters: {
 		docs: {
 			inlineStories: false,
@@ -38,7 +38,7 @@ export default {
 	}
 };
 
-export const Template011 = {
+export const Template01 = {
 	name: "pipeline-header-walkthrough",
 	parameters: {
 		docs: {
@@ -58,7 +58,7 @@ export const Template011 = {
 	})
 };
 
-export const Template01 = {
+export const Template02 = {
 	name: "ft-pipeline-header-01",
 	parameters: {
 		docs: {
@@ -70,7 +70,7 @@ export const Template01 = {
 	render: () => PipelineHeader01
 };
 
-export const Template02 = {
+export const Template03 = {
 	name: "_pipeline-details",
 	parameters: {
 		docs: {
@@ -82,7 +82,7 @@ export const Template02 = {
 	render: () => PipelineName
 };
 
-export const Template03 = {
+export const Template04 = {
 	name: "_pipeline-card",
 	parameters: {
 		docs: {
@@ -94,7 +94,7 @@ export const Template03 = {
 	render: () => PipelineCard
 };
 
-export const Template04 = {
+export const Template05 = {
 	name: "ft-pipeline-details-popover",
 	parameters: {
 		docs: {
@@ -107,7 +107,7 @@ export const Template04 = {
 	render: () => PipelineDetailsPopover
 };
 
-export const Template05 = {
+export const Template06 = {
 	name: "ft-add-source-popover",
 	parameters: {
 		docs: {
@@ -120,7 +120,7 @@ export const Template05 = {
 	render: () => AddSourcePopover
 };
 
-export const TemplateSourceDetails = {
+export const Template07 = {
 	name: "ft-source-details",
 	parameters: {
 		docs: {
@@ -133,7 +133,7 @@ export const TemplateSourceDetails = {
 	render: () => SourceDetails
 };
 
-export const Template06 = {
+export const Template08 = {
 	name: "ft-select-source-popover",
 	parameters: {
 		docs: {
@@ -146,7 +146,7 @@ export const Template06 = {
 	render: () => SelectSourcePopover
 };
 
-export const Template07 = {
+export const Template09 = {
 	name: "ft-ingestion-mode-popover",
 	parameters: {
 		docs: {
@@ -159,7 +159,7 @@ export const Template07 = {
 	render: () => IngestionModePopover
 };
 
-export const Template08 = {
+export const Template10 = {
 	name: "ft-configure-popover",
 	parameters: {
 		docs: {
@@ -172,7 +172,7 @@ export const Template08 = {
 	render: () => ConfigurePopover
 };
 
-export const Template09 = {
+export const Template11 = {
 	name: "ft-time-schedule-popover",
 	parameters: {
 		docs: {

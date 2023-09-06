@@ -3,6 +3,7 @@ import ProfileDropdown1 from "./ProfileDropdown01.vue";
 import ProfileDropdownFile1 from "./ProfileDropdown01.vue?raw";
 import ProfileDropdown2 from "./ProfileDropdown02.vue";
 import ProfileDropdownFile2 from "./ProfileDropdown02.vue?raw";
+import { descriptions } from "../../utils/stories-title-description";
 
 export default {
 	title: "Patterns/Profile Dropdown",
@@ -14,7 +15,7 @@ export default {
 	}
 };
 
-export const Template01 = {
+export const Pattern01 = {
 	name: "ft-profile-dropdown-01",
 	parameters: {
 		docs: {
@@ -26,12 +27,15 @@ export const Template01 = {
 	render: () => ProfileDropdown1
 };
 
-export const Template02 = {
+export const Pattern02 = {
 	name: "ft-profile-dropdown-02",
 	parameters: {
 		docs: {
 			source: {
 				code: ProfileDropdownFile2
+			},
+			description: {
+				component: descriptions["Patterns"]["profile-dropdown"]
 			}
 		}
 	},

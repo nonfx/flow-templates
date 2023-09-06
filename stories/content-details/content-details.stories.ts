@@ -1,8 +1,9 @@
 import ContentDetails01 from "./ContentDetails01.vue";
 import file from "./ContentDetails01.vue?raw";
+import { descriptions } from "../../utils/stories-title-description";
 
 export default {
-	title: "Templates/Content Details Layout",
+	title: "Layouts/Content Details",
 	parameters: {
 		docs: {
 			inlineStories: false,
@@ -11,12 +12,15 @@ export default {
 	}
 };
 
-export const Template01 = {
+export const Layout01 = {
 	name: "ft-content-details-01",
 	parameters: {
 		docs: {
 			source: {
 				code: file
+			},
+			description: {
+				component: descriptions["Layouts"]["content-details"]
 			}
 		}
 	},
