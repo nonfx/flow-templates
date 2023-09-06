@@ -3,7 +3,7 @@ import Cards1 from "./Cards01.vue";
 import cardsFile1 from "./Cards01.vue?raw";
 
 export default {
-	title: "Templates/Cards",
+	title: "Templates/Grid",
 	parameters: {
 		docs: {
 			inlineStories: false,

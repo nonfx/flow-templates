@@ -58,8 +58,10 @@ import ssageExampleFile from "./UsageExample.vue?raw";
 import DependencyGraph from "./DependencyGraph.vue";
 import dependencyGraphFile from "./DependencyGraph.vue?raw";
 
+import { descriptions } from "../../utils/stories-title-description";
+
 export default {
-	title: "Templates/Admin Template Layout",
+	title: "Layouts/Admin Layout",
 	parameters: {
 		docs: {
 			inlineStories: false,
@@ -68,14 +70,7 @@ export default {
 	}
 };
 
-const adminLayoutDescription = `
-Here we present an Admin Layout Template for multiple uses:
-1. The below story acts as the main working story and representation of mock.
-2. All the other components can be used to build various sections of the admin template.
-3. The components initiate with an underscore '_'. 
-`;
-
-export const AdminLayout = {
+export const Layout01 = {
 	name: "ft-admin-layout",
 	parameters: {
 		docs: {
@@ -83,7 +78,7 @@ export const AdminLayout = {
 				code: HomeFile
 			},
 			description: {
-				component: adminLayoutDescription
+				component: descriptions["Layouts"]["admin-layout"]
 			}
 		}
 	},

@@ -25,7 +25,7 @@ export default {
 	}
 };
 
-export const SingleLineSlabTemplate01 = {
+export const Pattern01 = {
 	name: "ft-single-line-slab-01",
 	parameters: {
 		docs: {
@@ -37,7 +37,7 @@ export const SingleLineSlabTemplate01 = {
 	render: () => SingleLineSlab1
 };
 
-export const SingleLineSlabTemplate02 = {
+export const Pattern02 = {
 	name: "ft-single-line-slab-02",
 	parameters: {
 		docs: {
@@ -49,7 +49,7 @@ export const SingleLineSlabTemplate02 = {
 	render: () => SingleLineSlab2
 };
 
-export const SingleLineSlabTemplate03 = {
+export const Pattern03 = {
 	name: "ft-single-line-slab-03",
 	parameters: {
 		docs: {
@@ -61,7 +61,7 @@ export const SingleLineSlabTemplate03 = {
 	render: () => SingleLineSlab3
 };
 
-export const SingleLineSlabTemplate04 = {
+export const Pattern04 = {
 	name: "ft-single-line-slab-04",
 	parameters: {
 		docs: {
@@ -73,7 +73,7 @@ export const SingleLineSlabTemplate04 = {
 	render: () => SingleLineSlab4
 };
 
-export const MultiLineSlabTemplate01 = {
+export const Pattern05 = {
 	name: "ft-multi-line-slab-01",
 	parameters: {
 		docs: {
@@ -85,7 +85,7 @@ export const MultiLineSlabTemplate01 = {
 	render: () => MultiLineSlab1
 };
 
-export const MultiLineSlabTemplate02 = {
+export const Pattern06 = {
 	name: "ft-multi-line-slab-02",
 	parameters: {
 		docs: {
@@ -97,7 +97,7 @@ export const MultiLineSlabTemplate02 = {
 	render: () => MultiLineSlab2
 };
 
-export const MultiLineSlabTemplate03 = {
+export const Pattern07 = {
 	name: "ft-multi-line-slab-03",
 	parameters: {
 		docs: {

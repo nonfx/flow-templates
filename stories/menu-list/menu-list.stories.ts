@@ -11,6 +11,7 @@ import MenuList4 from "./MenuList04.vue";
 import menuListFile4 from "./MenuList04.vue?raw";
 import MenuList5 from "./MenuList05.vue";
 import menuListFile5 from "./MenuList05.vue?raw";
+import { descriptions } from "../../utils/stories-title-description";
 
 export default {
 	title: "Patterns/Menu List",
@@ -22,19 +23,22 @@ export default {
 	}
 };
 
-export const ExampleTemplate = {
+export const Pattern01 = {
 	name: "ft-example",
 	parameters: {
 		docs: {
 			source: {
 				code: exampleFile
+			},
+			description: {
+				component: descriptions["Patterns"]["menu-list"]
 			}
 		}
 	},
 	render: () => ExampleVue
 };
 
-export const Template01 = {
+export const Pattern02 = {
 	name: "ft-menu-list-01",
 	parameters: {
 		docs: {
@@ -46,7 +50,7 @@ export const Template01 = {
 	render: () => MenuList1
 };
 
-export const Template02 = {
+export const Pattern03 = {
 	name: "ft-menu-list-02",
 	parameters: {
 		docs: {
@@ -58,7 +62,7 @@ export const Template02 = {
 	render: () => MenuList2
 };
 
-export const Template03 = {
+export const Pattern04 = {
 	name: "ft-menu-list-03",
 	parameters: {
 		docs: {
@@ -70,7 +74,7 @@ export const Template03 = {
 	render: () => MenuList3
 };
 
-export const Template04 = {
+export const Pattern05 = {
 	name: "ft-menu-list-04",
 	parameters: {
 		docs: {
@@ -82,7 +86,7 @@ export const Template04 = {
 	render: () => MenuList4
 };
 
-export const Template05 = {
+export const Pattern06 = {
 	name: "ft-menu-list-05",
 	parameters: {
 		docs: {

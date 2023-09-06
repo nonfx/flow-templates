@@ -9,7 +9,7 @@ import Banner04 from "./Banner04.vue";
 import BannerFile04 from "./Banner04.vue?raw";
 
 export default {
-	title: "Templates/Banner",
+	title: "Patterns/Banner",
 	parameters: {
 		docs: {
 			inlineStories: false,
@@ -18,7 +18,7 @@ export default {
 	}
 };
 
-export const Template01 = {
+export const Pattern01 = {
 	name: "ft-banner-01",
 	parameters: {
 		docs: {
@@ -30,7 +30,7 @@ export const Template01 = {
 	render: () => Banner01
 };
 
-export const Template02 = {
+export const Pattern02 = {
 	name: "ft-banner-02",
 	parameters: {
 		docs: {
@@ -42,7 +42,7 @@ export const Template02 = {
 	render: () => Banner02
 };
 
-export const Template03 = {
+export const Pattern03 = {
 	name: "ft-banner-03",
 	parameters: {
 		docs: {
@@ -54,8 +54,7 @@ export const Template03 = {
 	render: () => Banner03
 };
 
-
-export const Template04 = {
+export const Pattern04 = {
 	name: "ft-banner-04",
 	parameters: {
 		docs: {

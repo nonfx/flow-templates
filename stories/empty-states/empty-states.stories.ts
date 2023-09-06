@@ -7,7 +7,7 @@ import EmptyStateSmall3 from "./EmptyStateSmall03.vue";
 import EmptyStateFile3 from "./EmptyStateSmall03.vue?raw";
 
 export default {
-	title: "Templates/Empty States",
+	title: "Patterns/Empty States",
 	parameters: {
 		docs: {
 			inlineStories: false,
@@ -16,7 +16,7 @@ export default {
 	}
 };
 
-export const Template01 = {
+export const Pattern01 = {
 	name: "ft-empty-state-small-01",
 	parameters: {
 		docs: {
@@ -28,7 +28,7 @@ export const Template01 = {
 	render: () => EmptyStateSmall1
 };
 
-export const Template02 = {
+export const Pattern02 = {
 	name: "ft-empty-state-small-02",
 	parameters: {
 		docs: {
@@ -40,7 +40,7 @@ export const Template02 = {
 	render: () => EmptyStateSmall2
 };
 
-export const Template03 = {
+export const Pattern03 = {
 	name: "ft-empty-state-small-03",
 	parameters: {
 		docs: {

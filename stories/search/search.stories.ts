@@ -11,7 +11,7 @@ export default {
 	}
 };
 
-export const Template01 = {
+export const Pattern01 = {
 	name: "ft-search-01",
 	parameters: {
 		docs: {

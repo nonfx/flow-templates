@@ -6,7 +6,7 @@ import BigNumber02 from "./BigNumber02.vue";
 import bigNumber02File from "./BigNumber02.vue?raw";
 
 export default {
-	title: "Templates/Big Number",
+	title: "Patterns/Big Number",
 	parameters: {
 		docs: {
 			inlineStories: false,
@@ -15,7 +15,7 @@ export default {
 	}
 };
 
-export const Template01 = {
+export const Pattern01 = {
 	name: "ft-big-number-01",
 	parameters: {
 		docs: {
@@ -27,7 +27,7 @@ export const Template01 = {
 	render: () => BigNumber01
 };
 
-export const Template02 = {
+export const Pattern02 = {
 	name: "ft-big-number-02",
 	parameters: {
 		docs: {

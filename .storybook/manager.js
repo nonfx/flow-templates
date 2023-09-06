@@ -36,7 +36,7 @@ const theme = create({
 	inputBorderRadius: 4,
 
 	// Brand assets
-	brandTitle: "Flow Templates",
+	brandTitle: "Flow Template Library",
 	brandUrl: "https://flow.cldcvr.com/templates/index.html"
 });
 
