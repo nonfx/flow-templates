@@ -1,5 +1,5 @@
 <template>
-	<f-div direction="column" gap="x-large">
+	<f-div direction="column" gap="x-large" padding="large">
 		<f-div direction="column" gap="medium">
 			<f-text variant="heading" size="x-large" weight="bold">Welcome to </f-text>
 			<f-text variant="heading" size="large" weight="bold">Flow Template Library 🎉 </f-text>
