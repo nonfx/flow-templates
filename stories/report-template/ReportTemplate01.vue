@@ -160,7 +160,7 @@
 				>APPLICATION COMPONENTS</f-text
 			>
 			<f-div padding="none medium" gap="x-large">
-				<f-div direction="column" gap="x-small" v-for="(value, name) in table2">
+				<f-div direction="column" gap="x-small" v-for="(value, _name) in table2">
 					<f-table
 						:highlightSelected="false"
 						:highlightHover="false"

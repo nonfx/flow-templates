@@ -2,6 +2,9 @@
 import ReportTemplate01 from "./ReportTemplate01.vue";
 import ReportTemplate01File from "./ReportTemplate01.vue?raw";
 
+import ReportTemplate02 from "./ReportTemplate02.vue";
+import ReportTemplate02File from "./ReportTemplate02.vue?raw";
+
 export default {
 	title: "Templates/Report Template",
 	parameters: {
@@ -22,4 +25,16 @@ export const Template01 = {
 		}
 	},
 	render: () => ReportTemplate01
+};
+
+export const Template02 = {
+	name: "ft-report-02",
+	parameters: {
+		docs: {
+			source: {
+				code: ReportTemplate02File
+			}
+		}
+	},
+	render: () => ReportTemplate02
 };
