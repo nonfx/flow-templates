@@ -1,31 +1,31 @@
 {
   "Patterns": [
     {
-      "img": "/assets/images/patterns__header.svg",
+      "img": "images/patterns__header.svg",
       "title": "header"
     },
     {
-      "img": "/assets/images/patterns__menu-list.svg",
+      "img": "images/patterns__menu-list.svg",
       "title": "menu-list"
     },
     {
-      "img": "/assets/images/patterns__profile-dropdown.svg",
+      "img": "images/patterns__profile-dropdown.svg",
       "title": "profile-dropdown"
     }
   ],
   "Templates": [
     {
-      "img": "/assets/images/templates__accordion.svg",
+      "img": "images/templates__accordion.svg",
       "title": "accordion"
     },
     {
-      "img": "/assets/images/templates__basic-layout.svg",
+      "img": "images/templates__basic-layout.svg",
       "title": "basic-layout"
     }
   ],
   "Layouts": [
     {
-      "img": "/assets/images/layouts__content-details.svg",
+      "img": "images/layouts__content-details.svg",
       "title": "content-details"
     }
   ]

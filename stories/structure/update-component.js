@@ -17,9 +17,9 @@ existingImages.forEach(imageFile => {
 	Object.entries(imageList).forEach(([key, value]) => {
 		if (
 			imageName.split("__")[0].toLowerCase().includes(key.toLowerCase()) &&
-			!value.some(item => item.img === `/assets/images/${imageFile}`)
+			!value.some(item => item.img === `images/${imageFile}`)
 		) {
-			value.push({ img: `/assets/images/${imageFile}`, title: imageName.split("__")[1] });
+			value.push({ img: `images/${imageFile}`, title: imageName.split("__")[1] });
 		}
 	});
 	console.log(`Added image ${imageFile} to the list.`);
