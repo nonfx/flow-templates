@@ -6,7 +6,19 @@ export default {
 		previewTabs: {
 			"storybook/docs/panel": { hidden: true }
 		},
-		viewMode: "story"
+		viewMode: "story",
+		controls: { disabled: true },
+		actions: { disabled: true },
+		toolbar: {
+			title: { hidden: true },
+			zoom: { hidden: true },
+			eject: { hidden: true },
+			copy: { hidden: true },
+			fullscreen: { hidden: true },
+			addons: { hidden: true },
+			"storybook/background": { hidden: true },
+			"storybook/viewport": { hidden: true }
+		}
 	}
 };
 
