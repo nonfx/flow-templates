@@ -66,7 +66,11 @@ module.exports = {
 		if (!config.optimizeDeps) {
 			config.optimizeDeps = {};
 		}
-		config.optimizeDeps.include = [...(config.optimizeDeps?.include ?? []), "@storybook/vue3"];
+		config.optimizeDeps.include = [
+			...(config.optimizeDeps?.include ?? []),
+			"@storybook/vue3",
+			"react/jsx-runtime"
+		];
 		config.optimizeDeps.exclude = [...(config.optimizeDeps?.exclude ?? []), "lit", "lit-html"];
 		config.plugins = [
 			...config.plugins,
