@@ -72,6 +72,10 @@ module.exports = {
 			"react/jsx-runtime"
 		];
 		config.optimizeDeps.exclude = [...(config.optimizeDeps?.exclude ?? []), "lit", "lit-html"];
+		config.resolve.alias = {
+			...(config.resolve.alias ?? {}),
+			"react/jsx-runtime": "react/jsx-runtime.js"
+		};
 		config.plugins = [
 			...config.plugins,
 			{
