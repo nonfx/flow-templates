@@ -113,6 +113,28 @@
 								<f-text>Light theme</f-text>
 								<f-icon v-if="theme === 'f=light'" source="i-tick" state="success"></f-icon>
 							</f-div>
+							<f-div
+								padding="medium"
+								gap="small"
+								clickable
+								state="default"
+								:selected="theme === 'f-ollion-dark' ? 'background' : 'none'"
+								@click="setTheme('f-ollion-dark')"
+							>
+								<f-text>Ollion Dark theme</f-text>
+								<f-icon v-if="theme === 'f-ollion-dark'" source="i-tick" state="success"></f-icon>
+							</f-div>
+							<f-div
+								padding="medium"
+								gap="small"
+								border="small solid default bottom"
+								clickable
+								.selected="theme === 'f-ollion-light' ? 'background' : 'none'"
+								@click="setTheme('f-ollion-light')"
+							>
+								<f-text>Ollion Light theme</f-text>
+								<f-icon v-if="theme === 'f-ollion-light'" source="i-tick" state="success"></f-icon>
+							</f-div>
 							<f-div padding="medium" gap="small" clickable>
 								<f-text>Logout</f-text>
 							</f-div>
@@ -226,13 +248,33 @@
 						<f-div
 							padding="medium"
 							gap="small"
-							border="small solid default bottom"
 							clickable
 							.selected="theme === 'f-light' ? 'background' : 'none'"
 							@click="setTheme('f-light')"
 						>
 							<f-text>Light theme</f-text>
-							<f-icon v-if="theme === 'f=light'" source="i-tick" state="success"></f-icon>
+							<f-icon v-if="theme === 'f-light'" source="i-tick" state="success"></f-icon>
+						</f-div>
+						<f-div
+							padding="medium"
+							gap="small"
+							clickable
+							:selected="theme === 'f-ollion-dark' ? 'background' : 'none'"
+							@click="setTheme('f-ollion-dark')"
+						>
+							<f-text>Ollion Dark theme</f-text>
+							<f-icon v-if="theme === 'f-ollion-dark'" source="i-tick" state="success"></f-icon>
+						</f-div>
+						<f-div
+							padding="medium"
+							gap="small"
+							border="small solid default bottom"
+							clickable
+							.selected="theme === 'f-ollion-light' ? 'background' : 'none'"
+							@click="setTheme('f-ollion-light')"
+						>
+							<f-text>Ollion Light theme</f-text>
+							<f-icon v-if="theme === 'f-ollion-light'" source="i-tick" state="success"></f-icon>
 						</f-div>
 						<f-div padding="medium" gap="small" clickable>
 							<f-text>Logout</f-text>
@@ -431,7 +473,7 @@ export default defineComponent({
 		toggleMenuMobile() {
 			this.openMenuMobile = !this.openMenuMobile;
 		},
-		setTheme(theme: "f-dark" | "f-light") {
+		setTheme(theme: `f-${string}`) {
 			ConfigUtil.setConfig({ theme });
 			this.theme = theme;
 		},

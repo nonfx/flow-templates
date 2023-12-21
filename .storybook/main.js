@@ -43,16 +43,20 @@ copyDir("node_modules/@cldcvr/flow-code-editor/dist/assets", "assets");
 
 module.exports = {
 	stories: ["../stories/**/*.stories.mdx", "../stories/**/*.stories.@(js|jsx|ts|tsx)"],
+
 	addons: [
 		"@storybook/addon-links",
 		"@storybook/addon-essentials",
 		"storybook-addon-themes",
-		"@storybook/addon-storysource"
+		"@storybook/addon-storysource",
+		"@storybook/addon-mdx-gfm"
 	],
-	framework: "@storybook/vue3",
-	core: {
-		builder: "@storybook/builder-vite"
+
+	framework: {
+		name: "@storybook/vue3-vite",
+		options: {}
 	},
+
 	async viteFinal(config, { configType }) {
 		// customize the Vite config here
 		config.assetsInclude = ["assets"];
@@ -74,5 +78,6 @@ module.exports = {
 		// return the customized config
 		return config;
 	},
+
 	staticDirs: ["../assets"]
 };
