@@ -64,6 +64,7 @@
     "@cldcvr/flow-system-icon": "1.15.0",
     "@cldcvr/flow-table": "2.2.3",
     "@faker-js/faker": "^8.0.2",
+    "@storybook/addon-docs": "^7.6.6",
     "vue": "^3.2.47"
   }
 }
