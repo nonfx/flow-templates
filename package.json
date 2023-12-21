@@ -52,7 +52,9 @@
     "typescript": "^4.9.3",
     "vite": "^4.2.0",
     "vue-loader": "^16.8.3",
-    "vue-tsc": "^1.2.0"
+    "vue-tsc": "^1.2.0",
+    "@storybook/addon-docs": "^7.6.6",
+    "react": "17.0.2"
   },
   "dependencies": {
     "@cldcvr/flow-aws-icon": "1.8.4",
@@ -64,7 +66,8 @@
     "@cldcvr/flow-system-icon": "1.15.0",
     "@cldcvr/flow-table": "2.2.3",
     "@faker-js/faker": "^8.0.2",
-    "@storybook/addon-docs": "^7.6.6",
+    "lit": "^3.1.0",
+    "lodash": "^4.17.21",
     "vue": "^3.2.47"
   }
 }
