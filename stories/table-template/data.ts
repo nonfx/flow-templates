@@ -1,10 +1,10 @@
-import { FPopover } from "@cldcvr/flow-core";
+import { FPopover } from "@ollion/flow-core";
 import {
 	FTableSchemaCell,
 	FTableSchemaData,
 	FTableSchemaDataRow,
 	FTableSchemaHeaderCell
-} from "@cldcvr/flow-table";
+} from "@ollion/flow-table";
 import { faker } from "@faker-js/faker";
 import { html } from "lit";
 

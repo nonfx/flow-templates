@@ -3,7 +3,7 @@ import {
 	FTableSchemaData,
 	FTableSchemaDataRow,
 	FTableSchemaHeaderCell
-} from "@cldcvr/flow-table";
+} from "@ollion/flow-table";
 import { faker } from "@faker-js/faker";
 import { html } from "lit";
 

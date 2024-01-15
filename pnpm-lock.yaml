@@ -5,33 +5,33 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  '@cldcvr/flow-aws-icon':
-    specifier: 1.8.4
-    version: 1.8.4(@cldcvr/flow-core-config@1.1.3)
-  '@cldcvr/flow-code-editor':
-    specifier: ^1.1.0
-    version: 1.1.0(@cldcvr/flow-core-config@1.1.3)(@cldcvr/flow-core@2.7.3)
-  '@cldcvr/flow-core':
-    specifier: 2.7.3
-    version: 2.7.3(@cldcvr/flow-core-config@1.1.3)
-  '@cldcvr/flow-form-builder':
-    specifier: 2.2.1
-    version: 2.2.1(@cldcvr/flow-core-config@1.1.3)(@cldcvr/flow-core@2.7.3)
-  '@cldcvr/flow-gcp-icon':
-    specifier: 1.7.4
-    version: 1.7.4(@cldcvr/flow-core-config@1.1.3)
-  '@cldcvr/flow-product-icon':
-    specifier: 1.11.5
-    version: 1.11.5(@cldcvr/flow-core-config@1.1.3)
-  '@cldcvr/flow-system-icon':
-    specifier: 1.15.0
-    version: 1.15.0(@cldcvr/flow-core-config@1.1.3)
-  '@cldcvr/flow-table':
-    specifier: 2.2.3
-    version: 2.2.3(@cldcvr/flow-core-config@1.1.3)(@cldcvr/flow-core@2.7.3)
   '@faker-js/faker':
     specifier: ^8.0.2
     version: 8.3.1
+  '@ollion/flow-aws-icon':
+    specifier: 1.9.1
+    version: 1.9.1(@ollion/flow-core-config@1.1.3)
+  '@ollion/flow-code-editor':
+    specifier: ^1.1.0
+    version: 1.1.0(@ollion/flow-core-config@1.1.3)(@ollion/flow-core@2.7.5)
+  '@ollion/flow-core':
+    specifier: 2.7.5
+    version: 2.7.5(@ollion/flow-core-config@1.1.3)
+  '@ollion/flow-form-builder':
+    specifier: 2.2.1
+    version: 2.2.1(@ollion/flow-core-config@1.1.3)(@ollion/flow-core@2.7.5)
+  '@ollion/flow-gcp-icon':
+    specifier: 1.8.1
+    version: 1.8.1(@ollion/flow-core-config@1.1.3)
+  '@ollion/flow-product-icon':
+    specifier: 1.12.1
+    version: 1.12.1(@ollion/flow-core-config@1.1.3)
+  '@ollion/flow-system-icon':
+    specifier: 1.16.1
+    version: 1.16.1(@ollion/flow-core-config@1.1.3)
+  '@ollion/flow-table':
+    specifier: 2.2.3
+    version: 2.2.3(@ollion/flow-core-config@1.1.3)(@ollion/flow-core@2.7.5)
   lit:
     specifier: ^3.1.0
     version: 3.1.0
@@ -1427,101 +1427,6 @@ packages:
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
 
-  /@cldcvr/flow-aws-icon@1.8.4(@cldcvr/flow-core-config@1.1.3):
-    resolution: {integrity: sha512-nahy94EGImdRoM4unV3sj50bTTm+Bg4Blfbe4ZDKfjhhAg1RkT7SsZ0p6g9nbb2+h7nDuwFw9uouRK2RdqdbFA==}
-    peerDependencies:
-      '@cldcvr/flow-core-config': '*'
-    dependencies:
-      '@cldcvr/flow-core-config': 1.1.3
-    dev: false
-
-  /@cldcvr/flow-code-editor@1.1.0(@cldcvr/flow-core-config@1.1.3)(@cldcvr/flow-core@2.7.3):
-    resolution: {integrity: sha512-4x3YM4miFtIaOL00+qb0Dg09BfWm8LC0JGD3NqUyV3qklCgHzhLTKC2mqP+gQ0iYmUdSVH4McKj9ac0PhoI9QQ==}
-    peerDependencies:
-      '@cldcvr/flow-core': ^2.0.3
-      '@cldcvr/flow-core-config': ^1.1.3
-    dependencies:
-      '@cldcvr/flow-core': 2.7.3(@cldcvr/flow-core-config@1.1.3)
-      '@cldcvr/flow-core-config': 1.1.3
-      lit: 3.1.0
-      monaco-editor: 0.38.0
-    dev: false
-
-  /@cldcvr/flow-core-config@1.1.3:
-    resolution: {integrity: sha512-zF1oszIKFskWYIbPWY52pCvVDParEUZkETib4QUrKnP7BRLP/a6Rva+TRU1uGg00klTAERY94oz8I2o28GkGkA==}
-    dependencies:
-      rxjs: 7.8.1
-    dev: false
-
-  /@cldcvr/flow-core@2.7.3(@cldcvr/flow-core-config@1.1.3):
-    resolution: {integrity: sha512-PAs5Y1H47KZmGau671eSlCM7qfsgBzwByBeFRfcC0WP9hLDn7RIkJUbs0SIUnVuX3XxM8iynLEB7hHi9mjFGaw==}
-    peerDependencies:
-      '@cldcvr/flow-core-config': '*'
-    dependencies:
-      '@cldcvr/flow-core-config': 1.1.3
-      '@emoji-mart/data': 1.1.2
-      '@floating-ui/dom': 1.5.3
-      axios: 0.27.2
-      emoji-mart: 5.5.2
-      flatpickr: 4.6.13
-      lit: 3.1.0
-      lodash-es: 4.17.21
-      mark.js: 8.11.1
-      rxjs: 7.8.1
-      validate-color: 2.2.4
-      vanilla-colorful: 0.7.2
-    transitivePeerDependencies:
-      - debug
-    dev: false
-
-  /@cldcvr/flow-form-builder@2.2.1(@cldcvr/flow-core-config@1.1.3)(@cldcvr/flow-core@2.7.3):
-    resolution: {integrity: sha512-+/XEq3dtizhG8tEnEyWigp3WlB3HcSOuGBh4mNWtOBJcEcozpQG6yHNLt7gMuHIValoWZgE5g8zJ59mSjBnxEQ==}
-    peerDependencies:
-      '@cldcvr/flow-core': ^2.1.3
-      '@cldcvr/flow-core-config': ^1.1.3
-    dependencies:
-      '@cldcvr/flow-core': 2.7.3(@cldcvr/flow-core-config@1.1.3)
-      '@cldcvr/flow-core-config': 1.1.3
-      lit: 3.1.0
-      lodash-es: 4.17.21
-      rxjs: 7.8.1
-    dev: false
-
-  /@cldcvr/flow-gcp-icon@1.7.4(@cldcvr/flow-core-config@1.1.3):
-    resolution: {integrity: sha512-2O20Irvi8hmkUbiNAa+zrLxS/oQl6qcE8S+punboj2rhKPu/O7M3tLANMtA0g5bLdBtwgbD8HMVbiqnh3U1IlA==}
-    peerDependencies:
-      '@cldcvr/flow-core-config': '*'
-    dependencies:
-      '@cldcvr/flow-core-config': 1.1.3
-    dev: false
-
-  /@cldcvr/flow-product-icon@1.11.5(@cldcvr/flow-core-config@1.1.3):
-    resolution: {integrity: sha512-C87WXNyJQowgXjoGnxDKb+V/moJjM/3V4lmPyQl54OXG/HHgqtXkUtHp4N/kXUMOP2eEte9q+rKf3URTNMrmXw==}
-    peerDependencies:
-      '@cldcvr/flow-core-config': '*'
-    dependencies:
-      '@cldcvr/flow-core-config': 1.1.3
-    dev: false
-
-  /@cldcvr/flow-system-icon@1.15.0(@cldcvr/flow-core-config@1.1.3):
-    resolution: {integrity: sha512-0oACBPeI3ASai82t2mnSU9yoUXUBRwztfLu+0qLxGMVhmZ9Dy3iHi+odQYgpqZfn8e9m3e2BFfxbsdMkNJ4KXQ==}
-    peerDependencies:
-      '@cldcvr/flow-core-config': '*'
-    dependencies:
-      '@cldcvr/flow-core-config': 1.1.3
-    dev: false
-
-  /@cldcvr/flow-table@2.2.3(@cldcvr/flow-core-config@1.1.3)(@cldcvr/flow-core@2.7.3):
-    resolution: {integrity: sha512-tDikZtSoZkME5AZYFTaAjkmNOBYNZ2EYwa5BiwU7lQZ3QTOwenNxxPzo3OiRewXRZ+GPktJDUMt+mbyNEPhs1A==}
-    peerDependencies:
-      '@cldcvr/flow-core': ^2.0.3
-      '@cldcvr/flow-core-config': ^1.1.3
-    dependencies:
-      '@cldcvr/flow-core': 2.7.3(@cldcvr/flow-core-config@1.1.3)
-      '@cldcvr/flow-core-config': 1.1.3
-      lit: 3.1.0
-    dev: false
-
   /@colors/colors@1.5.0:
     resolution: {integrity: sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==}
     engines: {node: '>=0.1.90'}
@@ -2009,6 +1914,101 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.16.0
     dev: true
+
+  /@ollion/flow-aws-icon@1.9.1(@ollion/flow-core-config@1.1.3):
+    resolution: {integrity: sha512-sudqIdeiGNfzvDeB0kvJFMH31jesDN6tsWfyzEWzIjJnAUFQlBCyE5ZE4Lf5+a5uwsqcezwlRMI1OQyLH3yV5A==}
+    peerDependencies:
+      '@ollion/flow-core-config': '*'
+    dependencies:
+      '@ollion/flow-core-config': 1.1.3
+    dev: false
+
+  /@ollion/flow-code-editor@1.1.0(@ollion/flow-core-config@1.1.3)(@ollion/flow-core@2.7.5):
+    resolution: {integrity: sha512-B1bOJst6TWEOif7ctsVNcfgVI5rUkvLkx3xqtRvD4RlqGGtxHQJl8GfaYEtpm+eIHzdTgdr6sHAJmnD/J3Ts8Q==}
+    peerDependencies:
+      '@ollion/flow-core': ^2.0.3
+      '@ollion/flow-core-config': ^1.1.3
+    dependencies:
+      '@ollion/flow-core': 2.7.5(@ollion/flow-core-config@1.1.3)
+      '@ollion/flow-core-config': 1.1.3
+      lit: 3.1.0
+      monaco-editor: 0.38.0
+    dev: false
+
+  /@ollion/flow-core-config@1.1.3:
+    resolution: {integrity: sha512-Im5UNwO+/KHkD+gAMvE1OicpLmTbof3qnxJj1vHSay+7MfzAbeuZH5YaTK7cChJ6ocBaR99vS4XGKrBs10/z6Q==}
+    dependencies:
+      rxjs: 7.8.1
+    dev: false
+
+  /@ollion/flow-core@2.7.5(@ollion/flow-core-config@1.1.3):
+    resolution: {integrity: sha512-gsq6XFLxJSRUhg8xkZkVNJrhso+6JPw6/6c4MH/K/OFL8vVk6u8n/YPUjaIl5H6IlKvwGLAO6ducc6NN03xzQw==}
+    peerDependencies:
+      '@ollion/flow-core-config': '*'
+    dependencies:
+      '@emoji-mart/data': 1.1.2
+      '@floating-ui/dom': 1.5.3
+      '@ollion/flow-core-config': 1.1.3
+      axios: 0.27.2
+      emoji-mart: 5.5.2
+      flatpickr: 4.6.13
+      lit: 3.1.0
+      lodash-es: 4.17.21
+      mark.js: 8.11.1
+      rxjs: 7.8.1
+      validate-color: 2.2.4
+      vanilla-colorful: 0.7.2
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
+  /@ollion/flow-form-builder@2.2.1(@ollion/flow-core-config@1.1.3)(@ollion/flow-core@2.7.5):
+    resolution: {integrity: sha512-ZQWjAwdRZwEgdO8uKA43c3Fx7ApxV9r01mqjIn1m5F6mEbWRTcbZ7UfguHaFHv5SFXOZUHfIWWEW4qpwBeyDPQ==}
+    peerDependencies:
+      '@ollion/flow-core': ^2.1.3
+      '@ollion/flow-core-config': ^1.1.3
+    dependencies:
+      '@ollion/flow-core': 2.7.5(@ollion/flow-core-config@1.1.3)
+      '@ollion/flow-core-config': 1.1.3
+      lit: 3.1.0
+      lodash-es: 4.17.21
+      rxjs: 7.8.1
+    dev: false
+
+  /@ollion/flow-gcp-icon@1.8.1(@ollion/flow-core-config@1.1.3):
+    resolution: {integrity: sha512-JAdA6ffgyrQ4HDyXZRfcmsV7iZRKViY9JqHLU0C67ntOtnm7L62AVQywzPkjeSgZhIeyp5F0WVuWvAhKSyehHw==}
+    peerDependencies:
+      '@ollion/flow-core-config': '*'
+    dependencies:
+      '@ollion/flow-core-config': 1.1.3
+    dev: false
+
+  /@ollion/flow-product-icon@1.12.1(@ollion/flow-core-config@1.1.3):
+    resolution: {integrity: sha512-lYSmKYRjUpytwMCcTf8bg7EcLrvLDg+1YMMlx1f3U2iNfgjFxWOn3ufr2838Idyah08YOas5qv4YHyAFUSA8WQ==}
+    peerDependencies:
+      '@ollion/flow-core-config': '*'
+    dependencies:
+      '@ollion/flow-core-config': 1.1.3
+    dev: false
+
+  /@ollion/flow-system-icon@1.16.1(@ollion/flow-core-config@1.1.3):
+    resolution: {integrity: sha512-X5s8hiYt/W+DI6z8++LPKNpracWXxWI/vhy8c3kpEYw+lhflizxc/PaXOmye/F6BEVgXGOi8p5lzI2bqE3BvHg==}
+    peerDependencies:
+      '@ollion/flow-core-config': '*'
+    dependencies:
+      '@ollion/flow-core-config': 1.1.3
+    dev: false
+
+  /@ollion/flow-table@2.2.3(@ollion/flow-core-config@1.1.3)(@ollion/flow-core@2.7.5):
+    resolution: {integrity: sha512-96V8rI2sTfVyFiiN0JBR5kOGDGz+rBuNkAjEfnOdYfidt446Y5aLEJrJqBWCTfP+Sa9HhIuN+TztRyTmY63UTw==}
+    peerDependencies:
+      '@ollion/flow-core': ^2.0.3
+      '@ollion/flow-core-config': ^1.1.3
+    dependencies:
+      '@ollion/flow-core': 2.7.5(@ollion/flow-core-config@1.1.3)
+      '@ollion/flow-core-config': 1.1.3
+      lit: 3.1.0
+    dev: false
 
   /@pkgjs/parseargs@0.11.0:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -3405,7 +3405,7 @@ packages:
       ts-dedent: 2.2.0
       type-fest: 2.19.0
       vue: 3.3.13(typescript@4.9.5)
-      vue-component-type-helpers: 1.8.25
+      vue-component-type-helpers: 1.8.27
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -9286,8 +9286,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /vue-component-type-helpers@1.8.25:
-    resolution: {integrity: sha512-NCA6sekiJIMnMs4DdORxATXD+/NRkQpS32UC+I1KQJUasx+Z7MZUb3Y+MsKsFmX+PgyTYSteb73JW77AibaCCw==}
+  /vue-component-type-helpers@1.8.27:
+    resolution: {integrity: sha512-0vOfAtI67UjeO1G6UiX5Kd76CqaQ67wrRZiOe7UAb9Jm6GzlUr/fC7CV90XfwapJRjpCMaZFhv1V0ajWRmE9Dg==}
     dev: true
 
   /vue-docgen-api@4.75.1(vue@3.3.13):

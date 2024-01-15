@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts">
-import { FTableSchemaData } from "@cldcvr/flow-table";
+import { FTableSchemaData } from "@ollion/flow-table";
 import { defineComponent } from "vue";
 import { getInnerData } from "./inner-data";
 
