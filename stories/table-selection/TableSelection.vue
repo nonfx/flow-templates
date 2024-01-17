@@ -44,6 +44,16 @@
 					</f-div>
 					<f-divider></f-divider>
 					<f-div data-qa="right-section" direction="column">
+						<f-div height="hug-content" padding="large" gap="auto">
+							<f-div width="hug-content" gap="small" align="middle-left">
+								<f-icon source="i-table"></f-icon>
+								<f-text variant="heading" size="small">Tables</f-text>
+								<f-counter :label="10"></f-counter>
+							</f-div>
+							<f-div width="250px"
+								><f-search placeholder="Search table" variant="round" size="small"></f-search
+							></f-div>
+						</f-div>
 						<f-div data-qa="table-container">
 							<f-table-schema
 								selectable="multiple"
