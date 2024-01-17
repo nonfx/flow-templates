@@ -24,7 +24,7 @@
 						<f-div height="hug-content" padding="medium">
 							<f-search variant="round" placeholder="Search schema" size="small"></f-search
 						></f-div>
-						<f-div overflow="scroll" class="hide-scrollbar" direction="column">
+						<f-div overflow="scroll" hide-scrollbar direction="column">
 							<f-div
 								align="middle-left"
 								border="small solid secondary bottom"
@@ -47,10 +47,10 @@
 						<f-div data-qa="table-container">
 							<f-table-schema
 								selectable="multiple"
-								highlight-selected
 								variant="underlined"
 								:data="tableData"
 								:show-search-bar="false"
+								sticky-cell-background="secondary"
 								sticky-header
 								@row-click="closeOptions"
 							></f-table-schema>
@@ -125,12 +125,3 @@ onMounted(() => {
 	tableData.value = getMockTableData(100, columnOptions);
 });
 </script>
-<style>
-.hide-scrollbar {
-	-ms-overflow-style: none; /* Internet Explorer 10+ */
-	scrollbar-width: none; /* Firefox */
-}
-.hide-scrollbar::-webkit-scrollbar {
-	display: none; /* Safari and Chrome */
-}
-</style>

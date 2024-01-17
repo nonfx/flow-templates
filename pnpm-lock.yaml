@@ -13,13 +13,13 @@ dependencies:
     version: 1.9.1(@ollion/flow-core-config@1.1.3)
   '@ollion/flow-code-editor':
     specifier: ^1.1.0
-    version: 1.1.0(@ollion/flow-core-config@1.1.3)(@ollion/flow-core@2.7.5)
+    version: 1.1.0(@ollion/flow-core-config@1.1.3)(@ollion/flow-core@2.7.6)
   '@ollion/flow-core':
-    specifier: 2.7.5
-    version: 2.7.5(@ollion/flow-core-config@1.1.3)
+    specifier: 2.7.6
+    version: 2.7.6(@ollion/flow-core-config@1.1.3)
   '@ollion/flow-form-builder':
     specifier: 2.2.1
-    version: 2.2.1(@ollion/flow-core-config@1.1.3)(@ollion/flow-core@2.7.5)
+    version: 2.2.1(@ollion/flow-core-config@1.1.3)(@ollion/flow-core@2.7.6)
   '@ollion/flow-gcp-icon':
     specifier: 1.8.1
     version: 1.8.1(@ollion/flow-core-config@1.1.3)
@@ -30,8 +30,8 @@ dependencies:
     specifier: 1.16.1
     version: 1.16.1(@ollion/flow-core-config@1.1.3)
   '@ollion/flow-table':
-    specifier: 2.2.3
-    version: 2.2.3(@ollion/flow-core-config@1.1.3)(@ollion/flow-core@2.7.5)
+    specifier: 2.2.4
+    version: 2.2.4(@ollion/flow-core-config@1.1.3)(@ollion/flow-core@2.7.6)
   lit:
     specifier: ^3.1.0
     version: 3.1.0
@@ -1923,13 +1923,13 @@ packages:
       '@ollion/flow-core-config': 1.1.3
     dev: false
 
-  /@ollion/flow-code-editor@1.1.0(@ollion/flow-core-config@1.1.3)(@ollion/flow-core@2.7.5):
+  /@ollion/flow-code-editor@1.1.0(@ollion/flow-core-config@1.1.3)(@ollion/flow-core@2.7.6):
     resolution: {integrity: sha512-B1bOJst6TWEOif7ctsVNcfgVI5rUkvLkx3xqtRvD4RlqGGtxHQJl8GfaYEtpm+eIHzdTgdr6sHAJmnD/J3Ts8Q==}
     peerDependencies:
       '@ollion/flow-core': ^2.0.3
       '@ollion/flow-core-config': ^1.1.3
     dependencies:
-      '@ollion/flow-core': 2.7.5(@ollion/flow-core-config@1.1.3)
+      '@ollion/flow-core': 2.7.6(@ollion/flow-core-config@1.1.3)
       '@ollion/flow-core-config': 1.1.3
       lit: 3.1.0
       monaco-editor: 0.38.0
@@ -1941,8 +1941,8 @@ packages:
       rxjs: 7.8.1
     dev: false
 
-  /@ollion/flow-core@2.7.5(@ollion/flow-core-config@1.1.3):
-    resolution: {integrity: sha512-gsq6XFLxJSRUhg8xkZkVNJrhso+6JPw6/6c4MH/K/OFL8vVk6u8n/YPUjaIl5H6IlKvwGLAO6ducc6NN03xzQw==}
+  /@ollion/flow-core@2.7.6(@ollion/flow-core-config@1.1.3):
+    resolution: {integrity: sha512-9y7xdM+8R6p0uE2JY+Yzy4A8PmvbBq35gVx+CEBW4+AGndhtvpiVv9k/Hw4Hn/XqyZ7chnXh7vIMb8byeNzlsQ==}
     peerDependencies:
       '@ollion/flow-core-config': '*'
     dependencies:
@@ -1962,13 +1962,13 @@ packages:
       - debug
     dev: false
 
-  /@ollion/flow-form-builder@2.2.1(@ollion/flow-core-config@1.1.3)(@ollion/flow-core@2.7.5):
+  /@ollion/flow-form-builder@2.2.1(@ollion/flow-core-config@1.1.3)(@ollion/flow-core@2.7.6):
     resolution: {integrity: sha512-ZQWjAwdRZwEgdO8uKA43c3Fx7ApxV9r01mqjIn1m5F6mEbWRTcbZ7UfguHaFHv5SFXOZUHfIWWEW4qpwBeyDPQ==}
     peerDependencies:
       '@ollion/flow-core': ^2.1.3
       '@ollion/flow-core-config': ^1.1.3
     dependencies:
-      '@ollion/flow-core': 2.7.5(@ollion/flow-core-config@1.1.3)
+      '@ollion/flow-core': 2.7.6(@ollion/flow-core-config@1.1.3)
       '@ollion/flow-core-config': 1.1.3
       lit: 3.1.0
       lodash-es: 4.17.21
@@ -1999,13 +1999,13 @@ packages:
       '@ollion/flow-core-config': 1.1.3
     dev: false
 
-  /@ollion/flow-table@2.2.3(@ollion/flow-core-config@1.1.3)(@ollion/flow-core@2.7.5):
-    resolution: {integrity: sha512-96V8rI2sTfVyFiiN0JBR5kOGDGz+rBuNkAjEfnOdYfidt446Y5aLEJrJqBWCTfP+Sa9HhIuN+TztRyTmY63UTw==}
+  /@ollion/flow-table@2.2.4(@ollion/flow-core-config@1.1.3)(@ollion/flow-core@2.7.6):
+    resolution: {integrity: sha512-s+l/y/BvUILGowSTYvw6GAdEoEv5vFRw0kaML910s62xMnR5uOMOiXvcTZovtWqu9QSWASeW2fOtEacSgN1hIA==}
     peerDependencies:
       '@ollion/flow-core': ^2.0.3
       '@ollion/flow-core-config': ^1.1.3
     dependencies:
-      '@ollion/flow-core': 2.7.5(@ollion/flow-core-config@1.1.3)
+      '@ollion/flow-core': 2.7.6(@ollion/flow-core-config@1.1.3)
       '@ollion/flow-core-config': 1.1.3
       lit: 3.1.0
     dev: false
