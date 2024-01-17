@@ -39,7 +39,7 @@ const copyDir = (src, dest, callback) => {
 	});
 };
 
-copyDir("node_modules/@cldcvr/flow-code-editor/dist/assets", "assets");
+copyDir("node_modules/@ollion/flow-code-editor/dist/assets", "assets");
 
 module.exports = {
 	stories: ["../stories/**/*.stories.mdx", "../stories/**/*.stories.@(js|jsx|ts|tsx)"],

@@ -422,7 +422,7 @@
 </template>
 
 <script lang="ts">
-import { ConfigUtil, FSearch } from "@cldcvr/flow-core";
+import { ConfigUtil, FSearch } from "@ollion/flow-core";
 import { defineComponent } from "vue";
 
 export default defineComponent({

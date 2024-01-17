@@ -239,7 +239,7 @@
 </template>
 
 <script lang="ts">
-import { ConfigUtil } from "@cldcvr/flow-core";
+import { ConfigUtil } from "@ollion/flow-core";
 import { defineComponent } from "vue";
 
 export default defineComponent({

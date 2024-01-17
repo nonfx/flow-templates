@@ -37,7 +37,7 @@ const theme = create({
 
 	// Brand assets
 	brandTitle: "Flow Template Library",
-	brandUrl: "https://flow.cldcvr.com/templates/index.html"
+	brandUrl: "https://flow.ollion.com/templates/index.html"
 });
 
 addons.setConfig({

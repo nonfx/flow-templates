@@ -48,7 +48,7 @@ import TabContentSection from "./TabContentSection.vue";
 import SearchSection from "./SearchSection.vue";
 import AboutPlatform from "./AboutPlatform.vue";
 import PlatformHeader from "./PlatformHeader.vue";
-import { FDiv } from "@cldcvr/flow-core";
+import { FDiv } from "@ollion/flow-core";
 
 export default defineComponent({
 	data() {

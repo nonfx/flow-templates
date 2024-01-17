@@ -7,8 +7,8 @@
 </template>
 
 <script lang="ts">
-import { FPopover } from "@cldcvr/flow-core";
-import { FTableSchemaData } from "@cldcvr/flow-table";
+import { FPopover } from "@ollion/flow-core";
+import { FTableSchemaData } from "@ollion/flow-table";
 import { defineComponent } from "vue";
 import { getFakeUsers } from "./data";
 
