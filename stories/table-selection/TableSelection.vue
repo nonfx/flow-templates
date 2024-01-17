@@ -5,6 +5,13 @@
 				<!--Start :top bar-->
 				<f-div padding="medium" align="middle-left" gap="medium" height="hug-content">
 					<f-text variant="para" size="small" weight="bold"> Add tables </f-text>
+					<f-icon-button
+						icon="i-git-repo"
+						state="primary"
+						size="medium"
+						category="packed"
+						@click="handleSourceCodeLink"
+					></f-icon-button>
 					<f-button label="help" state="neutral" size="x-small" variant="round"></f-button>
 					<f-icon-button
 						icon="i-close"
@@ -130,6 +137,12 @@ const closeOptions = (_event: CustomEvent) => {
 	if (columnOptions.value) {
 		columnOptions.value.open = false;
 	}
+};
+
+const handleSourceCodeLink = function () {
+	window
+		.open(`https://github.com/ollionorg/flow-templates/tree/main/stories/table-selection`, "_blank")
+		?.focus();
 };
 onMounted(() => {
 	tableData.value = getMockTableData(100, columnOptions);
