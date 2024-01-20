@@ -75,7 +75,7 @@ devDependencies:
     version: 7.6.6(@vue/compiler-core@3.3.13)(vue@3.3.13)
   '@storybook/vue3-vite':
     specifier: ^7.6.6
-    version: 7.6.6(@vue/compiler-core@3.3.13)(typescript@4.9.5)(vite@4.5.1)(vue@3.3.13)
+    version: 7.6.6(@vue/compiler-core@3.3.13)(typescript@4.9.5)(vite@4.5.2)(vue@3.3.13)
   '@storybook/web-components':
     specifier: ^7.6.6
     version: 7.6.6(lit@3.1.0)(react-dom@18.2.0)(react@17.0.2)
@@ -99,7 +99,7 @@ devDependencies:
     version: 5.62.0(eslint@8.56.0)(typescript@4.9.5)
   '@vitejs/plugin-vue':
     specifier: ^4.1.0
-    version: 4.5.2(vite@4.5.1)(vue@3.3.13)
+    version: 4.5.2(vite@4.5.2)(vue@3.3.13)
   babel-loader:
     specifier: ^8.3.0
     version: 8.3.0(@babel/core@7.23.6)(webpack@5.89.0)
@@ -140,8 +140,8 @@ devDependencies:
     specifier: ^4.9.3
     version: 4.9.5
   vite:
-    specifier: ^4.2.0
-    version: 4.5.1(@types/node@20.10.5)(sass@1.69.5)
+    specifier: ^4.5.2
+    version: 4.5.2(@types/node@20.10.5)(sass@1.69.5)
   vue-loader:
     specifier: ^16.8.3
     version: 16.8.3(vue@3.3.13)(webpack@5.89.0)
@@ -2837,7 +2837,7 @@ packages:
       - supports-color
     dev: true
 
-  /@storybook/builder-vite@7.6.6(typescript@4.9.5)(vite@4.5.1):
+  /@storybook/builder-vite@7.6.6(typescript@4.9.5)(vite@4.5.2):
     resolution: {integrity: sha512-vDBHjsswnVScVgGHeIZ22R/LoRt5T1F62p5czusydBSxKGzma5Va4JHQJp4/IKXwiCZbXcua/Cs7VKtBLO+50A==}
     peerDependencies:
       '@preact/preset-vite': '*'
@@ -2869,7 +2869,7 @@ packages:
       magic-string: 0.30.5
       rollup: 3.29.4
       typescript: 4.9.5
-      vite: 4.5.1(@types/node@20.10.5)(sass@1.69.5)
+      vite: 4.5.2(@types/node@20.10.5)(sass@1.69.5)
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -3363,18 +3363,18 @@ packages:
       file-system-cache: 2.3.0
     dev: true
 
-  /@storybook/vue3-vite@7.6.6(@vue/compiler-core@3.3.13)(typescript@4.9.5)(vite@4.5.1)(vue@3.3.13):
+  /@storybook/vue3-vite@7.6.6(@vue/compiler-core@3.3.13)(typescript@4.9.5)(vite@4.5.2)(vue@3.3.13):
     resolution: {integrity: sha512-pctJJSCQ67bFTsF5mPEiPgIBqeGibj9aS8VnWZ2Khzj+S5gxJ6NzXvoWCyGlCIgOYixWU66OYd1qvJ8KUnS35g==}
     engines: {node: ^14.18 || >=16}
     peerDependencies:
       vite: ^3.0.0 || ^4.0.0 || ^5.0.0
     dependencies:
-      '@storybook/builder-vite': 7.6.6(typescript@4.9.5)(vite@4.5.1)
+      '@storybook/builder-vite': 7.6.6(typescript@4.9.5)(vite@4.5.2)
       '@storybook/core-server': 7.6.6
       '@storybook/vue3': 7.6.6(@vue/compiler-core@3.3.13)(vue@3.3.13)
-      '@vitejs/plugin-vue': 4.5.2(vite@4.5.1)(vue@3.3.13)
+      '@vitejs/plugin-vue': 4.5.2(vite@4.5.2)(vue@3.3.13)
       magic-string: 0.30.5
-      vite: 4.5.1(@types/node@20.10.5)(sass@1.69.5)
+      vite: 4.5.2(@types/node@20.10.5)(sass@1.69.5)
       vue-docgen-api: 4.75.1(vue@3.3.13)
     transitivePeerDependencies:
       - '@preact/preset-vite'
@@ -3881,14 +3881,14 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
-  /@vitejs/plugin-vue@4.5.2(vite@4.5.1)(vue@3.3.13):
+  /@vitejs/plugin-vue@4.5.2(vite@4.5.2)(vue@3.3.13):
     resolution: {integrity: sha512-UGR3DlzLi/SaVBPX0cnSyE37vqxU3O6chn8l0HJNzQzDia6/Au2A4xKv+iIJW8w2daf80G7TYHhi1pAUjdZ0bQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       vite: ^4.0.0 || ^5.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.5.1(@types/node@20.10.5)(sass@1.69.5)
+      vite: 4.5.2(@types/node@20.10.5)(sass@1.69.5)
       vue: 3.3.13(typescript@4.9.5)
     dev: true
 
@@ -9244,8 +9244,8 @@ packages:
       vfile-message: 3.1.4
     dev: true
 
-  /vite@4.5.1(@types/node@20.10.5)(sass@1.69.5):
-    resolution: {integrity: sha512-AXXFaAJ8yebyqzoNB9fu2pHoo/nWX+xZlaRwoeYUxEqBO+Zj4msE5G+BhGBll9lYEKv9Hfks52PAF2X7qDYXQA==}
+  /vite@4.5.2(@types/node@20.10.5)(sass@1.69.5):
+    resolution: {integrity: sha512-tBCZBNSBbHQkaGyhGCDUGqeo2ph8Fstyp6FMSvTtsXeZSPpSMGlviAOav2hxVTqFcx8Hj/twtWKsMJXNY0xI8w==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
