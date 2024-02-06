@@ -1,0 +1,70 @@
+.f-three-columns {
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		transition: opacity 300ms linear;
+		background-color: #000;
+		opacity: 0;
+		z-index: 1;
+	}
+}
+.f-left-notch {
+	margin-top: 12px;
+	padding: 2px;
+	border-radius: 0px 8px 8px 0px !important;
+}
+.f-right-notch {
+	margin-top: 12px;
+	padding: 2px;
+	border-radius: 8px 0px 0px 8px !important;
+}
+
+.f-left-column,
+.f-right-column {
+	transition: width 300ms linear;
+
+	&[data-open="false"] {
+		width: 0px !important;
+	}
+}
+@media (max-width: 1270px) {
+	.f-three-columns {
+		&[data-overlay="true"] {
+			&::before {
+				top: 0px;
+				bottom: 0px;
+				left: 0px;
+				right: 0px;
+				opacity: 0.6;
+			}
+		}
+	}
+	.f-left-column,
+	.f-right-column {
+		position: absolute;
+		z-index: 2;
+	}
+	.f-left-notch,
+	.f-right-notch {
+		position: absolute;
+		z-index: 2;
+	}
+	.f-left-notch {
+		transition: left 300ms linear;
+		left: 320px;
+		&[data-open="false"] {
+			left: 0px;
+		}
+	}
+	.f-right-notch {
+		transition: right 300ms linear;
+		right: 320px;
+		&[data-open="false"] {
+			right: 0px;
+		}
+	}
+	.f-right-column {
+		right: 0px;
+	}
+}

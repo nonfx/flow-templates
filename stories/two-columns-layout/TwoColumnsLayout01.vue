@@ -9,7 +9,7 @@
 		<f-div
 			:width="open ? '300px' : '0px'"
 			:class="open ? 'left-column-expanded' : 'left-column-collapsed'"
-			:border="open ? 'small solid secondary right' : 'none'"
+			:border="open ? 'small solid secondary right' : undefined"
 			direction="column"
 			:padding="open ? 'none none none large' : 'none'"
 			overflow="hidden"

@@ -59,7 +59,7 @@
   "dependencies": {
     "@ollion/flow-aws-icon": "1.9.1",
     "@ollion/flow-code-editor": "^1.1.0",
-    "@ollion/flow-core": "2.7.6",
+    "@ollion/flow-core": "2.7.8",
     "@ollion/flow-form-builder": "2.2.1",
     "@ollion/flow-gcp-icon": "1.8.1",
     "@ollion/flow-product-icon": "1.12.1",
