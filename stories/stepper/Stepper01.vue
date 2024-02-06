@@ -1,5 +1,5 @@
 <template>
-	<f-div align="middle-center" gap="small">
+	<f-div align="middle-center" overflow="visible" gap="small">
 		<f-div
 			v-for="step in steps"
 			:key="step.name"
@@ -7,12 +7,20 @@
 			width="hug-content"
 			height="hug-content"
 			gap="small"
+			overflow="visible"
 		>
-			<f-div gap="small" align="middle-center" width="hug-content" height="hug-content">
+			<f-div
+				gap="small"
+				overflow="visible"
+				align="middle-center"
+				width="hug-content"
+				height="hug-content"
+			>
 				<f-icon-button
 					:icon="step.icon.name"
 					category="packed"
 					:state="step.icon.state"
+					:effect="step.status === 'ongoing' ? 'pulse' : undefined"
 				></f-icon-button>
 				<f-text :state="getTextState(step)">{{ step.name }}</f-text>
 			</f-div>
