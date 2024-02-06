@@ -55,6 +55,7 @@ export const decorators = [
 			}
 		};
 		ConfigUtil.setConfig({
+			theme: "f-ollion-dark",
 			iconPack: {
 				...SystemIconPack,
 				...ProductIconPack,
